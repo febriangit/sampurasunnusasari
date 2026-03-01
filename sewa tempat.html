@@ -1,0 +1,1626 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sewa Tempat Acara - Warung Sambal Bakar</title>
+    
+    <!-- ========== BOOTSTRAP 5 & DEPENDENCIES ========== -->
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- AOS Animation -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <!-- Swiper CSS (untuk carousel) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    
+    <!-- ========== CUSTOM CSS ========== -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="sewa tempat.css">
+    <link rel="stylesheet" href="sewa tempat responsive.css">
+    <script src="sewa-tempt.js"></script>
+    
+    
+    <!-- Favicon -->
+    <link rel="icon" href="asset/Logo Warung Bakakak.png" type="image/png">
+</head>
+<body>
+    <!-- ========== NAVBAR (SAMA DENGAN INDEX.HTML) ========== -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="asset/Logo Warung Bakakak.png" alt="Logo Restoran" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSewaTempat">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSewaTempat">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Wilujeng Sumping</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="program.html">Program & Partnership</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pilih menu cabang.html">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#location-preview">Lokasi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="promo.html">Promo Spesial</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                            More
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-orange">
+                            <li><a class="dropdown-item" href="investasi.html"><i class="bi bi-graph-up me-2"></i>Peluang Investasi</a></li>
+                            <li><a class="dropdown-item" href="loker.html"><i class="bi bi-briefcase me-2"></i>Info Loker</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="sewa tempat.html"><i class="bi bi-people me-2"></i>Sewa Tempat</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="bi bi-tag me-2"></i>Berita</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== SECTION 1: HERO WITH VIDEO BACKGROUND ========== -->
+     <section class="sewa-hero-section position-relative overflow-hidden">
+    <!-- Background Video -->
+    <div class="hero-video-container position-absolute top-0 start-0 w-100 h-100">
+        <video autoplay muted loop playsinline class="hero-video w-100 h-100 object-fit-cover">
+            <source src="asset/vid SECTION BG.mp4" type="video/mp4">
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1920&q=80" 
+                 alt="Venue Background" 
+                 class="w-100 h-100 object-fit-cover">
+        </video>
+        <div class="video-overlay position-absolute top-0 start-0 w-100 h-100"></div>
+    </div>
+    <!-- Hero Content - SEMUA DI TENGAH SEMPURNA -->
+    <div class="container position-relative h-100 d-flex align-items-center justify-content-center">
+        <div class="row w-100 justify-content-center align-items-center m-0">
+            <div class="col-lg-8 col-md-10 col-12 text-center px-3">
+                <!-- Judul utama -->
+                <h1 class="display-2 fw-bold mb-3" data-aos="zoom-in" data-aos-duration="800">
+                    SEWA TEMPAT ACARA EKSKLUSIF
+                </h1>
+                
+                <!-- Logo - LEBIH BESAR dan prominent -->
+                <div class="logo-container" data-aos="fade-up" data-aos-delay="400">
+                    <img src="asset/Logo Warung Bakakak.png" 
+                         alt="Logo Warung Bakakak Sampurasun Nusasari" 
+                         class="img-fluid">
+                </div>
+                
+                <!-- Deskripsi -->
+                <p class="lead fw-medium mb-0" data-aos="fade-up" data-aos-delay="600">
+                    Perfect venue for weddings, birthdays, corporate events, and family gatherings</p>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- ========== SECTION 2: WHY CHOOSE US (CARD DESKTOP → CAROUSEL MOBILE) ========== -->
+    <section id="why-choose" class="why-choose-section py-5">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="display-5 fw-bold mb-3">✨ Mengapa Pilih Venue Kami?</h2>
+                <p class="lead text-muted">Keunggulan yang membuat acara Anda semakin spesial</p>
+            </div>
+            
+            <!-- Desktop View: 4 Cards Grid -->
+            <div class="d-none d-lg-block" data-aos="fade-up" data-aos-delay="100">
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card h-100 border-0 shadow-sm hover-lift">
+                            <div class="card-body text-center p-4">
+                                <div class="icon-wrapper mb-3">
+                                    <i class="bi bi-geo-alt-fill fs-1 text-primary"></i>
+                                </div>
+                                <h5 class="card-title fw-bold">Lokasi Strategis</h5>
+                                <p class="card-text text-muted">Akses mudah dari pusat kota, parkir luas untuk 100+ mobil, dekat dengan fasilitas umum.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card h-100 border-0 shadow-sm hover-lift">
+                            <div class="card-body text-center p-4">
+                                <div class="icon-wrapper mb-3">
+                                    <i class="bi bi-egg-fried fs-1 text-primary"></i>
+                                </div>
+                                <h5 class="card-title fw-bold">Catering Inklusif</h5>
+                                <p class="card-text text-muted">Menu lengkap Warung Sambal Bakar dengan 18 jenis sambal, bisa custom sesuai permintaan.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card h-100 border-0 shadow-sm hover-lift">
+                            <div class="card-body text-center p-4">
+                                <div class="icon-wrapper mb-3">
+                                    <i class="bi bi-speaker fs-1 text-primary"></i>
+                                </div>
+                                <h5 class="card-title fw-bold">Full Equipment</h5>
+                                <p class="card-text text-muted">Sound system profesional, lighting lengkap, proyektor, panggung, dan semua kebutuhan teknis.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card h-100 border-0 shadow-sm hover-lift">
+                            <div class="card-body text-center p-4">
+                                <div class="icon-wrapper mb-3">
+                                    <i class="bi bi-headset fs-1 text-primary"></i>
+                                </div>
+                                <h5 class="card-title fw-bold">Dedicated Support</h5>
+                                <p class="card-text text-muted">Event coordinator berpengalaman siap membantu dari planning hingga eksekusi acara.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mobile View: Carousel -->
+            <div class="d-block d-lg-none" data-aos="fade-up" data-aos-delay="100">
+                <div class="swiper whyChooseCarousel">
+                    <div class="swiper-wrapper">
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body text-center p-4">
+                                    <div class="icon-wrapper mb-3">
+                                        <i class="bi bi-geo-alt-fill fs-1 text-primary"></i>
+                                    </div>
+                                    <h5 class="card-title fw-bold">Lokasi Strategis</h5>
+                                    <p class="card-text text-muted">Akses mudah dari pusat kota, parkir luas untuk 100+ mobil.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="swiper-slide">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body text-center p-4">
+                                    <div class="icon-wrapper mb-3">
+                                        <i class="bi bi-egg-fried fs-1 text-primary"></i>
+                                    </div>
+                                    <h5 class="card-title fw-bold">Catering Inklusif</h5>
+                                    <p class="card-text text-muted">Menu lengkap dengan 18 jenis sambal, bisa custom sesuai permintaan.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="swiper-slide">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body text-center p-4">
+                                    <div class="icon-wrapper mb-3">
+                                        <i class="bi bi-speaker fs-1 text-primary"></i>
+                                    </div>
+                                    <h5 class="card-title fw-bold">Full Equipment</h5>
+                                    <p class="card-text text-muted">Sound system profesional, lighting lengkap, proyektor, dan panggung.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 4 -->
+                        <div class="swiper-slide">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body text-center p-4">
+                                    <div class="icon-wrapper mb-3">
+                                        <i class="bi bi-headset fs-1 text-primary"></i>
+                                    </div>
+                                    <h5 class="card-title fw-bold">Dedicated Support</h5>
+                                    <p class="card-text text-muted">Event coordinator berpengalaman siap membantu planning acara.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Navigation -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <!-- Pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SECTION 3: VENUE GALLERY (8 CARDS WITH CATEGORIES) ========== -->
+     <section class="venue-gallery-section py-5">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2 class="display-5 fw-bold mb-3">🏛️ Fasilitas & Layout Venue</h2>
+            <p class="lead mb-4">Jelajahi setiap sudut venue kami</p>
+        </div>
+        
+        <!-- Container Grid -->
+        <div class="venue-grid-container">
+            <!-- Row 1: 4 Card Atas -->
+            <div class="venue-row">
+                <!-- Card 1 -->
+                <div class="venue-card" 
+                     data-bs-toggle="modal" 
+                     data-bs-target="#venueModal"
+                     data-title="Main Hall - 500m²"
+                     data-description="Ruangan utama dengan kapasitas 500 orang, tinggi plafon 8 meter, AC sentral, dan lighting profesional. Cocok untuk wedding, seminar, dan acara besar lainnya."
+                     data-image="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&h=600&fit=crop">
+                    <div class="venue-card-img">
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&h=300&fit=crop" alt="Main Hall">
+                        <div class="venue-card-overlay">
+                            <div class="venue-card-content">
+                                <h5>Main Hall</h5>
+                                <p>Kapasitas 500 orang • Luas 500m²</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="venue-card" 
+                     data-bs-toggle="modal" 
+                     data-bs-target="#venueModal"
+                     data-title="Outdoor Terrace"
+                     data-description="Area outdoor dengan pemandangan taman yang asri, cocok untuk pre-wedding, cocktail party, atau break session. Dilengkapi dengan lighting garden dan sound system outdoor."
+                     data-image="https://images.unsplash.com/photo-1464207687429-7505649dae38?w=800&h=600&fit=crop">
+                    <div class="venue-card-img">
+                        <img src="https://images.unsplash.com/photo-1464207687429-7505649dae38?w=400&h=300&fit=crop" alt="Terrace">
+                        <div class="venue-card-overlay">
+                            <div class="venue-card-content">
+                                <h5>Outdoor Terrace</h5>
+                                <p>Pemandangan taman • Cocktail area</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="venue-card" 
+                     data-bs-toggle="modal" 
+                     data-bs-target="#venueModal"
+                     data-title="VIP Room"
+                     data-description="Ruangan privat untuk tamu khusus, meeting kecil, atau family room dengan fasilitas lengkap termasuk mini bar, sofa premium, dan TV LED 55 inch."
+                     data-image="https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=800&h=600&fit=crop">
+                    <div class="venue-card-img">
+                        <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=400&h=300&fit=crop" alt="VIP Room">
+                        <div class="venue-card-overlay">
+                            <div class="venue-card-content">
+                                <h5>VIP Room</h5>
+                                <p>Ruangan privat • Fasilitas lengkap</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 4 -->
+                <div class="venue-card" 
+                     data-bs-toggle="modal" 
+                     data-bs-target="#venueModal"
+                     data-title="Stage Area"
+                     data-description="Panggung profesional 8x4 meter dengan backdrop LED screen, lighting rig professional, dan sound system berkualitas tinggi. Cocok untuk pertunjukan dan presentasi."
+                     data-image="https://images.unsplash.com/photo-1492684223066-e9e3a5c70932?w=800&h=600&fit=crop">
+                    <div class="venue-card-img">
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&h=300&fit=crop" alt="Stage">
+                        <div class="venue-card-overlay">
+                            <div class="venue-card-content">
+                                <h5>Stage Area</h5>
+                                <p>Panggung profesional • LED screen</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- ========== SECTION 4: PACKAGE PROMO (8 CARDS CAROUSEL) ========== -->
+    <section class="package-section py-5">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="display-5 fw-bold mb-3">📦 Paket Promo Sewa Tempat</h2>
+                <p class="lead mb-4">Penawaran spesial untuk Anda</p>
+            </div>
+            
+            <!-- Bootstrap Carousel untuk 3 cards per slide -->
+            <div class="package-carousel-container" data-aos="fade-up" data-aos-delay="200">
+                <div id="packageCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        
+                        <!-- Slide 1 (Cards 1-3) -->
+                        <div class="carousel-item active">
+                            <div class="row g-4 justify-content-center">
+                                <!-- Package 1 -->
+                                <div class="col-lg-4 col-md-4">
+                                    <div class="package-card h-100">
+                                        <div class="card-header">
+                                            <div class="package-badge">ECONOMY</div>
+                                            <h4 class="package-title">Paket Basic</h4>
+                                            <div class="package-price">
+                                                <span class="price-amount">Rp 5</span>
+                                                <span class="price-currency">jt</span>
+                                                <span class="price-duration">/4 jam</span>
+                                            </div>
+                                        </div>
+                                        <div class="card-body d-flex flex-column">
+                                            <ul class="features-list mb-3">
+                                                <li><i class="bi bi-check-circle-fill"></i>Kapasitas 100 orang</li>
+                                                <li><i class="bi bi-check-circle-fill"></i>Ruangan utama</li>
+                                                <li><i class="bi bi-check-circle-fill"></i>Sound system basic</li>
+                                                <li><i class="bi bi-check-circle-fill"></i>Meja & kursi</li>
+                                                <li><i class="bi bi-x-circle"></i>Dekorasi</li>
+                                                <li><i class="bi bi-x-circle"></i>Catering</li>
+                                            </ul>
+                                            <button class="package-btn mt-auto" data-bs-toggle="modal" data-bs-target="#bookingModal">
+                                                Pilih Paket
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Package 2 -->
+                                <div class="col-lg-4 col-md-4">
+                                    <div class="package-card h-100">
+                                        <div class="card-header">
+                                            <div class="package-badge popular">POPULER</div>
+                                            <h4 class="package-title">Paket Premium</h4>
+                                            <div class="package-price">
+                                                <span class="price-amount">Rp 12</span>
+                                                <span class="price-currency">jt</span>
+                                                <span class="price-duration">/6 jam</span>
+                                            </div>
+                                        </div>
+                                        <div class="card-body d-flex flex-column">
+                                            <ul class="features-list mb-3">
+                                                <li><i class="bi bi-check-circle-fill"></i>Kapasitas 250 orang</li>
+                                                <li><i class="bi bi-check-circle-fill"></i>Ruangan VIP + terrace</li>
+                                                <li><i class="bi bi-check-circle-fill"></i>Sound system premium</li>
+                                                <li><i class="bi bi-check-circle-fill"></i>Full lighting setup</li>
+                                                <li><i class="bi bi-check-circle-fill"></i>Dekorasi minimalis</li>
+                                                <li><i class="bi bi-check-circle-fill"></i>Welcome drink</li>
+                                            </ul>
+                                            <button class="package-btn mt-auto" data-bs-toggle="modal" data-bs-target="#bookingModal">
+                                                Pilih Paket
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Package 3 -->
+                                <div class="col-lg-4 col-md-4">
+                                    <div class="package-card h-100">
+                                        <div class="card-header">
+                                            <div class="package-badge">EXCLUSIVE</div>
+                                            <h4 class="package-title">Paket All-In</h4>
+                                            <div class="package-price">
+                                                <span class="price-amount">Rp 25</span>
+                                                <span class="price-currency">jt</span>
+                                                <span class="price-duration">/8 jam</span>
+                                            </div>
+                                        </div>
+                                        <div class="card-body d-flex flex-column">
+                                            <ul class="features-list mb-3">
+                                                <li><i class="bi bi-check-circle-fill"></i>Kapasitas 500 orang</li>
+                                                <li><i class="bi bi-check-circle-fill"></i>Full venue access</li>
+                                                <li><i class="bi bi-check-circle-fill"></i>Professional catering</li>
+                                                <li><i class="bi bi-check-circle-fill"></i>Full decoration</li>
+                                                <li><i class="bi bi-check-circle-fill"></i>Event coordinator</li>
+                                                <li><i class="bi bi-check-circle-fill"></i>Photography package</li>
+                                            </ul>
+                                            <button class="package-btn mt-auto" data-bs-toggle="modal" data-bs-target="#bookingModal">
+                                                Pilih Paket
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 2 (Cards 4-6) -->
+                        <div class="carousel-item">
+                            <div class="row g-4 justify-content-center">
+                                <!-- Package 4 -->
+                                <div class="col-lg-4 col-md-4">
+                                    <div class="package-card h-100">
+                                        <div class="card-header">
+                                            <div class="package-badge">BUSINESS</div>
+                                            <h4 class="package-title">Paket Corporate</h4>
+                                            <div class="package-price">
+                                                <span class="price-amount">Rp 18</span>
+                                                <span class="price-currency">jt</span>
+                                                <span class="price-duration">/5 jam</span>
+                                            </div>
+                                        </div>
+                                        <div class="card-body d-flex flex-column">
+                                            <ul class="features-list mb-3">
+                                                <li><i class="bi bi-check-circle-fill"></i>Kapasitas 150 orang</li>
+                                                <li><i class="bi bi-check-circle-fill"></i>Meeting room setup</li>
+                                                <li><i class="bi bi-check-circle-fill"></i>Projector & screen</li>
+                                                <li><i class="bi bi-check-circle-fill"></i>WiFi high-speed</li>
+                                                <li><i class="bi bi-check-circle-fill"></i>Coffee break</li>
+                                                <li><i class="bi bi-check-circle-fill"></i>Notepad & pen</li>
+                                            </ul>
+                                            <button class="package-btn mt-auto" data-bs-toggle="modal" data-bs-target="#bookingModal">
+                                                Pilih Paket
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Package 5 -->
+                                <div class="col-lg-4 col-md-4">
+                                    <div class="package-card h-100">
+                                        <div class="card-header">
+                                            <div class="package-badge">SPECIAL</div>
+                                            <h4 class="package-title">Paket Wedding</h4>
+                                            <div class="package-price">
+                                                <span class="price-amount">Rp 35</span>
+                                                <span class="price-currency">jt</span>
+                                                <span class="price-duration">/10 jam</span>
+                                            </div>
+                                        </div>
+                                        <div class="card-body d-flex flex-column">
+                                            <ul class="features-list mb-3">
+                                                <li><i class="bi bi-check-circle-fill"></i>Kapasitas 300 orang</li>
+                                                <li><i class="bi bi-check-circle-fill"></i>Full decoration wedding</li>
+                                                <li><i class="bi bi-check-circle-fill"></i>Sound & lighting pro</li>
+                                                <li><i class="bi bi-check-circle-fill"></i>Catering premium</li>
+                                                <li><i class="bi bi-check-circle-fill"></i>Bridal room</li>
+                                                <li><i class="bi bi-check-circle-fill"></i>Photo & video package</li>
+                                            </ul>
+                                            <button class="package-btn mt-auto" data-bs-toggle="modal" data-bs-target="#bookingModal">
+                                                Pilih Paket
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Package 6 -->
+                                <div class="col-lg-4 col-md-4">
+                                    <div class="package-card h-100">
+                                        <div class="card-header">
+                                            <div class="package-badge">CUSTOM</div>
+                                            <h4 class="package-title">Paket Custom</h4>
+                                            <div class="package-price">
+                                                <span class="price-amount">Custom</span>
+                                                <span class="price-duration">Tersedia</span>
+                                            </div>
+                                        </div>
+                                        <div class="card-body d-flex flex-column">
+                                            <ul class="features-list mb-3">
+                                                <li><i class="bi bi-check-circle-fill"></i>Custom kapasitas</li>
+                                                <li><i class="bi bi-check-circle-fill"></i>Custom durasi</li>
+                                                <li><i class="bi bi-check-circle-fill"></i>Custom fasilitas</li>
+                                                <li><i class="bi bi-check-circle-fill"></i>Custom catering</li>
+                                                <li><i class="bi bi-check-circle-fill"></i>Custom dekorasi</li>
+                                                <li><i class="bi bi-check-circle-fill"></i>Event planning</li>
+                                            </ul>
+                                            <button class="package-btn mt-auto" data-bs-toggle="modal" data-bs-target="#bookingModal">
+                                                Konsultasi Gratis
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Carousel Navigation -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#packageCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#packageCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                    
+                    <!-- Carousel Indicators -->
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#packageCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#packageCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Custom Package CTA -->
+            <div class="custom-package-cta mt-5" data-aos="fade-up">
+                <div class="custom-icon">
+                    <i class="bi bi-sliders"></i>
+                </div>
+                <h4 class="mb-3">Butuh Paket Khusus?</h4>
+                <p class="mb-4">Kami bisa menyesuaikan paket sesuai kebutuhan dan budget Anda.</p>
+                <a href="https://wa.me/6281234567890?text=Halo,%20saya%20ingin%20konsultasi%20paket%20khusus%20sewa%20tempat" 
+                class="whatsapp-btn" target="_blank">
+                    <i class="bi bi-whatsapp"></i>Konsultasi Gratis via WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SECTION 5: EVENT PORTFOLIO (5 CARDS PER CATEGORY) ========== -->
+     <section class="portfolio-section py-5">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2 class="display-5 fw-bold mb-3 text-white">📸 Acara yang Pernah Kami Adakan</h2>
+            <p class="lead text-light">Bukti kesuksesan event di venue kami</p>
+            
+            <!-- Category Tabs -->
+            <ul class="nav nav-pills justify-content-center mb-5" id="portfolioTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="wedding-tab" data-bs-toggle="pill" data-bs-target="#wedding" type="button">Pernikahan</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="corporate-tab" data-bs-toggle="pill" data-bs-target="#family" type="button">Family Gathering</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="birthday-tab" data-bs-toggle="pill" data-bs-target="#birthday" type="button">Ulang Tahun</button>
+                </li>
+            </ul>
+        </div>
+        
+        <!-- Tab Content -->
+        <div class="tab-content" id="portfolioTabContent">
+            
+            <!-- ========== WEDDING TAB ========== -->
+            <div class="tab-pane fade show active" id="wedding" role="tabpanel">
+                <!-- Wedding Carousel -->
+                <div id="weddingCarousel" class="carousel slide" data-bs-ride="false">
+                    <div class="carousel-inner">
+                        
+                        <!-- SLIDE 1 (Cards 1-3) -->
+                        <div class="carousel-item active">
+                            <div class="row g-4">
+                                <!-- Card 1: Image -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="portfolio-card image-card" data-bs-toggle="modal" data-bs-target="#imageModal" 
+                                        data-title="Resepsi Pernikahan Sari & Budi"
+                                        data-description="Acara resepsi pernikahan dengan tema modern classic, dihadiri 150 tamu. Dekorasi minimalis elegan dengan dominasi warna putih dan emas."
+                                        data-date="15 Maret 2023"
+                                        data-guests="150"
+                                        data-image="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=600&h=400&fit=crop">
+                                        <div class="card-image">
+                                            <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=600&h=400&fit=crop" alt="Resepsi Sari & Budi">
+                                        </div>
+                                        <div class="card-overlay">
+                                            <div class="overlay-content">
+                                                <h5>Resepsi Sari & Budi</h5>
+                                                <p>150 tamu • Mar 2023</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Card 2: Image -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="portfolio-card image-card" data-bs-toggle="modal" data-bs-target="#imageModal"
+                                        data-title="Akad Nikah Rina & Dodi"
+                                        data-description="Akad nikah dengan tema tradisional modern, diadakan di terrace outdoor venue kami. Dekorasi bunga segar dengan nuansa pastel."
+                                        data-date="10 Juni 2023"
+                                        data-guests="200"
+                                        data-image="https://images.unsplash.com/photo-1465495976277-4387d4b0e4a6?w=600&h=400&fit=crop">
+                                        <div class="card-image">
+                                            <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0e4a6?w=600&h=400&fit=crop" alt="Akad Nikah Rina & Dodi">
+                                        </div>
+                                        <div class="card-overlay">
+                                            <div class="overlay-content">
+                                                <h5>Akad Nikah Rina & Dodi</h5>
+                                                <p>200 tamu • Jun 2023</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Card 3: Image -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="portfolio-card image-card" data-bs-toggle="modal" data-bs-target="#imageModal"
+                                        data-title="Wedding Reception Ayu & Rizky"
+                                        data-description="Resepsi pernikahan indoor dengan lighting setup premium. Sound system profesional dan dekorasi floral yang mewah."
+                                        data-date="5 Agustus 2023"
+                                        data-guests="300"
+                                        data-image="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=600&h=400&fit=crop">
+                                        <div class="card-image">
+                                            <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=600&h=400&fit=crop" alt="Wedding Reception">
+                                        </div>
+                                        <div class="card-overlay">
+                                            <div class="overlay-content">
+                                                <h5>Resepsi Ayu & Rizky</h5>
+                                                <p>300 tamu • Agu 2023</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- SLIDE 2 (Cards 4-6) -->
+                        <div class="carousel-item">
+                            <div class="row g-4">
+                                <!-- Card 4: Image -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="portfolio-card image-card" data-bs-toggle="modal" data-bs-target="#imageModal"
+                                        data-title="Garden Wedding Maya & Fajar"
+                                        data-description="Pernikahan garden dengan tema rustic, diadakan di outdoor area venue. Dekorasi alami dengan banyak tanaman hijau."
+                                        data-date="22 September 2023"
+                                        data-guests="120"
+                                        data-image="https://images.unsplash.com/photo-1537633552985-df8429e8048b?w=600&h=400&fit=crop">
+                                        <div class="card-image">
+                                            <img src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?w=600&h=400&fit=crop" alt="Garden Wedding">
+                                        </div>
+                                        <div class="card-overlay">
+                                            <div class="overlay-content">
+                                                <h5>Garden Wedding Maya & Fajar</h5>
+                                                <p>120 tamu • Sep 2023</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Card 5: Image -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="portfolio-card image-card" data-bs-toggle="modal" data-bs-target="#imageModal"
+                                        data-title="Intimate Wedding Dinner"
+                                        data-description="Acara wedding dinner intim dengan hanya keluarga dekat. Setup meja premium dengan candlelight dinner."
+                                        data-date="12 Oktober 2023"
+                                        data-guests="80"
+                                        data-image="https://images.unsplash.com/photo-1559314809-2b99056a8c4a?w=600&h=400&fit=crop">
+                                        <div class="card-image">
+                                            <img src="https://images.unsplash.com/photo-1559314809-2b99056a8c4a?w=600&h=400&fit=crop" alt="Intimate Wedding">
+                                        </div>
+                                        <div class="card-overlay">
+                                            <div class="overlay-content">
+                                                <h5>Intimate Wedding Dinner</h5>
+                                                <p>80 tamu • Okt 2023</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Card 6: Image -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="portfolio-card image-card" data-bs-toggle="modal" data-bs-target="#imageModal"
+                                        data-title="Classic Ballroom Wedding"
+                                        data-description="Pernikahan klasik di ballroom utama dengan chandelier besar. Dekorasi mewah dengan bunga segar dan silk draping."
+                                        data-date="3 November 2023"
+                                        data-guests="250"
+                                        data-image="https://images.unsplash.com/photo-1519741497674-611481863552?w=600&h=400&fit=crop">
+                                        <div class="card-image">
+                                            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=600&h=400&fit=crop" alt="Classic Wedding">
+                                        </div>
+                                        <div class="card-overlay">
+                                            <div class="overlay-content">
+                                                <h5>Classic Ballroom Wedding</h5>
+                                                <p>250 tamu • Nov 2023</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- SLIDE 3 (Cards 7-9) -->
+                        <div class="carousel-item">
+                            <div class="row g-4">
+                                <!-- Card 7: Image -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="portfolio-card image-card" data-bs-toggle="modal" data-bs-target="#imageModal"
+                                        data-title="Beach Theme Wedding"
+                                        data-description="Pernikahan bertema pantai dengan dekorasi pasir putih, kerang, dan warna biru laut. Cocok untuk pasangan yang menyukai suasana santai."
+                                        data-date="17 Desember 2023"
+                                        data-guests="100"
+                                        data-image="https://images.unsplash.com/photo-1548620840-4c43b20e63fc?w=600&h=400&fit=crop">
+                                        <div class="card-image">
+                                            <img src="https://images.unsplash.com/photo-1548620840-4c43b20e63fc?w=600&h=400&fit=crop" alt="Beach Wedding">
+                                        </div>
+                                        <div class="card-overlay">
+                                            <div class="overlay-content">
+                                                <h5>Beach Theme Wedding</h5>
+                                                <p>100 tamu • Des 2023</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Card 8: Image -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="portfolio-card image-card" data-bs-toggle="modal" data-bs-target="#imageModal"
+                                        data-title="Modern Minimalist Wedding"
+                                        data-description="Pernikahan minimalis dengan desain clean lines dan warna monokrom. Fokus pada elegan tanpa berlebihan."
+                                        data-date="14 Januari 2024"
+                                        data-guests="90"
+                                        data-image="https://images.unsplash.com/photo-1520854221256-17463ccb8b9d?w=600&h=400&fit=crop">
+                                        <div class="card-image">
+                                            <img src="https://images.unsplash.com/photo-1520854221256-17463ccb8b9d?w=600&h=400&fit=crop" alt="Minimalist Wedding">
+                                        </div>
+                                        <div class="card-overlay">
+                                            <div class="overlay-content">
+                                                <h5>Modern Minimalist Wedding</h5>
+                                                <p>90 tamu • Jan 2024</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Card 9: Image -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="portfolio-card image-card" data-bs-toggle="modal" data-bs-target="#imageModal"
+                                        data-title="Royal Elegance Wedding"
+                                        data-description="Pernikahan dengan tema kerajaan yang megah. Dekorasi gold dan merah marun dengan perabotan antik."
+                                        data-date="28 Februari 2024"
+                                        data-guests="180"
+                                        data-image="https://images.unsplash.com/photo-1478728073286-db190d3d4571?w=600&h=400&fit=crop">
+                                        <div class="card-image">
+                                            <img src="https://images.unsplash.com/photo-1478728073286-db190d3d4571?w=600&h=400&fit=crop" alt="Royal Wedding">
+                                        </div>
+                                        <div class="card-overlay">
+                                            <div class="overlay-content">
+                                                <h5>Royal Elegance Wedding</h5>
+                                                <p>180 tamu • Feb 2024</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Carousel Controls -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#weddingCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#weddingCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                    
+                    <!-- Carousel Indicators -->
+                    <div class="carousel-indicators position-relative mt-4">
+                        <button type="button" data-bs-target="#weddingCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#weddingCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#weddingCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- ========== FAMILY GATHERING TAB ========== -->
+            <div class="tab-pane fade" id="family" role="tabpanel">
+                <!-- Family Gathering Carousel -->
+                <div id="familyCarousel" class="carousel slide" data-bs-ride="false">
+                    <div class="carousel-inner">
+                        
+                        <!-- SLIDE 1 (Cards 1-3) -->
+                        <div class="carousel-item active">
+                            <div class="row g-4">
+                                <!-- Card 1: Image - FAMILY REUNION 1 -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="portfolio-card image-card" data-bs-toggle="modal" data-bs-target="#imageModal" 
+                                        data-title="Family Reunion Besar 2023"
+                                        data-description="Reuni keluarga besar dengan 3 generasi. Acara diadakan di outdoor area dengan berbagai games tradisional dan makan bersama."
+                                        data-date="5 Januari 2023"
+                                        data-guests="120"
+                                        data-image="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop">
+                                        <div class="card-image">
+                                            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop" alt="Family Reunion">
+                                        </div>
+                                        <div class="card-overlay">
+                                            <div class="overlay-content">
+                                                <h5>Family Reunion 2023</h5>
+                                                <p>120 anggota • Jan 2023</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Card 2: Image - FAMILY DINNER -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="portfolio-card image-card" data-bs-toggle="modal" data-bs-target="#imageModal"
+                                        data-title="Family Dinner Intimate"
+                                        data-description="Makan malam keluarga intim dengan menu khusus. Dekorasi meja yang cozy dengan lighting hangat untuk suasana kekeluargaan."
+                                        data-date="18 Februari 2023"
+                                        data-guests="25"
+                                        data-image="https://images.unsplash.com/photo-1547592180-85f173990554?w=600&h=400&fit=crop">
+                                        <div class="card-image">
+                                            <img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=600&h=400&fit=crop" alt="Family Dinner">
+                                        </div>
+                                        <div class="card-overlay">
+                                            <div class="overlay-content">
+                                                <h5>Intimate Family Dinner</h5>
+                                                <p>25 anggota • Feb 2023</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Card 3: Image - OUTDOOR FAMILY GATHERING -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="portfolio-card image-card" data-bs-toggle="modal" data-bs-target="#imageModal"
+                                        data-title="Outdoor BBQ Family Day"
+                                        data-description="Hari keluarga dengan BBQ outdoor, games untuk anak-anak, dan kegiatan bonding. Area playground khusus untuk anak-anak."
+                                        data-date="12 Maret 2023"
+                                        data-guests="60"
+                                        data-image="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&h=400&fit=crop">
+                                        <div class="card-image">
+                                            <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&h=400&fit=crop" alt="Family BBQ">
+                                        </div>
+                                        <div class="card-overlay">
+                                            <div class="overlay-content">
+                                                <h5>Family BBQ Day</h5>
+                                                <p>60 anggota • Mar 2023</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- SLIDE 2 (Cards 4-6) -->
+                        <div class="carousel-item">
+                            <div class="row g-4">
+                                <!-- Card 4: Image - FAMILY CELEBRATION -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="portfolio-card image-card" data-bs-toggle="modal" data-bs-target="#imageModal"
+                                        data-title="Family Graduation Celebration"
+                                        data-description="Perayaan kelulusan anggota keluarga. Dekorasi dengan tema akademik dan surprise party untuk kelulusan sarjana."
+                                        data-date="25 Juni 2023"
+                                        data-guests="40"
+                                        data-image="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=600&h=400&fit=crop">
+                                        <div class="card-image">
+                                            <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=600&h=400&fit=crop" alt="Graduation Party">
+                                        </div>
+                                        <div class="card-overlay">
+                                            <div class="overlay-content">
+                                                <h5>Graduation Party</h5>
+                                                <p>40 anggota • Jun 2023</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Card 5: Image - FAMILY HOLIDAY PARTY -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="portfolio-card image-card" data-bs-toggle="modal" data-bs-target="#imageModal"
+                                        data-title="Family Holiday Party"
+                                        data-description="Pesta keluarga saat liburan dengan tema natal. Dekorasi winter wonderland dengan pohon natal besar dan hadiah untuk anak-anak."
+                                        data-date="24 Desember 2023"
+                                        data-guests="50"
+                                        data-image="https://images.unsplash.com/photo-1513889961551-628c1e5c2f93?w=600&h=400&fit=crop">
+                                        <div class="card-image">
+                                            <img src="https://images.unsplash.com/photo-1513889961551-628c1e5c2f93?w=600&h=400&fit=crop" alt="Holiday Party">
+                                        </div>
+                                        <div class="card-overlay">
+                                            <div class="overlay-content">
+                                                <h5>Holiday Family Party</h5>
+                                                <p>50 anggota • Des 2023</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Card 6: Image - FAMILY PICNIC -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="portfolio-card image-card" data-bs-toggle="modal" data-bs-target="#imageModal"
+                                        data-title="Family Weekend Picnic"
+                                        data-description="Piknik keluarga akhir pekan di area garden venue. Aktivitas outdoor seperti badminton, frisbee, dan board games."
+                                        data-date="14 April 2023"
+                                        data-guests="35"
+                                        data-image="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop">
+                                        <div class="card-image">
+                                            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop" alt="Family Picnic">
+                                        </div>
+                                        <div class="card-overlay">
+                                            <div class="overlay-content">
+                                                <h5>Weekend Family Picnic</h5>
+                                                <p>35 anggota • Apr 2023</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- SLIDE 3 (Cards 7-9) -->
+                        <div class="carousel-item">
+                            <div class="row g-4">
+                                <!-- Card 7: Image - FAMILY GAME NIGHT -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="portfolio-card image-card" data-bs-toggle="modal" data-bs-target="#imageModal"
+                                        data-title="Family Game Night"
+                                        data-description="Malam permainan keluarga dengan berbagai board games dan konsol game. Snack bar khusus dengan makanan favorit keluarga."
+                                        data-date="8 Juli 2023"
+                                        data-guests="20"
+                                        data-image="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=600&h=400&fit=crop">
+                                        <div class="card-image">
+                                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=600&h=400&fit=crop" alt="Family Game Night">
+                                        </div>
+                                        <div class="card-overlay">
+                                            <div class="overlay-content">
+                                                <h5>Family Game Night</h5>
+                                                <p>20 anggota • Jul 2023</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Card 8: Image - FAMILY BUFFET -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="portfolio-card image-card" data-bs-toggle="modal" data-bs-target="#imageModal"
+                                        data-title="Family Buffet Gathering"
+                                        data-description="Gathering keluarga dengan sistem buffet. Berbagai menu masakan tradisional dan internasional untuk semua usia."
+                                        data-date="19 Agustus 2023"
+                                        data-guests="75"
+                                        data-image="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600&h=400&fit=crop">
+                                        <div class="card-image">
+                                            <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600&h=400&fit=crop" alt="Family Buffet">
+                                        </div>
+                                        <div class="card-overlay">
+                                            <div class="overlay-content">
+                                                <h5>Family Buffet Gathering</h5>
+                                                <p>75 anggota • Agu 2023</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Card 9: Image - FAMILY POTLUCK -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="portfolio-card image-card" data-bs-toggle="modal" data-bs-target="#imageModal"
+                                        data-title="Family Potluck Party"
+                                        data-description="Acara potluck dimana setiap keluarga membawa makanan khas masing-masing. Berbagi resep dan cerita keluarga."
+                                        data-date="30 September 2023"
+                                        data-guests="45"
+                                        data-image="https://images.unsplash.com/photo-1544025162-d76694265947?w=600&h=400&fit=crop">
+                                        <div class="card-image">
+                                            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=600&h=400&fit=crop" alt="Family Potluck">
+                                        </div>
+                                        <div class="card-overlay">
+                                            <div class="overlay-content">
+                                                <h5>Family Potluck Party</h5>
+                                                <p>45 anggota • Sep 2023</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Carousel Controls -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#familyCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#familyCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                    
+                    <!-- Carousel Indicators -->
+                    <div class="carousel-indicators position-relative mt-4">
+                        <button type="button" data-bs-target="#familyCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#familyCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#familyCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== BIRTHDAY TAB ========== -->
+            <div class="tab-pane fade" id="birthday" role="tabpanel">
+                <!-- Birthday Carousel -->
+                <div id="birthdayCarousel" class="carousel slide" data-bs-ride="false">
+                    <div class="carousel-inner">
+                        
+                        <!-- SLIDE 1 (Cards 1-3) -->
+                        <div class="carousel-item active">
+                            <div class="row g-4">
+                                <!-- Card 1: Image - BIRTHDAY PARTY 1 -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="portfolio-card image-card" data-bs-toggle="modal" data-bs-target="#imageModal" 
+                                        data-title="Sweet 17 Birthday Celebration"
+                                        data-description="Pesta ulang tahun ke-17 dengan tema pastel dream. Dekorasi bunga-bunga dan balloon arch yang Instagramable untuk foto-foto."
+                                        data-date="8 Maret 2023"
+                                        data-guests="50"
+                                        data-image="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=600&h=400&fit=crop">
+                                        <div class="card-image">
+                                            <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=600&h=400&fit=crop" alt="Sweet 17 Party">
+                                        </div>
+                                        <div class="card-overlay">
+                                            <div class="overlay-content">
+                                                <h5>Sweet 17 Party</h5>
+                                                <p>50 tamu • Mar 2023</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Card 2: Image - KIDS BIRTHDAY -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="portfolio-card image-card" data-bs-toggle="modal" data-bs-target="#imageModal"
+                                        data-title="Kids Superhero Birthday Party"
+                                        data-description="Pesta ulang tahun anak dengan tema superhero. Area bermain, face painting, dan superhero mascot untuk menghibur anak-anak."
+                                        data-date="15 April 2023"
+                                        data-guests="30"
+                                        data-image="https://images.unsplash.com/photo-1531315630201-bb15abeb1653?w=600&h=400&fit=crop">
+                                        <div class="card-image">
+                                            <img src="https://images.unsplash.com/photo-1531315630201-bb15abeb1653?w=600&h=400&fit=crop" alt="Kids Birthday">
+                                        </div>
+                                        <div class="card-overlay">
+                                            <div class="overlay-content">
+                                                <h5>Superhero Kids Party</h5>
+                                                <p>30 anak • Apr 2023</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Card 3: Image - ADULT BIRTHDAY -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="portfolio-card image-card" data-bs-toggle="modal" data-bs-target="#imageModal"
+                                        data-title="30th Birthday Dinner Party"
+                                        data-description="Pesta ulang tahun ke-30 dengan dinner elegan. Live acoustic music, wine pairing, dan sophisticated decor untuk acara dewasa."
+                                        data-date="22 Mei 2023"
+                                        data-guests="40"
+                                        data-image="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=600&h=400&fit=crop">
+                                        <div class="card-image">
+                                            <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=600&h=400&fit=crop" alt="30th Birthday">
+                                        </div>
+                                        <div class="card-overlay">
+                                            <div class="overlay-content">
+                                                <h5>30th Birthday Dinner</h5>
+                                                <p>40 tamu • Mei 2023</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- SLIDE 2 (Cards 4-6) -->
+                        <div class="carousel-item">
+                            <div class="row g-4">
+                                <!-- Card 4: Image - SURPRISE PARTY -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="portfolio-card image-card" data-bs-toggle="modal" data-bs-target="#imageModal"
+                                        data-title="Surprise Birthday Party"
+                                        data-description="Pesta kejutan ulang tahun dengan tema masquerade ball. Tamu menggunakan masker dan ada magic show sebagai hiburan utama."
+                                        data-date="10 Juni 2023"
+                                        data-guests="60"
+                                        data-image="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&h=400&fit=crop">
+                                        <div class="card-image">
+                                            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&h=400&fit=crop" alt="Surprise Party">
+                                        </div>
+                                        <div class="card-overlay">
+                                            <div class="overlay-content">
+                                                <h5>Surprise Birthday Party</h5>
+                                                <p>60 tamu • Jun 2023</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Card 5: Image - BIRTHDAY BRUNCH -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="portfolio-card image-card" data-bs-toggle="modal" data-bs-target="#imageModal"
+                                        data-title="Birthday Brunch Gathering"
+                                        data-description="Brunch spesial ulang tahun dengan menu buffet internasional. Setup outdoor dengan garden view dan live cooking station."
+                                        data-date="5 Juli 2023"
+                                        data-guests="35"
+                                        data-image="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&h=400&fit=crop">
+                                        <div class="card-image">
+                                            <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&h=400&fit=crop" alt="Birthday Brunch">
+                                        </div>
+                                        <div class="card-overlay">
+                                            <div class="overlay-content">
+                                                <h5>Birthday Brunch Party</h5>
+                                                <p>35 tamu • Jul 2023</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Card 6: Image - PRINCESS BIRTHDAY -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="portfolio-card image-card" data-bs-toggle="modal" data-bs-target="#imageModal"
+                                        data-title="Princess Theme Birthday"
+                                        data-description="Pesta ulang tahun anak perempuan bertema putri. Castle backdrop, dress-up corner, dan fairy tale decorations."
+                                        data-date="18 Agustus 2023"
+                                        data-guests="25"
+                                        data-image="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=600&h=400&fit=crop">
+                                        <div class="card-image">
+                                            <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=600&h=400&fit=crop" alt="Princess Party">
+                                        </div>
+                                        <div class="card-overlay">
+                                            <div class="overlay-content">
+                                                <h5>Princess Theme Birthday</h5>
+                                                <p>25 anak • Agu 2023</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- SLIDE 3 (Cards 7-9) -->
+                        <div class="carousel-item">
+                            <div class="row g-4">
+                                <!-- Card 7: Image - MILESTONE BIRTHDAY -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="portfolio-card image-card" data-bs-toggle="modal" data-bs-target="#imageModal"
+                                        data-title="50th Milestone Birthday"
+                                        data-description="Perayaan ulang tahun ke-50 yang elegan. Tema gold celebration dengan foto-foto perjalanan hidup dan speech dari keluarga."
+                                        data-date="12 September 2023"
+                                        data-guests="80"
+                                        data-image="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&h=400&fit=crop">
+                                        <div class="card-image">
+                                            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&h=400&fit=crop" alt="50th Birthday">
+                                        </div>
+                                        <div class="card-overlay">
+                                            <div class="overlay-content">
+                                                <h5>50th Milestone Birthday</h5>
+                                                <p>80 tamu • Sep 2023</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Card 8: Image - SPORTS THEME -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="portfolio-card image-card" data-bs-toggle="modal" data-bs-target="#imageModal"
+                                        data-title="Sports Theme Birthday"
+                                        data-description="Pesta ulang tahun bertema olahraga. Mini games area, jersey dress code, dan trophy untuk pemenang kompetisi."
+                                        data-date="3 Oktober 2023"
+                                        data-guests="45"
+                                        data-image="https://images.unsplash.com/photo-1511882150382-421056c89033?w=600&h=400&fit=crop">
+                                        <div class="card-image">
+                                            <img src="https://images.unsplash.com/photo-1511882150382-421056c89033?w=600&h=400&fit=crop" alt="Sports Party">
+                                        </div>
+                                        <div class="card-overlay">
+                                            <div class="overlay-content">
+                                                <h5>Sports Theme Birthday</h5>
+                                                <p>45 tamu • Okt 2023</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Card 9: Image - RETRO THEME -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="portfolio-card image-card" data-bs-toggle="modal" data-bs-target="#imageModal"
+                                        data-title="Retro 80's Birthday Party"
+                                        data-description="Pesta ulang tahun bertema retro 80-an. Musik era 80s, dress code warna neon, dan dekorasi vintage yang nostalgic."
+                                        data-date="21 November 2023"
+                                        data-guests="55"
+                                        data-image="https://images.unsplash.com/photo-1492684223066-e9e4aab4d25e?w=600&h=400&fit=crop">
+                                        <div class="card-image">
+                                            <img src="https://images.unsplash.com/photo-1492684223066-e9e4aab4d25e?w=600&h=400&fit=crop" alt="Retro Party">
+                                        </div>
+                                        <div class="card-overlay">
+                                            <div class="overlay-content">
+                                                <h5>Retro 80's Birthday Party</h5>
+                                                <p>55 tamu • Nov 2023</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Carousel Controls -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#birthdayCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#birthdayCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                    
+                    <!-- Carousel Indicators -->
+                    <div class="carousel-indicators position-relative mt-4">
+                        <button type="button" data-bs-target="#birthdayCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#birthdayCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#birthdayCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- ========== IMAGE MODAL ========== -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content bg-dark border border-secondary">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title text-white" id="imageModalTitle"></h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <img id="modalImage" src="" class="img-fluid w-100" alt="Event Image">
+                    <div class="p-4">
+                        <p class="text-light" id="modalDescription"></p>
+                        <div class="row mt-3">
+                            <div class="col-md-6">
+                                <p class="text-light mb-1"><i class="bi bi-calendar3 me-2"></i> <strong>Tanggal:</strong> <span id="modalDate"></span></p>
+                            </div>
+                            <div class="col-md-6">
+                                <p class="text-light mb-1"><i class="bi bi-people me-2"></i> <strong>Jumlah Tamu:</strong> <span id="modalGuests"></span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== SECTION 6: BOOKING CTA WITH VIDEO ========== -->
+    <section id="booking" class="booking-cta-section position-relative py-5 overflow-hidden">
+        <!-- Background Video -->
+        <div class="cta-video-container position-absolute top-0 start-0 w-100 h-100">
+            <video autoplay muted loop playsinline class="cta-video w-100 h-100 object-fit-cover">
+                <source src="asset/BG vid 1.mp4" type="video/mp4">
+                <img src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?w=1920&q=80" 
+                    alt="Happy Event Background" 
+                    class="w-100 h-100 object-fit-cover">
+            </video>
+            <div class="video-overlay position-absolute top-0 start-0 w-100 h-100"></div>
+        </div>
+        
+        <!-- CTA Content -->
+        <div class="container position-relative py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-xl-7 text-center" data-aos="fade-up">
+                    <!-- Section Title -->
+                    <h2 class="display-4 fw-bold text-white mb-4">
+                        BOOKING TEMPAT ACARA 
+                    </h2>
+                    
+                    <!-- Description -->
+                    <p class="lead text-white mb-5">
+                        Jangan sampai tanggal yang Anda inginkan sudah diambil orang lain!<br>
+                        Booking sekarang untuk mendapatkan penawaran terbaik.
+                    </p>
+                    
+                    <!-- Single CTA Button with Both Icons -->
+                    <a href="https://wa.me/6281234567890?text=Halo%20Warung%20Bakkak%2C%20saya%20ingin%20booking%20tempat%20acara.%20Apakah%20ada%20tanggal%20yang%20tersedia%20untuk%20bulan%20depan%3F%20Bisa%20dibantu%20dengan%20penawaran%20terbaiknya%3F" 
+                    class="btn btn-cta-booking btn-lg px-5 py-4 fw-bold d-inline-flex align-items-center justify-content-center gap-3"
+                    target="_blank">
+                        <!-- Left Icon - Calendar -->
+                        <i class="bi bi-calendar-check fs-3"></i>
+                        <!-- Center Text -->
+                        <span class="fs-4">BOOKING VIA WHATSAPP</span>
+                        <!-- Right Icon - WhatsApp -->
+                        <i class="bi bi-whatsapp fs-3"></i>
+                    </a>
+                    
+                    <!-- Additional Info -->
+                    <div class="additional-info text-white mt-5 pt-3 border-top border-white-25">
+                        <p class="mb-2">
+                            <i class="bi bi-check-circle me-2 text-success"></i>
+                            Gratis konsultasi venue & dekorasi
+                        </p>
+                        <p class="mb-0">
+                            <i class="bi bi-check-circle me-2 text-success"></i>
+                            Konfirmasi instant via WhatsApp
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SECTION 7: FAQ (CARD LAYOUT) ========== -->
+    <section class="faq-section py-5" style="background: linear-gradient(135deg, #8B4513 0%, #5D2906 100%);">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="display-5 fw-bold mb-3 text-white">❓ SEMUA YANG PERLU ANDA KETAHUI TENTANG <br> SEWA TEMPAT</h2>
+                <p class="lead text-warning">Informasi lengkap untuk kebutuhan acara Anda</p>
+            </div>
+            
+            <!-- Horizontal Scroll Container - PURE CSS -->
+            <div class="faq-scroll-wrapper mb-5" data-aos="fade-up">           
+                <!-- FAQ Scroll Grid - NO JS NEEDED -->
+                <div class="faq-scroll-container">
+                    <div class="faq-scroll-content">
+                        <!-- FAQ Card 1 -->
+                        <div class="faq-scroll-card">
+                            <div class="faq-scroll-icon">
+                                <i class="bi bi-cash-coin"></i>
+                            </div>
+                            <h5 class="faq-scroll-title">Berapa DP minimal?</h5>
+                            <p class="faq-scroll-text">
+                                DP minimal 50% untuk booking tanggal, sisanya dibayar H-7 acara. 
+                                Pembayaran bisa via transfer bank atau cash.
+                            </p>
+                            <div class="faq-scroll-badge">Pembayaran</div>
+                        </div>
+                        
+                        <!-- FAQ Card 2 -->
+                        <div class="faq-scroll-card">
+                            <div class="faq-scroll-icon">
+                                <i class="bi bi-truck"></i>
+                            </div>
+                            <h5 class="faq-scroll-title">Boleh bawa vendor sendiri?</h5>
+                            <p class="faq-scroll-text">
+                                Boleh membawa vendor eksternal untuk dekorasi, fotografi, atau entertainment. 
+                                Tetapi perlu koordinasi dengan event coordinator kami.
+                            </p>
+                            <div class="faq-scroll-badge">Vendor</div>
+                        </div>
+                        
+                        <!-- FAQ Card 3 -->
+                        <div class="faq-scroll-card">
+                            <div class="faq-scroll-icon">
+                                <i class="bi bi-calendar-week"></i>
+                            </div>
+                            <h5 class="faq-scroll-title">Ada diskon weekday?</h5>
+                            <p class="faq-scroll-text">
+                                Ya! Diskon 10% untuk booking hari Senin-Kamis. 
+                                Weekend (Jumat-Minggu) harga normal, dengan minimum booking 6 jam.
+                            </p>
+                            <div class="faq-scroll-badge">Diskon</div>
+                        </div>
+                        
+                        <!-- FAQ Card 4 -->
+                        <div class="faq-scroll-card">
+                            <div class="faq-scroll-icon">
+                                <i class="bi bi-clock-history"></i>
+                            </div>
+                            <h5 class="faq-scroll-title">Bisa extend waktu?</h5>
+                            <p class="faq-scroll-text">
+                                Bisa extend dengan biaya tambahan Rp 500.000 per jam. 
+                                Harus konfirmasi maksimal 2 jam sebelum waktu berakhir.
+                            </p>
+                            <div class="faq-scroll-badge">Waktu</div>
+                        </div>
+                        
+                        <!-- FAQ Card 5 -->
+                        <div class="faq-scroll-card">
+                            <div class="faq-scroll-icon">
+                                <i class="bi bi-eye"></i>
+                            </div>
+                            <h5 class="faq-scroll-title">Bisa tour venue langsung?</h5>
+                            <p class="faq-scroll-text">
+                                Bisa! Silakan janji via WhatsApp dulu untuk jadwal tour. 
+                                Buka untuk tour setiap hari 10:00-17:00 WIB.
+                            </p>
+                            <div class="faq-scroll-badge">Tour</div>
+                        </div>
+                        
+                        <!-- FAQ Card 6 -->
+                        <div class="faq-scroll-card">
+                            <div class="faq-scroll-icon">
+                                <i class="bi bi-arrow-counterclockwise"></i>
+                            </div>
+                            <h5 class="faq-scroll-title">Apa kebijakan refund?</h5>
+                            <p class="faq-scroll-text">
+                                DP tidak bisa refund, tapi bisa reschedule maksimal 1x. 
+                                Pembatalan H-30 dapat refund 25%, H-14 tidak ada refund.
+                            </p>
+                            <div class="faq-scroll-badge">Kebijakan</div>
+                        </div>
+                        
+                        <!-- FAQ Card 7 -->
+                        <div class="faq-scroll-card">
+                            <div class="faq-scroll-icon">
+                                <i class="bi bi-people"></i>
+                            </div>
+                            <h5 class="faq-scroll-title">Kapasitas maksimal?</h5>
+                            <p class="faq-scroll-text">
+                                Kapasitas maksimal 150 orang untuk standing party, 100 orang untuk seated dining.
+                                Fasilitas full AC dengan sound system profesional.
+                            </p>
+                            <div class="faq-scroll-badge">Kapasitas</div>
+                        </div>
+                        
+                        <!-- FAQ Card 8 -->
+                        <div class="faq-scroll-card">
+                            <div class="faq-scroll-icon">
+                                <i class="bi bi-car-front"></i>
+                            </div>
+                            <h5 class="faq-scroll-title">Ada parkir?</h5>
+                            <p class="faq-scroll-text">
+                                Tersedia parkir untuk 30 mobil dan 50 motor. Gratis untuk tamu acara.
+                                Ada security untuk menjaga keamanan kendaraan.
+                            </p>
+                            <div class="faq-scroll-badge">Parkir</div>
+                        </div>
+                        
+                        <!-- FAQ Card 9 -->
+                        <div class="faq-scroll-card">
+                            <div class="faq-scroll-icon">
+                                <i class="bi bi-music-note"></i>
+                            </div>
+                            <h5 class="faq-scroll-title">Ada sound system?</h5>
+                            <p class="faq-scroll-text">
+                                Sudah termasuk sound system profesional, mic wireless, dan lighting dasar.
+                                Bisa tambahan untuk kebutuhan spesifik dengan biaya tambahan.
+                            </p>
+                            <div class="faq-scroll-badge">Sound System</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- More Questions CTA -->
+            <div class="text-center mt-5" data-aos="fade-up">
+                <div class="faq-cta-card">
+                    <div class="faq-cta-content">
+                        <h4 class="faq-cta-title">Masih ada pertanyaan?</h4>
+                        <p class="faq-cta-text">Tim Warung Bakkak siap membantu Anda 24/7</p>
+                        
+                        <div class="d-flex flex-column flex-md-row gap-3 justify-content-center align-items-center mt-4">
+                            <!-- WhatsApp Button -->
+                            <a href="https://wa.me/6281234567890?text=Halo%20Warung%20Bakkak,%20saya%20ada%20pertanyaan%20tentang%20sewa%20tempat%20acara" 
+                            class="btn btn-whatsapp-faq" target="_blank">
+                                <i class="bi bi-whatsapp me-2"></i>Tanya via WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER (SAMA DENGAN INDEX.HTML) ========== -->
+    <footer class="footer-modern">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <img src="asset/Logo Warung Bakakak.png" alt="Logo" height="50" class="mb-3">
+                    <p class="text-white-50">Waroeng Sambal Bakar menghadirkan cita rasa autentik Indonesia dengan 18 jenis sambal spesial dan pelayanan terbaik.</p>
+                    <div class="social-links mt-3">
+                        <a href="https://www.instagram.com/sampurasunnusasari" target="_blank"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@sampurasunnusasari" target="_blank"><i class="bi bi-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="text-white mb-3">Menu</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html#hero">Home</a></li>
+                        <li><a href="index.html#menu-highlight">Menu Favorit</a></li>
+                        <li><a href="program.html">Program Partnership</a></li>
+                        <li><a href="promo.html">Promo & Kemitraan</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-3">Layanan</h5>
+                    <ul class="footer-links">
+                        <li><a href="peluang-investasi.html">Peluang Investasi</a></li>
+                        <li><a href="info-loker.html">Info Loker</a></li>
+                        <li><a href="sewa-tempat.html">Sewa Tempat</a></li>
+                        <li><a href="index.html#location-preview">Lokasi</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-3">Kontak</h5>
+                    <ul class="footer-contact">
+                        <li><i class="bi bi-envelope-fill me-2"></i>info@waroengsambalbakar.com</li>
+                        <li><i class="bi bi-telephone-fill me-2"></i>021-12345678</li>
+                        <li><i class="bi bi-whatsapp me-2"></i>0812-3456-7890</li>
+                        <li><i class="bi bi-clock-fill me-2"></i>10.00 - 22.00 WIB</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="text-center text-white-50">
+                <p class="mb-0">&copy; 2026 Sampurasun Nusasari. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== JAVASCRIPT LIBRARIES ========== -->
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+    <script src="js/sewa-tempat.js"></script>
+    
+    <script>
+    // Initialize AOS
+    AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 100
+    });
+    
+    // Initialize Swiper carousels
+    document.addEventListener('DOMContentLoaded', function() {
+        // Why Choose Us Carousel (Mobile only)
+        if (window.innerWidth < 992) {
+            new Swiper('.whyChooseCarousel', {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                loop: true,
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+            });
+        }
+        
+        // Venue Gallery Carousel (Mobile only)
+        if (window.innerWidth < 768) {
+            new Swiper('.venueGalleryCarousel', {
+                slidesPerView: 1.2,
+                spaceBetween: 15,
+                centeredSlides: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                loop: true,
+            });
+        }
+        
+        // Package Carousel
+        new Swiper('.packageCarousel', {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,
+                },
+                992: {
+                    slidesPerView: 3,
+                },
+            },
+            loop: true,
+        });
+        
+        // Gallery Modal Handler
+        const galleryModal = document.getElementById('galleryModal');
+        if (galleryModal) {
+            galleryModal.addEventListener('show.bs.modal', function(event) {
+                const button = event.relatedTarget;
+                const title = button.getAttribute('data-title');
+                const desc = button.getAttribute('data-description');
+                const imgSrc = button.querySelector('img').src;
+                
+                const modalTitle = galleryModal.querySelector('.modal-title');
+                const modalImage = galleryModal.querySelector('#modalImage');
+                const modalImageTitle = galleryModal.querySelector('#modalImageTitle');
+                const modalImageDesc = galleryModal.querySelector('#modalImageDesc');
+                
+                modalTitle.textContent = title;
+                modalImage.src = imgSrc;
+                modalImage.alt = title;
+                modalImageTitle.textContent = title;
+                modalImageDesc.textContent = desc;
+            });
+        }
+        
+        // Portfolio Modal Handler (similar to gallery)
+        // ... additional JS for portfolio modal
+    });
+    </script>
+    
+    
+</body>
+</html>

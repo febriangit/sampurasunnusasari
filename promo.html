@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promo Spesial - Warung Sambal Bakar Sampurasun</title>
+    
+    <!-- ========== CSS LIBRARIES (SAMA DENGAN INDEX) ========== -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="promo.css">
+    <link rel="stylesheet" href="promo responsive.css">
+    <script src="promo.js" defer></script>
+
+        <!-- ========== JAVASCRIPT LIBRARIES ========== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Initialize AOS -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 800,
+                once: true,
+                offset: 100
+            });
+        });
+    </script>
+    <!-- Favicon -->
+    <link rel="icon" href="asset/Logo Warung Bakakak.png" type="image/png">
+</head>
+<body>
+
+    <!-- ========== NAVBAR (SAMA PERSIS DENGAN INDEX) ========== -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="asset/Logo Warung Bakakak.png" alt="Logo Warung Sambal Bakar" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Wilujeng Sumping</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="program.html">Program & Partnership</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pilih menu cabang.html">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="location-preview">Lokasi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#promo.html">Promo Spesial</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            More
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-orange" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="sewa tempat.html"><i class="bi bi-calendar-event me-2"></i>Sewa Tempat Acara</a></li>
+                            <li><a class="dropdown-item" href="footer-modern"><i class="bi bi-envelope me-2"></i>Kontak</a></li>
+                            <li><a class="dropdown-item" href="loker.html"><i class="bi bi-briefcase me-2"></i>Info Loker</a></li>
+                            <li><a class="dropdown-item" href="investasi.html"><i class="bi bi-graph-up me-2"></i>Peluang Investasi</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="blog.html"><i class="bi bi-newspaper me-2"></i>Berita</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== HERO SECTION DENGAN BACKGROUND VIDEO ========== -->
+    <section class="promo-hero-video-section">
+        <!-- Background Video -->
+        <video autoplay muted loop playsinline class="promo-hero-video">
+            <source src="asset/vid SECTION BG.mp4" type="video/mp4">
+            Browser Anda tidak mendukung video tag.
+        </video>
+        <div class="promo-hero-overlay"></div>
+        
+        <!-- Hero Content -->
+        <div class="promo-hero-content">
+            <div class="container text-center">              
+                <!-- Judul -->
+                <h1 class="promo-hero-title" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    PROMO SPESIAL
+                </h1>
+                <!-- Logo di Tengah -->
+                <div class="promo-logo-container" data-aos="zoom-in" data-aos-duration="1200">
+                    <img src="asset/Logo Warung Bakakak.png" alt="Logo Warung Bakakak" class="promo-hero-logo">
+                </div>
+                <!-- Deskripsi -->
+                <p class="promo-hero-desc" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                    Nikmati berbagai penawaran menarik dan diskon spesial dari Warung Sambal Bakar Sampurasun. <br>
+                </p>
+            </div>
+        </div>
+    </section>
+
+<!-- ========== PROMO GRID SECTION - 6 CARD GRID ========== -->
+<section id="promo-section" class="promo-grid-section">
+    <div class="container">
+        <!-- Section Header -->
+        <div class="section-header text-center mb-5">
+            <div class="promo-badge-wrapper">
+                <span class="promo-badge-label">🎉 PROMO SPESIAL 🎉</span>
+            </div>
+            <h2 class="section-title">Promo Makanan & Minuman Terbaru</h2>
+            <p class="section-subtitle">
+                Klik tombol <strong>"AMBIL PROMO"</strong> pada setiap banner untuk memilih cabang dan hubungi kami via WhatsApp.
+            </p>
+        </div>
+
+        <!-- Promo Grid - 2 Baris x 3 Kolom -->
+        <div class="promo-grid">
+            <!-- Baris 1 -->
+            <div class="promo-row">
+                <!-- Card 1: Paket Bahagia -->
+                <div class="promo-card">
+                    <div class="promo-card-inner">
+                        <div class="promo-image-wrapper">
+                            <img src="asset/promo 2.jpeg" alt="Paket Bahagia" class="promo-image">
+                            <div class="promo-badge promo-badge-tersedia">Tersedia</div>
+                        </div>
+
+                        <div class="promo-info">
+                            <div class="promo-cabang">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span>Sumedang, Subang, Pasteur</span>
+                            </div>
+
+                            <div class="promo-periode">
+                                <i class="bi bi-calendar-event-fill"></i>
+                                <span>19 - 21 Desember 2025</span>
+                            </div>
+
+                            <div class="promo-kuota">
+                                <i class="bi bi-tag-fill"></i>
+                                <span>Kuota: 20 paket/hari</span>
+                                <span class="promo-sisa">(Sisa 12)</span>
+                            </div>
+
+                            <div class="promo-harga">
+                                <span class="harga-coret">Rp 180.000</span>
+                                <span class="harga-diskon">Rp 59.000</span>
+                            </div>
+
+                            <button class="promo-btn-ambil" 
+                                    data-promo-id="1" 
+                                    data-promo-gambar="asset/promo 2.jpeg"
+                                    data-promo-nama="Paket Bahagia"
+                                    data-cabang='["Sumedang","Subang","Pasteur"]'>
+                                🔴 AMBIL PROMO
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Promo Es Cendol Double -->
+                <div class="promo-card">
+                    <div class="promo-card-inner">
+                        <div class="promo-image-wrapper">
+                            <img src="asset/promo 2.jpeg" alt="Promo Es Cendol Double" class="promo-image">
+                            <div class="promo-badge promo-badge-tersedia">Tersedia</div>
+                        </div>
+
+                        <div class="promo-info">
+                            <div class="promo-cabang">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span>Lembang, Soreang</span>
+                            </div>
+
+                            <div class="promo-periode">
+                                <i class="bi bi-calendar-event-fill"></i>
+                                <span>1 - 31 Januari 2026</span>
+                            </div>
+
+                            <div class="promo-kuota">
+                                <i class="bi bi-tag-fill"></i>
+                                <span>Kuota: 100 cup/hari</span>
+                                <span class="promo-sisa">(Sisa 45)</span>
+                            </div>
+
+                            <div class="promo-harga">
+                                <span class="harga-coret">Rp 30.000</span>
+                                <span class="harga-diskon">Rp 15.000</span>
+                            </div>
+
+                            <button class="promo-btn-ambil" 
+                                    data-promo-id="2" 
+                                    data-promo-gambar="https://i.pinimg.com/736x/5f/7d/8a/5f7d8acf2592796e1982d2624e40548e.jpg"
+                                    data-promo-nama="Es Cendol Double"
+                                    data-cabang='["Lembang","Soreang"]'>
+                                🔴 AMBIL PROMO
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Weekend Special 40% -->
+                <div class="promo-card">
+                    <div class="promo-card-inner">
+                        <div class="promo-image-wrapper">
+                            <img src="asset/promo 2.jpeg" alt="Weekend Special 40%" class="promo-image">
+                            <div class="promo-badge promo-badge-tersedia">Tersedia</div>
+                        </div>
+
+                        <div class="promo-info">
+                            <div class="promo-cabang">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span>Semua Cabang</span>
+                            </div>
+
+                            <div class="promo-periode">
+                                <i class="bi bi-calendar-event-fill"></i>
+                                <span>Setiap Sabtu-Minggu</span>
+                            </div>
+
+                            <div class="promo-kuota">
+                                <i class="bi bi-tag-fill"></i>
+                                <span>Min. Rp 100.000</span>
+                            </div>
+
+                            <div class="promo-harga">
+                                <span class="harga-diskon">DISKON 40%</span>
+                            </div>
+
+                            <button class="promo-btn-ambil" 
+                                    data-promo-id="3" 
+                                    data-promo-gambar="https://i.pinimg.com/736x/37/e6/b2/37e6b2f6e489ec78b288cd731d18992a.jpg"
+                                    data-promo-nama="Weekend Special 40%"
+                                    data-cabang='["Sumedang","Subang","Pasteur","Lembang","Soreang","Soreang 2"]'>
+                                🔴 AMBIL PROMO
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Baris 2 -->
+            <div class="promo-row">
+                <!-- Card 4: Sarapan Hemat 50% -->
+                <div class="promo-card">
+                    <div class="promo-card-inner">
+                        <div class="promo-image-wrapper">
+                            <img src="asset/promo 2.jpeg" alt="Sarapan Hemat 50%" class="promo-image">
+                            <div class="promo-badge promo-badge-tersedia">Tersedia</div>
+                        </div>
+
+                        <div class="promo-info">
+                            <div class="promo-cabang">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span>Sumedang, Subang</span>
+                            </div>
+
+                            <div class="promo-periode">
+                                <i class="bi bi-calendar-event-fill"></i>
+                                <span>07.00 - 10.00 WIB</span>
+                            </div>
+
+                            <div class="promo-kuota">
+                                <i class="bi bi-tag-fill"></i>
+                                <span>Setiap hari</span>
+                            </div>
+
+                            <div class="promo-harga">
+                                <span class="harga-diskon">DISKON 50%</span>
+                            </div>
+
+                            <button class="promo-btn-ambil" 
+                                    data-promo-id="4" 
+                                    data-promo-gambar="https://i.pinimg.com/736x/ee/39/b5/ee39b5216912435437ea4dc877396bcc.jpg"
+                                    data-promo-nama="Sarapan Hemat 50%"
+                                    data-cabang='["Sumedang","Subang"]'>
+                                🔴 AMBIL PROMO
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5: Student Discount 35% -->
+                <div class="promo-card">
+                    <div class="promo-card-inner">
+                        <div class="promo-image-wrapper">
+                            <img src="asset/promo 2.jpeg" alt="Student Discount 35%" class="promo-image">
+                            <div class="promo-badge promo-badge-tersedia">Tersedia</div>
+                        </div>
+
+                        <div class="promo-info">
+                            <div class="promo-cabang">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span>Pasteur, Lembang</span>
+                            </div>
+
+                            <div class="promo-periode">
+                                <i class="bi bi-calendar-event-fill"></i>
+                                <span>Selama Januari 2026</span>
+                            </div>
+
+                            <div class="promo-kuota">
+                                <i class="bi bi-tag-fill"></i>
+                                <span>Min. Rp 50.000</span>
+                            </div>
+
+                            <div class="promo-harga">
+                                <span class="harga-diskon">DISKON 35%</span>
+                            </div>
+
+                            <button class="promo-btn-ambil" 
+                                    data-promo-id="5" 
+                                    data-promo-gambar="https://i.pinimg.com/736x/88/6a/da/886adaccc3856b60a000620a8ccfedcd.jpg"
+                                    data-promo-nama="Student Discount 35%"
+                                    data-cabang='["Pasteur","Lembang"]'>
+                                🔴 AMBIL PROMO
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6: Cashback 25% -->
+                <div class="promo-card">
+                    <div class="promo-card-inner">
+                        <div class="promo-image-wrapper">
+                            <img src="asset/promo 2.jpeg" alt="Cashback 25%" class="promo-image">
+                            <div class="promo-badge promo-badge-tersedia">Tersedia</div>
+                        </div>
+
+                        <div class="promo-info">
+                            <div class="promo-cabang">
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <span>Soreang, Soreang 2</span>
+                            </div>
+
+                            <div class="promo-periode">
+                                <i class="bi bi-calendar-event-fill"></i>
+                                <span>20 - 25 Des 2025</span>
+                            </div>
+
+                            <div class="promo-kuota">
+                                <i class="bi bi-tag-fill"></i>
+                                <span>Min. Rp 150.000</span>
+                            </div>
+
+                            <div class="promo-harga">
+                                <span class="harga-diskon">CASHBACK 25%</span>
+                            </div>
+
+                            <button class="promo-btn-ambil" 
+                                    data-promo-id="6" 
+                                    data-promo-gambar="https://i.pinimg.com/1200x/64/27/1a/64271a49f982e58be10618af588d82eb.jpg"
+                                    data-promo-nama="Cashback 25%"
+                                    data-cabang='["Soreang","Soreang 2"]'>
+                                🔴 AMBIL PROMO
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== WHATSAPP MODAL ========== -->
+<div class="whatsapp-modal-promo" id="whatsappModal">
+    <div class="whatsapp-modal-header">
+        <h5><i class="fab fa-whatsapp me-2"></i> Pilih Cabang</h5>
+        <button class="whatsapp-close-btn" id="closeWhatsappModal">&times;</button>
+    </div>
+
+    <div class="whatsapp-modal-body" id="modalCabangList">
+        <!-- Daftar cabang akan diisi secara dinamis oleh JavaScript -->
+        <div style="text-align: center; color: #FFD700; padding: 20px;">
+            <i class="fas fa-spinner fa-spin"></i> Memuat data cabang...
+        </div>
+    </div>
+
+    <div class="whatsapp-modal-footer">
+        <p class="mb-0">Pilih cabang untuk mengambil promo</p>
+    </div>
+</div>
+<!-- Backdrop untuk modal -->
+<div id="modalBackdrop" class="modal-backdrop-custom"></div>
+
+    <!-- ========== FOOTER (SAMA PERSIS DENGAN INDEX) ========== -->
+    <footer class="footer-modern">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <img src="asset/Logo Warung Bakakak.png" alt="Logo Warung Sambal Bakar" height="50" class="mb-3">
+                    <p class="text-white-50">Waroeng Sambal Bakar Sampurasun menghadirkan cita rasa autentik Indonesia dengan 18 jenis sambal spesial dan pelayanan terbaik sejak 1996.</p>
+                    <div class="social-links mt-3">
+                        <a href="https://www.instagram.com/sampurasunnusasari" target="_blank" class="social-icon">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@sampurasunnusasari" target="_blank" class="social-icon">
+                            <i class="bi bi-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="text-white mb-3">Menu</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Wilujeng Sumping</a></li>
+                        <li><a href="pilih menu cabang.html">Menu</a></li>
+                        <li><a href="program.html">Program Partnership</a></li>
+                        <li><a href="promo.html">Promo Spesial</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-3">Layanan</h5>
+                    <ul class="footer-links">
+                        <li><a href="investasi.html">Peluang Investasi</a></li>
+                        <li><a href="loker.html">Info Loker</a></li>
+                        <li><a href="sewa tempat.html">Sewa Tempat Acara</a></li>
+                        <li><a href="location-preview">Lokasi Cabang</a></li>
+                        <li><a href="blog.html">Berita & Artikel</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-3">Kontak</h5>
+                    <ul class="footer-contact">
+                        <li><i class="bi bi-envelope-fill me-2"></i>pelajarsumedang@gmail.com</li>
+                        <li><i class="bi bi-telephone-fill me-2"></i>0812- 1431-1134</li>
+                        <li><i class="bi bi-whatsapp me-2"></i>0821-1567-3887</li>
+                        <li><i class="bi bi-clock-fill me-2"></i>10.00 - 22.00 WIB</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="text-center text-white-50">
+                <p class="mb-0">&copy; 2026 Sampurasun Nusasari. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== JAVASCRIPT LIBRARIES ========== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+    
+    <!-- Initialize AOS -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 800,
+                once: true,
+                offset: 100
+            });
+        });
+    </script>
+    <!-- ================================================
+     DROPDOWN FIX MOBILE — Pasang sebelum </body>
+     ================================================ -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+        // Ambil semua dropdown toggle di dalam navbar mobile
+        const dropdownToggles = document.querySelectorAll('#navbarNav .dropdown-toggle');
+
+        dropdownToggles.forEach(function (toggle) {
+            toggle.addEventListener('click', function (e) {
+                // Hentikan Bootstrap default behavior yang mungkin conflict
+                e.preventDefault();
+                e.stopPropagation();
+
+                const parentItem = this.closest('.nav-item');
+                const dropdownMenu = parentItem.querySelector('.dropdown-menu');
+
+                // Jika sudah terbuka, tutup
+                if (parentItem.classList.contains('show')) {
+                    parentItem.classList.remove('show');
+                    if (dropdownMenu) dropdownMenu.classList.remove('show');
+                } else {
+                    // Tutup semua dropdown lain dulu
+                    document.querySelectorAll('#navbarNav .nav-item.show').forEach(function (openItem) {
+                        openItem.classList.remove('show');
+                        const openMenu = openItem.querySelector('.dropdown-menu');
+                        if (openMenu) openMenu.classList.remove('show');
+                    });
+
+                    // Buka dropdown ini
+                    parentItem.classList.add('show');
+                    if (dropdownMenu) dropdownMenu.classList.add('show');
+                }
+            });
+        });
+
+        // Tutup dropdown kalau klik di luar area navbar
+        document.addEventListener('click', function (e) {
+            if (!e.target.closest('#navbarNav')) {
+                document.querySelectorAll('#navbarNav .nav-item.show').forEach(function (openItem) {
+                    openItem.classList.remove('show');
+                    const openMenu = openItem.querySelector('.dropdown-menu');
+                    if (openMenu) openMenu.classList.remove('show');
+                });
+            }
+        });
+
+    });
+    </script>
+
+</body>
+</html>

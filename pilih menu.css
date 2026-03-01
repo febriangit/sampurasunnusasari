@@ -1,0 +1,794 @@
+/* ============================================
+   VARIABLES & ROOT SETTINGS - COKLAT ORANGE TUA
+   ============================================ */
+:root {
+    /* Warna tema coklat orange tua */
+    --dark-brown: #3d2709;      /* Coklat orange tua untuk background */
+    --section-bg: #4E342E;      /* Coklat semu orange tua untuk section */
+    --card-bg: #8D6E63;         /* Coklat terang untuk card background */
+    --card-light: #A1887F;      /* Coklat lebih terang untuk card highlight */
+    --border-light: #BCAAA4;    /* Coklat terang untuk border */
+    --cream: #FFECB3;           /* Cream orange untuk teks */
+    --light-cream: #FFF8E1;     /* Cream lebih terang */
+    
+    /* Warna tombol sesuai tema */
+    --btn-primary: #FF9800;     /* Orange */
+    --btn-success: #8BC34A;     /* Hijau terang */
+    --btn-warning: #FFC107;     /* Kuning */
+    --btn-danger: #F44336;      /* Merah */
+    --btn-info: #2196F3;        /* Biru */
+    
+    /* Warna border tombol */
+    --border-primary: #F57C00;
+    --border-success: #7CB342;
+    --border-warning: #FFB300;
+    --border-danger: #E53935;
+    --border-info: #1976D2;
+    
+    /* Warna icon */
+    --icon-primary: #FF9800;
+    --icon-success: #8BC34A;
+    --icon-warning: #FFC107;
+    --icon-danger: #F44336;
+    --icon-info: #2196F3;
+    
+    /* Shadow */
+    --shadow-light: rgba(0, 0, 0, 0.1);
+    --shadow-medium: rgba(0, 0, 0, 0.15);
+    --shadow-dark: rgba(0, 0, 0, 0.25);
+    
+    /* Transition */
+    --transition: all 0.3s ease;
+}
+
+/* ============================================
+   GLOBAL RESET & BASE STYLES
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--dark-brown);
+    color: var(--cream);
+    min-height: 100vh;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* ============================================
+   MAIN SECTION - BACKGROUND COKLAT SEMU ORANGE TUA
+   ============================================ */
+.main-section {
+    background: linear-gradient(135deg, var(--section-bg) 0%, var(--dark-brown) 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Pattern background subtle */
+.main-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(255, 152, 0, 0.05) 0%, transparent 20%),
+        radial-gradient(circle at 80% 20%, rgba(255, 193, 7, 0.05) 0%, transparent 20%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
+    position: relative;
+    z-index: 1;
+}
+
+/* ============================================
+   HEADER & TYPOGRAPHY
+   ============================================ */
+.text-center {
+    text-align: center;
+}
+
+.restaurant-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    color: var(--light-cream);
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px var(--shadow-dark);
+    letter-spacing: 1px;
+    line-height: 1.2;
+    position: relative;
+    display: inline-block;
+}
+
+.restaurant-title::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 3px;
+    background: linear-gradient(to right, transparent, var(--cream), transparent);
+    border-radius: 2px;
+}
+
+.restaurant-subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    color: var(--border-light);
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.5px;
+    opacity: 0.9;
+}
+
+.description {
+    margin-bottom: 2.5rem !important;
+}
+
+.lead {
+    font-size: clamp(1rem, 1.2vw, 1.1rem);
+    color: var(--light-cream);
+    line-height: 1.7;
+    background: rgba(78, 52, 46, 0.7);
+    padding: 1.2rem 1.5rem;
+    border-radius: 10px;
+    border-left: 3px solid var(--border-light);
+    backdrop-filter: blur(5px);
+    max-width: 700px;
+    margin: 0 auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================================
+   CARDS CONTAINER
+   ============================================ */
+.cards-container {
+    margin-top: 1.5rem;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -12px;
+    margin-left: -12px;
+}
+
+.mb-4 {
+    margin-bottom: 1.2rem !important;
+}
+
+.justify-content-center {
+    justify-content: center !important;
+}
+
+/* ============================================
+   CARD STYLING - SIZE LEBIH KECIL & ATTRACTIVE
+   ============================================ */
+.menu-card {
+    background: #492705 !important;
+    border: 2px solid #F57C00 !important;
+    border-radius: 12px !important;
+    transition: var(--transition);
+    height: 240px; /* Ukuran lebih kecil */
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 6px 15px var(--shadow-medium);
+    cursor: pointer;
+}
+
+.menu-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px var(--shadow-dark);
+    border-color: var(--cream) !important;
+    color: #FF9800 !important;
+}
+
+.menu-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(to right, var(--border-light), transparent);
+    border-radius: 12px 12px 0 0;
+    z-index: 1;
+}
+
+/* Card Body */
+.card-body {
+    padding: 1.5rem 1.2rem !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    height: 100%;
+}
+
+/* Card Icon */
+.card-icon {
+    margin-bottom: 0.8rem;
+    width: 70px; /* Lebih kecil */
+    height: 70px; /* Lebih kecil */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    transition: var(--transition);
+    backdrop-filter: blur(5px);
+}
+
+.menu-card:hover .card-icon {
+    transform: scale(1.1) rotate(5deg);
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.card-icon i {
+    font-size: 2.2rem; /* Lebih kecil */
+    transition: var(--transition);
+}
+
+/* Card Title */
+.card-title {
+    font-size: clamp(1.1rem, 1.3vw, 1.2rem);
+    font-weight: 600;
+    color: var(--light-cream);
+    margin-bottom: 0.8rem !important;
+    text-align: center;
+    line-height: 1.3;
+    padding: 0 0.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    min-height: 2.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ============================================
+   BUTTON STYLING
+   ============================================ */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6rem 1.5rem !important;
+    font-weight: 600 !important;
+    font-size: 0.9rem !important;
+    border-radius: 25px !important;
+    text-decoration: none;
+    transition: var(--transition) !important;
+    border-width: 2px !important;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    min-width: 120px;
+    box-shadow: 0 3px 8px var(--shadow-light);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px var(--shadow-medium);
+}
+
+.btn-lg {
+    padding: 0.7rem 1.8rem !important;
+    font-size: 0.95rem !important;
+}
+
+.mt-auto {
+    margin-top: auto !important;
+}
+
+/* Tombol Primary */
+.btn-primary {
+    background-color: var(--btn-primary) !important;
+    border-color: var(--border-primary) !important;
+    color: white !important;
+}
+
+.btn-primary:hover {
+    background-color: #F57C00 !important;
+    border-color: #F57C00 !important;
+}
+
+/* Tombol Success */
+.btn-success {
+    background-color: var(--btn-success) !important;
+    border-color: var(--border-success) !important;
+    color: white !important;
+}
+
+.btn-success:hover {
+    background-color: #7CB342 !important;
+    border-color: #7CB342 !important;
+}
+
+/* Tombol Warning */
+.btn-warning {
+    background-color: var(--btn-warning) !important;
+    border-color: var(--border-warning) !important;
+    color: #5D4037 !important;
+}
+
+.btn-warning:hover {
+    background-color: #FFB300 !important;
+    border-color: #FFB300 !important;
+}
+
+/* Tombol Danger */
+.btn-danger {
+    background-color: var(--btn-danger) !important;
+    border-color: var(--border-danger) !important;
+    color: white !important;
+}
+
+.btn-danger:hover {
+    background-color: #E53935 !important;
+    border-color: #E53935 !important;
+}
+
+/* Tombol Info */
+.btn-info {
+    background-color: var(--btn-info) !important;
+    border-color: var(--border-info) !important;
+    color: white !important;
+}
+
+.btn-info:hover {
+    background-color: #1976D2 !important;
+    border-color: #1976D2 !important;
+}
+
+/* ============================================
+   ICON COLORS
+   ============================================ */
+/* Card 1 */
+.col-lg-4:nth-child(1) .card-icon i {
+    color: var(--icon-primary) !important;
+}
+
+/* Card 2 */
+.col-lg-4:nth-child(2) .card-icon i {
+    color: var(--icon-success) !important;
+}
+
+/* Card 3 */
+.col-lg-4:nth-child(3) .card-icon i {
+    color: var(--icon-warning) !important;
+}
+
+/* Card 4 */
+.col-lg-5:nth-child(1) .card-icon i {
+    color: var(--icon-danger) !important;
+}
+
+/* Card 5 */
+.col-lg-5:nth-child(2) .card-icon i {
+    color: var(--icon-info) !important;
+}
+
+/* ============================================
+   CARD BACKGROUND VARIATIONS - LEBIH MENARIK
+   ============================================ */
+.col-lg-4:nth-child(1) .menu-card {
+    background: linear-gradient(145deg, #8D6E63, #795548);
+}
+
+.col-lg-4:nth-child(2) .menu-card {
+    background: linear-gradient(145deg, #A1887F, #8D6E63);
+}
+
+.col-lg-4:nth-child(3) .menu-card {
+    background: linear-gradient(145deg, #BCAAA4, #A1887F);
+}
+
+.col-lg-5:nth-child(1) .menu-card {
+    background: linear-gradient(145deg, #8D6E63, #6D4C41);
+}
+
+.col-lg-5:nth-child(2) .menu-card {
+    background: linear-gradient(145deg, #A1887F, #8D6E63);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+/* Large Desktop (≥1200px) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+    
+    .col-lg-4 {
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+        padding-right: 12px;
+        padding-left: 12px;
+    }
+    
+    .col-lg-5 {
+        flex: 0 0 41.666667%;
+        max-width: 41.666667%;
+        padding-right: 12px;
+        padding-left: 12px;
+    }
+}
+
+/* Desktop (992px - 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .container {
+        max-width: 960px;
+    }
+    
+    .col-lg-4, .col-md-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    
+    .col-lg-5, .col-md-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    
+    .row.mb-4 .col-lg-4:nth-child(3) {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-top: 0.8rem;
+    }
+    
+    .row.mb-4 .col-lg-4:nth-child(3) .menu-card {
+        max-width: 350px;
+        margin: 0 auto;
+    }
+}
+
+/* Tablet (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .container {
+        max-width: 720px;
+    }
+    
+    .col-md-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    
+    .menu-card {
+        height: 220px;
+    }
+    
+    .card-body {
+        padding: 1.2rem 1rem !important;
+    }
+    
+    .card-icon {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 0.6rem;
+    }
+    
+    .card-icon i {
+        font-size: 1.8rem;
+    }
+    
+    .card-title {
+        font-size: 1.1rem;
+        min-height: 2.4rem;
+    }
+    
+    .btn-lg {
+        padding: 0.6rem 1.5rem !important;
+        font-size: 0.9rem !important;
+    }
+    
+    .row.mb-4 .col-md-6:nth-child(3) {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-top: 0.8rem;
+    }
+    
+    .row.mb-4 .col-md-6:nth-child(3) .menu-card {
+        max-width: 350px;
+        margin: 0 auto;
+    }
+}
+
+/* Small Tablet (576px - 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+    .container {
+        max-width: 540px;
+    }
+    
+    .menu-card {
+        height: 200px;
+        max-width: 300px;
+        margin: 0 auto 1rem auto !important;
+    }
+    
+    .card-body {
+        padding: 1rem 0.8rem !important;
+    }
+    
+    .card-icon {
+        width: 55px;
+        height: 55px;
+    }
+    
+    .card-icon i {
+        font-size: 1.6rem;
+    }
+    
+    .card-title {
+        font-size: 1rem;
+        margin-bottom: 0.6rem !important;
+        min-height: 2.2rem;
+    }
+    
+    .btn {
+        padding: 0.5rem 1.2rem !important;
+        font-size: 0.85rem !important;
+        min-width: 100px;
+    }
+    
+    .restaurant-title {
+        font-size: 2.2rem;
+    }
+    
+    .restaurant-subtitle {
+        font-size: 1.3rem;
+    }
+    
+    .lead {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+}
+
+/* Mobile (≤575px) */
+@media (max-width: 575px) {
+    .main-section {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+    
+    .container {
+        padding: 0 10px;
+    }
+    
+    .restaurant-title {
+        font-size: 2rem;
+    }
+    
+    .restaurant-subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 1.2rem;
+    }
+    
+    .description {
+        margin-bottom: 2rem !important;
+    }
+    
+    .lead {
+        font-size: 0.95rem;
+        padding: 0.9rem;
+        line-height: 1.6;
+    }
+    
+    .cards-container {
+        margin-top: 1rem;
+    }
+    
+    .row {
+        margin-right: -8px;
+        margin-left: -8px;
+    }
+    
+    .col-lg-4, .col-lg-5, .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding-right: 8px;
+        padding-left: 8px;
+    }
+    
+    .mb-4 {
+        margin-bottom: 1rem !important;
+    }
+    
+    .row.mb-4, .row.justify-content-center {
+        margin-bottom: 0 !important;
+    }
+    
+    .menu-card {
+        height: 180px;
+        max-width: 280px;
+        margin: 0 auto 1rem auto !important;
+    }
+    
+    .card-body {
+        padding: 0.9rem 0.7rem !important;
+    }
+    
+    .card-icon {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 0.5rem;
+    }
+    
+    .card-icon i {
+        font-size: 1.5rem;
+    }
+    
+    .card-title {
+        font-size: 0.95rem;
+        margin-bottom: 0.5rem !important;
+        min-height: 2rem;
+    }
+    
+    .btn {
+        padding: 0.4rem 1rem !important;
+        font-size: 0.8rem !important;
+        min-width: 90px;
+    }
+    
+    .btn-lg {
+        padding: 0.5rem 1.2rem !important;
+    }
+}
+
+/* Extra Small Mobile (≤375px) */
+@media (max-width: 375px) {
+    .restaurant-title {
+        font-size: 1.7rem;
+    }
+    
+    .restaurant-subtitle {
+        font-size: 1rem;
+    }
+    
+    .lead {
+        font-size: 0.9rem;
+    }
+    
+    .menu-card {
+        height: 170px;
+        max-width: 260px;
+    }
+    
+    .card-body {
+        padding: 0.8rem 0.6rem !important;
+    }
+    
+    .card-icon {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .card-icon i {
+        font-size: 1.3rem;
+    }
+    
+    .card-title {
+        font-size: 0.9rem;
+    }
+    
+    .btn {
+        padding: 0.35rem 0.9rem !important;
+        font-size: 0.75rem !important;
+        min-width: 80px;
+    }
+}
+
+/* Landscape Mobile */
+@media (max-height: 600px) and (orientation: landscape) {
+    .main-section {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        min-height: auto;
+    }
+    
+    .menu-card {
+        height: 150px;
+        margin-bottom: 0.8rem !important;
+    }
+    
+    .card-body {
+        padding: 0.7rem 0.5rem !important;
+    }
+    
+    .card-icon {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 0.4rem;
+    }
+    
+    .card-icon i {
+        font-size: 1.2rem;
+    }
+    
+    .card-title {
+        font-size: 0.85rem;
+        margin-bottom: 0.4rem !important;
+        min-height: 1.6rem;
+    }
+    
+    .btn {
+        padding: 0.3rem 0.8rem !important;
+        font-size: 0.7rem !important;
+        min-width: 70px;
+    }
+    
+    .restaurant-title {
+        font-size: 1.5rem;
+    }
+    
+    .restaurant-subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .lead {
+        font-size: 0.85rem;
+        padding: 0.6rem;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .main-section {
+        background: white !important;
+    }
+    
+    .restaurant-title, .restaurant-subtitle, .lead, .card-title {
+        color: black !important;
+    }
+    
+    .menu-card {
+        border: 1px solid #ccc !important;
+        box-shadow: none !important;
+        break-inside: avoid;
+    }
+    
+    .btn {
+        background: white !important;
+        color: black !important;
+        border: 1px solid black !important;
+        box-shadow: none !important;
+    }
+}

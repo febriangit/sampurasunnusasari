@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warung Sambal Bakar - Peluang Investasi</title>
+    
+    <!-- ========== CSS LIBRARIES ========== -->
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    
+    <!-- Custom CSS -->
+     <link rel="stylesheet" href="investasi.css">
+    
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <!-- ========== NAVIGATION BAR ========== -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="asset/Logo Warung Bakakak.png" alt="Logo Restoran" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#hero">Wilujeng Sumping</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="program.html">Program & Partnership</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pilih menu cabang.html">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#location-preview">Lokasi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="promo.html">Promo Spesial</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                            More
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-orange">
+                            <li><a class="dropdown-item" href="sewa tempat.html"><i class="bi bi-calendar-event me-2"></i>Sewa Tempat Acara</a></li>
+                            <li><a class="dropdown-item" href="index.html#footer-modern"><i class="bi bi-envelope me-2"></i>Kontak</a></li>
+                            <li><a class="dropdown-item" href="loker.html"><i class="bi bi-briefcase me-2"></i>Info Loker</a></li>
+                            <li><a class="dropdown-item active" href="investasi.html"><i class="bi bi-graph-up me-2"></i>Peluang Investasi</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="blog.html"><i class="bi bi-newspaper me-2"></i>Berita</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== HERO SECTION (Video Background) ========== -->
+    <section id="investasi-hero" class="investasi-hero-section">
+        <!-- Video Background -->
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="asset/vid SECTION BG.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        
+        <!-- Video Overlay -->
+        <div class="hero-overlay"></div>
+        
+        <!-- Hero Content -->
+        <div class="hero-content">
+            <div class="container text-center">
+                
+                <!-- Logo Restoran -->
+                <!-- Judul Utama -->
+                <h1 class="hero-title" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="200">
+                    <span class="hero-greeting">Peluang Investasi</span><br>
+                </h1>
+                <div class="hero-logo-container" data-aos="zoom-in" data-aos-duration="1000">
+                    <img src="asset/Logo Warung Bakakak.png" alt="Warung Sambal Bakar" class="hero-logo">
+                </div>
+                
+                <!-- Subtitle/Deskripsi -->
+                <div class="hero-description" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                    <p class="hero-subtitle">
+                        <strong>Raih ROI hingga 20% per Tahun</strong> + Bagi Hasil dari Bisnis<br>
+                        yang Sudah Terbukti Tumbuh Konsisten Sejak 1996
+                    </p>
+                </div>
+                
+                <!-- Tombol CTA -->
+                <div class="hero-buttons" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+                    <a href="asset/documents/proposal-investasi.pdf" class="btn btn-primary btn-lg me-3" download>
+                        <i class="bi bi-download me-2"></i>Download Proposal Investasi
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SECTION 1: MENGAPA BERINVESTASI? (3 Cards) ========== -->
+    <section id="mengapa-investasi" class="section-mengapa py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title" data-aos="fade-up">Mengapa <br> Berinvestasi di Warung Sambal Bakar?</h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+                    Bergabunglah dengan jaringan bisnis kuliner yang sudah teruji dan terus berkembang
+                </p>
+            </div>
+            
+            <div class="row g-4 justify-content-center">
+                <!-- Card 1 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="why-card h-100 text-center">
+                        <div class="why-icon mb-4">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h4 class="why-title">ROI 20% per Tahun</h4>
+                        <p class="why-description">
+                            Return on Investment yang kompetitif dengan bagi hasil bulanan yang transparan dan konsisten sejak 2019.
+                        </p>
+                        <div class="why-stat">
+                            <span class="stat-number">20%</span>
+                            <span class="stat-label">Per Tahun</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="why-card h-100 text-center">
+                        <div class="why-icon mb-4">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h4 class="why-title">Bisnis Tumbuh 30%</h4>
+                        <p class="why-description">
+                            Pertumbuhan omzet tahunan mencapai 30% dengan 5 cabang aktif dan 2 cabang dalam persiapan.
+                        </p>
+                        <div class="why-stat">
+                            <span class="stat-number">30%</span>
+                            <span class="stat-label">Growth/Year</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="why-card h-100 text-center">
+                        <div class="why-icon mb-4">
+                            <i class="fas fa-store"></i>
+                        </div>
+                        <h4 class="why-title">5 Cabang Aktif</h4>
+                        <p class="why-description">
+                            Jaringan restoran yang sudah stabil di 5 lokasi strategis dengan lebih dari 50.000 pelanggan setia.
+                        </p>
+                        <div class="why-stat">
+                            <span class="stat-number">5</span>
+                            <span class="stat-label">Cabang Aktif</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SECTION 2: PAKET INVESTASI (3 Cards) ========== -->
+    <section id="paket-investasi" class="section-paket py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title" data-aos="fade-up">Pilih Paket Investasi Anda</h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+                    Mulai dari Rp 50 juta dengan skema bagi hasil yang menarik
+                </p>
+            </div>
+            
+            <div class="row g-4 justify-content-center">
+                <!-- Paket Bronze -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="paket-card bronze h-100">
+                        <div class="paket-header">
+                            <div class="paket-icon">
+                                <i class="fas fa-coins"></i>
+                            </div>
+                            <span class="paket-badge">Bronze</span>
+                        </div>
+                        <h3 class="paket-title">Paket Bronze</h3>
+                        <div class="paket-price">
+                            <span class="currency">Rp</span>
+                            <span class="amount">50</span>
+                            <span class="unit">juta</span>
+                        </div>
+                        <div class="paket-features">
+                            <p><i class="fas fa-check-circle me-2"></i>Bagi Hasil: <strong>15% per tahun</strong></p>
+                            <p><i class="fas fa-check-circle me-2"></i>Jangka Waktu: 3 tahun</p>
+                            <p><i class="fas fa-check-circle me-2"></i>Pembayaran: Bulanan</p>
+                            <p><i class="fas fa-check-circle me-2"></i>Laporan Keuangan: Triwulan</p>
+                            <p><i class="fas fa-check-circle me-2"></i>Bonus: Voucher makan Rp 500.000</p>
+                        </div>
+                        <a href="#form-investasi" class="btn-paket bronze">
+                            <i class="fas fa-file-signature me-2"></i>Pilih Paket Ini
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Paket Silver -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="paket-card silver h-100">
+                        <div class="paket-header">
+                            <div class="paket-icon">
+                                <i class="fas fa-gem"></i>
+                            </div>
+                            <span class="paket-badge best-value">Best Value</span>
+                        </div>
+                        <h3 class="paket-title">Paket Silver</h3>
+                        <div class="paket-price">
+                            <span class="currency">Rp</span>
+                            <span class="amount">100</span>
+                            <span class="unit">juta</span>
+                        </div>
+                        <div class="paket-features">
+                            <p><i class="fas fa-check-circle me-2"></i>Bagi Hasil: <strong>18% per tahun</strong></p>
+                            <p><i class="fas fa-check-circle me-2"></i>Jangka Waktu: 3 tahun</p>
+                            <p><i class="fas fa-check-circle me-2"></i>Pembayaran: Bulanan</p>
+                            <p><i class="fas fa-check-circle me-2"></i>Laporan Keuangan: Bulanan</p>
+                            <p><i class="fas fa-check-circle me-2"></i>Bonus: Voucher makan Rp 1.000.000</p>
+                            <p><i class="fas fa-check-circle me-2"></i>Free: 1x makan keluarga (4 orang)</p>
+                        </div>
+                        <a href="#form-investasi" class="btn-paket silver">
+                            <i class="fas fa-crown me-2"></i>Pilih Paket Ini
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Paket Gold -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="paket-card gold h-100">
+                        <div class="paket-header">
+                            <div class="paket-icon">
+                                <i class="fas fa-crown"></i>
+                            </div>
+                            <span class="paket-badge premium">Premium</span>
+                        </div>
+                        <h3 class="paket-title">Paket Gold</h3>
+                        <div class="paket-price">
+                            <span class="currency">Rp</span>
+                            <span class="amount">200</span>
+                            <span class="unit">juta</span>
+                        </div>
+                        <div class="paket-features">
+                            <p><i class="fas fa-check-circle me-2"></i>Bagi Hasil: <strong>20% per tahun</strong></p>
+                            <p><i class="fas fa-check-circle me-2"></i>Jangka Waktu: 3 tahun</p>
+                            <p><i class="fas fa-check-circle me-2"></i>Pembayaran: Bulanan</p>
+                            <p><i class="fas fa-check-circle me-2"></i>Laporan Keuangan: Bulanan + Dashboard</p>
+                            <p><i class="fas fa-check-circle me-2"></i>Bonus: Voucher makan Rp 2.000.000</p>
+                            <p><i class="fas fa-check-circle me-2"></i>Free: 2x makan keluarga + tour cabang</p>
+                            <p><i class="fas fa-check-circle me-2"></i>Priority: Meeting rutin dengan management</p>
+                        </div>
+                        <a href="#form-investasi" class="btn-paket gold">
+                            <i class="fas fa-star me-2"></i>Pilih Paket Ini
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SECTION 3: ALUR INVESTASI (4 Cards Horizontal) ========== -->
+     <section id="alur-investasi" class="section-alur py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-title" data-aos="fade-up">Alur Investasi Mudah</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+                4 Langkah sederhana menjadi investor Warung Sambal Bakar
+            </p>
+        </div>
+        <div class="row g-4 justify-content-center">
+            <!-- Step 1 -->
+            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12" data-aos="fade-up" data-aos-delay="200">
+                <div class="alur-card h-100 text-center">
+                    <div class="alur-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h4 class="alur-title">Isi Form Pendaftaran</h4>
+                    <p class="alur-description">
+                        Lengkapi data diri dan pilih paket investasi yang sesuai dengan kebutuhan Anda.
+                    </p>
+                    <a href="form-investasi.html" class="btn-alur">
+                        <div class="btn-alur-icon">
+                            <i class="fas fa-pencil-alt"></i>
+                        </div>
+                        <div class="btn-alur-text">Isi Form Sekarang</div>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Step 2 -->
+            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12" data-aos="fade-up" data-aos-delay="300">
+                <div class="alur-card h-100 text-center">
+                    <div class="alur-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h4 class="alur-title">Verifikasi Data</h4>
+                    <p class="alur-description">
+                        Tim kami akan menghubungi Anda untuk verifikasi data dan penjelasan detail investasi.
+                    </p>
+                    <div class="alur-info-box">
+                        <div class="info-icon">
+                            <i class="fas fa-info-circle"></i>
+                        </div>
+                        <div class="info-text">Waktu proses: 1-2 hari kerja</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Step 3 -->
+            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12" data-aos="fade-up" data-aos-delay="400">
+            <div class="alur-card h-100 text-center">
+                <div class="alur-icon">
+                    <i class="fas fa-money-bill-wave"></i>
+                </div>
+                <h4 class="alur-title">Transfer Investasi</h4>
+                <p class="alur-description">
+                    Lakukan transfer ke rekening perusahaan untuk mengaktifkan status sebagai investor.
+                </p>
+                <div class="alur-rekening-box">
+                    <div class="bank-section">
+                        <div class="bank-name">BCA</div>
+                    </div>
+                    <div class="rek-section">
+                        <div class="rek-number">1234567890</div>
+                    </div>
+                    <div class="name-section">
+                        <div class="name-label">a.n:</div>
+                        <div class="account-name">PT Warung Sambal Bakar Indonesia</div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            
+            <!-- Step 4 -->
+            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12" data-aos="fade-up" data-aos-delay="500">
+                <div class="alur-card h-100 text-center">
+                    <div class="alur-icon">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <h4 class="alur-title">Penandatanganan Kontrak</h4>
+                    <p class="alur-description">
+                        Proses legalitas dengan penandatanganan kontrak kerjasama dan pembagian dokumen.
+                    </p>
+                    <div class="alur-info-box">
+                        <div class="info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="info-text">Online/Offline meeting</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- ========== SECTION 4: FAQ (Video Background + Accordion) ========== -->
+     <section id="faq-investasi" class="section-faq py-5">
+    <!-- Video Background -->
+    <video autoplay muted loop playsinline class="faq-video-bg">
+        <source src="asset/vid bg.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    
+    <!-- Video Overlay -->
+    <div class="faq-video-overlay"></div>
+    
+    <!-- FAQ Content -->
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-title-light" data-aos="fade-up">FAQ Investasi</h2>
+            <p class="section-subtitle-light" data-aos="fade-up" data-aos-delay="100">
+                Pertanyaan yang sering diajukan tentang investasi di Warung Sambal Bakar
+            </p>
+        </div>
+        
+        <div class="faq-accordion" data-aos="fade-up" data-aos-delay="200">
+            <!-- FAQ Item 1 -->
+            <div class="faq-item">
+                <input type="checkbox" id="faq1" class="faq-checkbox">
+                <label for="faq1" class="faq-question">
+                    <span class="faq-icon"><i class="fas fa-question-circle"></i></span>
+                    <span class="faq-text">Bagaimana cara pembagian bagi hasil dilakukan?</span>
+                    <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                </label>
+                <div class="faq-answer">
+                    <p>Bagi hasil dibayarkan setiap bulan tanggal 5 ke rekening yang telah Anda daftarkan. Pembayaran dilakukan secara otomatis setelah laporan keuangan bulanan disetujui. Anda akan menerima slip pembayaran dan laporan via email setiap bulannya.</p>
+                </div>
+            </div>
+            
+            <!-- FAQ Item 2 -->
+            <div class="faq-item">
+                <input type="checkbox" id="faq2" class="faq-checkbox">
+                <label for="faq2" class="faq-question">
+                    <span class="faq-icon"><i class="fas fa-question-circle"></i></span>
+                    <span class="faq-text">Apakah investasi ini aman secara hukum?</span>
+                    <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                </label>
+                <div class="faq-answer">
+                    <p>Ya, seluruh investasi dilindungi dengan kontrak notaris yang mengikat secara hukum. Perusahaan juga telah terdaftar di OJK dan memiliki izin usaha lengkap. Anda dapat melakukan pengecekan legalitas perusahaan melalui database OJK.</p>
+                </div>
+            </div>
+            
+            <!-- FAQ Item 3 -->
+            <div class="faq-item">
+                <input type="checkbox" id="faq3" class="faq-checkbox">
+                <label for="faq3" class="faq-question">
+                    <span class="faq-icon"><i class="fas fa-question-circle"></i></span>
+                    <span class="faq-text">Bisakah saya menarik investasi sebelum jangka waktu berakhir?</span>
+                    <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                </label>
+                <div class="faq-answer">
+                    <p>Penarikan dini dapat dilakukan setelah minimal 1 tahun dengan pemberitahuan 30 hari sebelumnya. Namun terdapat penalti sebesar 2% dari pokok investasi. Kami sarankan untuk berinvestasi sesuai jangka waktu yang telah disepakati untuk mendapatkan hasil optimal.</p>
+                </div>
+            </div>
+            
+            <!-- FAQ Item 4 -->
+            <div class="faq-item">
+                <input type="checkbox" id="faq4" class="faq-checkbox">
+                <label for="faq4" class="faq-question">
+                    <span class="faq-icon"><i class="fas fa-question-circle"></i></span>
+                    <span class="faq-text">Bagaimana jika bisnis restoran mengalami kerugian?</span>
+                    <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                </label>
+                <div class="faq-answer">
+                    <p>Perusahaan memiliki asuransi bisnis dan dana cadangan untuk menanggung risiko operasional. Dalam 5 tahun terakhir, kami selalu mencetak laba. Jika terjadi kondisi force majeure, investor tetap mendapatkan pengembalian pokok sesuai dengan klausul dalam kontrak.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- WhatsApp CTA -->
+        <div class="whatsapp-cta-container" data-aos="fade-up" data-aos-delay="400">
+            <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20untuk%20berinvestasi%20di%20Warung%20Sambal%20Bakar" 
+               target="_blank" 
+               class="whatsapp-cta">
+                <i class="fab fa-whatsapp whatsapp-icon"></i>
+                <span class="whatsapp-text">
+                    Konsultasi via WhatsApp
+                    <span class="whatsapp-subtext">Respon cepat dalam 5 menit</span>
+                </span>
+            </a>
+        </div>
+    </div>
+    </section>
+
+    <!-- ========== FOOTER (Sama dengan index.html) ========== -->
+    <footer class="footer-modern">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <img src="asset/Logo Warung Bakakak.png" alt="Logo" height="50" class="mb-3">
+                    <p class="text-white-50">Waroeng Sambal Bakar menghadirkan cita rasa autentik Indonesia dengan 18 jenis sambal spesial dan pelayanan terbaik.</p>
+                    <div class="social-links mt-3">
+                        <a href="https://www.instagram.com/sampurasunnusasari" target="_blank"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@sampurasunnusasari" target="_blank"><i class="bi bi-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="text-white mb-3">Menu</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Wilujeng Sumping</a></li>
+                        <li><a href="index.html#menu-highlight">Menu Favorit</a></li>
+                        <li><a href="program.html">Program Partnership</a></li>
+                        <li><a href="promo.html">Promo & Kemitraan</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-3">Layanan</h5>
+                    <ul class="footer-links">
+                        <li><a href="peluang-investasi.html">Peluang Investasi</a></li>
+                        <li><a href="loker.html">Info Loker</a></li>
+                        <li><a href="sewa-tempat.html">Sewa Tempat</a></li>
+                        <li><a href="index.html#location-preview">Lokasi</a></li>
+                        <li><a href="blog.html">Berita</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-3">Kontak</h5>
+                    <ul class="footer-contact">
+                        <li><i class="bi bi-envelope-fill me-2"></i>investasi@warungsambalbakar.com</li>
+                        <li><i class="bi bi-telephone-fill me-2"></i>021-12345678 ext. 203</li>
+                        <li><i class="bi bi-whatsapp me-2"></i>0812-3456-7890 (Investasi)</li>
+                        <li><i class="bi bi-clock-fill me-2"></i>08.00 - 17.00 WIB (Senin-Jumat)</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="text-center text-white-50">
+                <p class="mb-0">&copy; 2026 Sampurasun Nusasari. All rights reserved. | <a href="syarat-ketentuan.html" class="text-white-50">Syarat & Ketentuan</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== JAVASCRIPT LIBRARIES ========== -->
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS Animation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="js/investasi.js"></script>
+    
+    <script>
+        // Initialize AOS
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 800,
+                easing: 'ease-in-out',
+                once: true,
+                mirror: false
+            });
+        });
+    </script>
+</body>
+</html>

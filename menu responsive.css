@@ -1,0 +1,1553 @@
+/* ============================================================
+   MENU RESPONSIVE CSS - TOTAL REWRITE
+   Warung Bakakak Sampurasun Nusasari
+   
+   Struktur:
+   1. Global Reset & Base
+   2. Sticky Navigation
+   3. Hero Section
+   4. Breakpoint: Tablet (768px - 1024px)
+   5. Breakpoint: Mobile (max 767px)
+   Per section dalam setiap breakpoint
+   ============================================================ */
+
+/* ============================================================
+   1. GLOBAL RESET & BASE
+   ============================================================ */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+/* Touch scroll untuk semua scroll container */
+.tumisan-scroll-container,
+.nasi-scroll-container,
+.minuman-scroll-container,
+.minuman-row-container,
+.kids-scroll-container,
+.tambahan-scroll-container,
+.promo-scroll-container,
+.menu-carousel,
+.carousel-items {
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.tumisan-scroll-container::-webkit-scrollbar,
+.nasi-scroll-container::-webkit-scrollbar,
+.minuman-scroll-container::-webkit-scrollbar,
+.minuman-row-container::-webkit-scrollbar,
+.kids-scroll-container::-webkit-scrollbar,
+.tambahan-scroll-container::-webkit-scrollbar,
+.promo-scroll-container::-webkit-scrollbar,
+.menu-carousel::-webkit-scrollbar,
+.carousel-items::-webkit-scrollbar {
+    display: none;
+}
+
+/* Sembunyikan tombol carousel nav di semua ukuran responsive */
+@media (max-width: 1024px) {
+    .carousel-nav,
+    .carousel-nav-prev,
+    .carousel-nav-next {
+        display: none !important;
+    }
+}
+
+
+/* ============================================================
+   2. STICKY NAVIGATION - FIXED POSITION
+   ============================================================ */
+.sticky-nav {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    z-index: 9999 !important;
+    background-color: var(--primary-darker) !important;
+    border-bottom: 3px solid var(--secondary) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4) !important;
+    padding: 10px 0 !important;
+}
+
+body {
+    padding-top: 72px;
+}
+
+.nav-scroll {
+    display: flex !important;
+    overflow-x: auto !important;
+    gap: 10px !important;
+    padding: 4px 0 6px !important;
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+    -webkit-overflow-scrolling: touch !important;
+}
+
+.nav-scroll::-webkit-scrollbar {
+    display: none !important;
+}
+
+.nav-item-btn {
+    flex: 0 0 auto !important;
+    white-space: nowrap !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    min-height: 44px !important;
+}
+
+
+/* ============================================================
+   3. TABLET — 768px sampai 1024px
+   ============================================================ */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    /* --- HERO --- */
+    .hero-section {
+        padding: 30px 0 !important;
+        min-height: auto !important;
+    }
+
+    .hero-section .hero-title {
+        font-size: 1.9rem !important;
+    }
+
+    .hero-section .title {
+        font-size: 1rem !important;
+    }
+
+    .hero-section .hero-subtitle {
+        font-size: 0.9rem !important;
+    }
+
+    /* --- SECTION GLOBAL --- */
+    .menu-section,
+    .menu-section-ikan,
+    .menu-section-tumisan,
+    .menu-section-kids,
+    .menu-section-nasi,
+    .menu-section-minuman,
+    .menu-section-promo {
+        padding: 40px 0 !important;
+    }
+
+    .container,
+    .container-fluid {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+
+    .section-title {
+        font-size: 1.7rem !important;
+    }
+
+    .section-header {
+        margin-bottom: 30px !important;
+    }
+
+    /* ---- SIGNATURE CARD ---- */
+    .signature-card {
+        max-width: 100% !important;
+    }
+
+    .signature-image {
+        height: 300px !important;
+    }
+
+    .signature-title {
+        font-size: 1.4rem !important;
+    }
+
+    .size-grid {
+        grid-template-columns: 1fr 1fr 1fr !important;
+        gap: 10px !important;
+    }
+
+    .price-toggle {
+        min-height: 80px !important;
+        padding: 14px 8px !important;
+    }
+
+    .price-toggle-size {
+        font-size: 0.75rem !important;
+    }
+
+    .price-toggle-price {
+        font-size: 1rem !important;
+    }
+
+    /* ---- ANEKA AYAM — 2 card besar ---- */
+    .row.g-4.mb-5 {
+        flex-direction: column !important;
+    }
+
+    .row.g-4.mb-5 .col-lg-6 {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+    }
+
+    .vertical-image-container {
+        height: 220px !important;
+    }
+
+    /* ---- ANEKA AYAM — carousel 4 card → 2 card peek ---- */
+    .carousel-container {
+        padding: 0 !important;
+        overflow: hidden !important;
+    }
+
+    .carousel-wrapper {
+        overflow: hidden !important;
+    }
+
+    .carousel-items {
+        overflow-x: auto !important;
+        scroll-snap-type: x mandatory !important;
+        padding: 10px 4px 16px !important;
+    }
+
+    .carousel-card {
+        flex: 0 0 calc(50% - 8px) !important;
+        min-width: 0 !important;
+        scroll-snap-align: start !important;
+    }
+
+    .carousel-image {
+        height: 180px !important;
+    }
+
+    /* ---- IKAN LAUT BAKAR ---- */
+    .menu-carousel-container {
+        padding: 0 !important;
+    }
+
+    .menu-carousel {
+        overflow-x: auto !important;
+        scroll-snap-type: x mandatory !important;
+        padding: 10px 4px 20px !important;
+        gap: 14px !important;
+    }
+
+    .menu-item-card {
+        flex: 0 0 calc(50% - 10px) !important;
+        min-width: 0 !important;
+        scroll-snap-align: start !important;
+    }
+
+    .card-img-wrapper {
+        height: 180px !important;
+    }
+
+    /* ---- TUMISAN ---- */
+    .tumisan-scroll-container {
+        padding: 10px 0 20px !important;
+        margin: 0 !important;
+        overflow-x: auto !important;
+    }
+
+    .tumisan-row {
+        width: max-content !important;
+        padding: 10px 20px !important;
+        gap: 16px !important;
+    }
+
+    .tumisan-card {
+        width: 260px !important;
+        min-width: 260px !important;
+        max-width: 260px !important;
+    }
+
+    .tumisan-img {
+        height: 170px !important;
+    }
+
+    /* ---- KIDS ---- */
+    .kids-scroll-container {
+        overflow-x: auto !important;
+        padding: 10px 0 20px !important;
+    }
+
+    .kids-row {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        gap: 16px !important;
+        padding: 10px 20px !important;
+        width: max-content !important;
+    }
+
+    .kids-scroll-container .col-auto {
+        flex: 0 0 auto !important;
+        width: auto !important;
+    }
+
+    .kids-card {
+        width: 260px !important;
+        min-width: 260px !important;
+        max-width: 260px !important;
+    }
+
+    .kids-img-wrapper {
+        height: 170px !important;
+    }
+
+    /* ---- MENU TAMBAHAN ---- */
+    .tambahan-scroll-container {
+        overflow-x: auto !important;
+        padding: 10px 0 20px !important;
+        margin: 0 !important;
+    }
+
+    .tambahan-row {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        justify-content: flex-start !important;
+        gap: 16px !important;
+        padding: 10px 20px !important;
+        width: max-content !important;
+    }
+
+    .tambahan-card {
+        width: 260px !important;
+        min-width: 260px !important;
+        max-width: 260px !important;
+    }
+
+    /* ---- NASI & LIWET ---- */
+    .nasi-scroll-container {
+        overflow-x: auto !important;
+        padding: 10px 0 20px !important;
+        margin: 0 !important;
+    }
+
+    .nasi-row {
+        width: max-content !important;
+        padding: 10px 20px !important;
+        gap: 16px !important;
+    }
+
+    .nasi-card {
+        width: 260px !important;
+        min-width: 260px !important;
+        max-width: 260px !important;
+    }
+
+    .nasi-img-wrapper {
+        height: 170px !important;
+    }
+
+    /* ---- MINUMAN ---- */
+    .minuman-row-container {
+        overflow-x: auto !important;
+        padding: 10px 0 20px !important;
+        margin: 0 0 16px !important;
+    }
+
+    .minuman-row {
+        width: max-content !important;
+        padding: 10px 20px !important;
+        gap: 16px !important;
+    }
+
+    .minuman-card {
+        width: 260px !important;
+        min-width: 260px !important;
+        max-width: 260px !important;
+    }
+
+    .minuman-img-wrapper {
+        height: 170px !important;
+    }
+
+    /* ---- PAKET PROMO ---- */
+    .promo-scroll-container {
+        overflow-x: auto !important;
+    }
+
+    .promo-row-container {
+        overflow: visible !important;
+        padding: 0 !important;
+    }
+
+    .promo-row {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        scroll-snap-type: x mandatory !important;
+        gap: 16px !important;
+        padding: 10px 20px 20px !important;
+        width: max-content !important;
+    }
+
+    .promo-row .col-auto {
+        flex: 0 0 auto !important;
+        width: auto !important;
+    }
+
+    .promo-card {
+        width: 280px !important;
+        min-width: 280px !important;
+        max-width: 280px !important;
+        scroll-snap-align: start !important;
+    }
+
+    .promo-img-wrapper {
+        height: 170px !important;
+    }
+
+    /* ---- FEATURED HEADER ---- */
+    .featured-header {
+        padding: 2rem 1.5rem !important;
+    }
+
+    .featured-title {
+        font-size: 1.8rem !important;
+    }
+
+    /* ---- MODAL ---- */
+    .modal-dialog {
+        margin: 15px auto !important;
+    }
+}
+
+
+/* ============================================================
+   4. MOBILE — max-width: 767px
+   ============================================================ */
+@media (max-width: 767px) {
+
+    body {
+        padding-top: 64px !important;
+    }
+
+    /* ============ HERO ============ */
+    .hero-section {
+        padding: 24px 0 20px !important;
+        min-height: auto !important;
+    }
+
+    .hero-section .container {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+    }
+
+    .hero-section .title {
+        font-size: 0.8rem !important;
+        letter-spacing: 1.5px !important;
+        margin-bottom: 8px !important;
+    }
+
+    .hero-section .hero-title {
+        font-size: 1.5rem !important;
+        line-height: 1.2 !important;
+        margin-bottom: 10px !important;
+    }
+
+    .hero-section .hero-subtitle {
+        font-size: 0.85rem !important;
+        line-height: 1.5 !important;
+        max-width: 100% !important;
+    }
+
+    /* ============ STICKY NAV ============ */
+    .sticky-nav {
+        padding: 8px 0 !important;
+    }
+
+    body {
+        padding-top: 62px !important;
+    }
+
+    .sticky-nav .container {
+        padding: 0 10px !important;
+    }
+
+    .nav-scroll {
+        gap: 8px !important;
+        padding: 4px 0 6px !important;
+    }
+
+    .nav-item-btn {
+        padding: 8px 12px !important;
+        font-size: 0.78rem !important;
+        min-height: 38px !important;
+        border-radius: 20px !important;
+    }
+
+    .nav-item-btn i {
+        font-size: 0.85rem !important;
+        margin-right: 5px !important;
+    }
+
+    /* ============ GLOBAL SECTION ============ */
+    .menu-section,
+    .menu-section-ikan,
+    .menu-section-tumisan,
+    .menu-section-kids,
+    .menu-section-nasi,
+    .menu-section-minuman,
+    .menu-section-promo {
+        padding: 28px 0 32px !important;
+    }
+
+    .container {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+        max-width: 100% !important;
+    }
+
+    .container-fluid {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .section-header {
+        margin-bottom: 24px !important;
+        padding: 0 16px !important;
+    }
+
+    .section-title {
+        font-size: 1.4rem !important;
+        letter-spacing: 0.5px !important;
+    }
+
+    .section-subtitle {
+        font-size: 0.82rem !important;
+        margin-top: 14px !important;
+    }
+
+
+    /* ============================================================
+       SIGNATURE CARD — Bakakak Ayam
+       Gambar atas, konten bawah, full width
+       ============================================================ */
+    .signature-card {
+        border-radius: 14px !important;
+        max-width: 100% !important;
+        margin: 0 16px !important;
+    }
+
+    /* Gambar jadi vertikal di atas */
+    .signature-image {
+        height: 220px !important;
+    }
+
+    .signature-content {
+        padding: 18px 16px 22px !important;
+    }
+
+    .signature-title {
+        font-size: 1.25rem !important;
+        margin-bottom: 8px !important;
+    }
+
+    .signature-description {
+        font-size: 0.83rem !important;
+        line-height: 1.6 !important;
+        margin-bottom: 18px !important;
+    }
+
+    .size-label {
+        font-size: 0.72rem !important;
+    }
+
+    .size-grid {
+        grid-template-columns: 1fr 1fr 1fr !important;
+        gap: 8px !important;
+    }
+
+    .price-toggle {
+        min-height: 78px !important;
+        padding: 12px 6px !important;
+        border-radius: 10px !important;
+    }
+
+    .price-toggle-size {
+        font-size: 0.72rem !important;
+        letter-spacing: 1px !important;
+    }
+
+    .price-toggle-price {
+        font-size: 0.95rem !important;
+    }
+
+    .quantity-selector {
+        padding: 12px !important;
+        margin-bottom: 16px !important;
+        flex-wrap: wrap !important;
+        gap: 10px !important;
+    }
+
+    .qty-label {
+        font-size: 0.72rem !important;
+    }
+
+    .btn-qty {
+        width: 36px !important;
+        height: 36px !important;
+    }
+
+    .qty-input {
+        width: 46px !important;
+        height: 36px !important;
+        font-size: 1rem !important;
+    }
+
+    .qty-total {
+        width: 100% !important;
+        text-align: right !important;
+        font-size: 0.78rem !important;
+    }
+
+    .qty-total strong {
+        font-size: 1rem !important;
+    }
+
+    .btn-order {
+        padding: 13px 20px !important;
+        font-size: 0.82rem !important;
+        min-height: 48px !important;
+        letter-spacing: 1.5px !important;
+    }
+
+
+    /* ============================================================
+       ANEKA AYAM — 2 card besar + carousel 4 card
+       ============================================================ */
+    /* 2 card besar → stack vertikal */
+    .row.g-4.mb-5 {
+        flex-direction: column !important;
+        gap: 16px !important;
+        margin: 0 16px 24px !important;
+    }
+
+    .row.g-4.mb-5 .col-lg-6 {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+    }
+
+    .vertical-card {
+        width: 100% !important;
+    }
+
+    /* Gambar card besar */
+    .vertical-image-container {
+        height: 200px !important;
+    }
+
+    .vertical-card .card-title {
+        font-size: 1.3rem !important;
+    }
+
+    .vertical-card .price-amount {
+        font-size: 1.6rem !important;
+    }
+
+    .vertical-card .quantity-control {
+        width: 110px !important;
+    }
+
+    /* Section header di dalam section (h3) */
+    .section-header h3 {
+        font-size: 1.3rem !important;
+    }
+
+    /* Carousel 4 card → horizontal scroll, card ~80vw dengan peek */
+    .carousel-container {
+        padding: 0 !important;
+        margin: 0 !important;
+        overflow: hidden !important;
+    }
+
+    .carousel-wrapper {
+        overflow: hidden !important;
+        width: 100% !important;
+    }
+
+    .carousel-items {
+        display: flex !important;
+        overflow-x: auto !important;
+        scroll-snap-type: x mandatory !important;
+        gap: 12px !important;
+        padding: 8px 16px 16px !important;
+        /* Lebar total: semua card + gap + padding kiri */
+        width: auto !important;
+    }
+
+    .carousel-card {
+        /* ~80vw — ada sisa 20vw jadi keliatan card berikutnya */
+        flex: 0 0 78vw !important;
+        min-width: 0 !important;
+        max-width: 78vw !important;
+        scroll-snap-align: start !important;
+    }
+
+    /* Gambar carousel card → aspect ratio */
+    .carousel-card .row.g-0 {
+        flex-direction: column !important;
+    }
+
+    .carousel-card .row.g-0 > .col-6:first-child,
+    .carousel-card .row.g-0 > .col-6:last-child {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: none !important;
+        padding: 0 !important;
+    }
+
+    .carousel-image {
+        height: 180px !important;
+        width: 100% !important;
+    }
+
+    .carousel-card .card-body {
+        padding: 12px !important;
+    }
+
+    .carousel-title {
+        font-size: 0.88rem !important;
+    }
+
+    .carousel-description {
+        font-size: 0.72rem !important;
+    }
+
+    .price-amount-small {
+        font-size: 0.9rem !important;
+    }
+
+    .btn-order-sm {
+        padding: 9px 10px !important;
+        font-size: 0.72rem !important;
+    }
+
+
+    /* ============================================================
+       IKAN LAUT BAKAR — Carousel multi-row
+       ============================================================ */
+    .menu-section-ikan {
+        padding: 28px 0 !important;
+    }
+
+    .menu-section-ikan .container {
+        padding: 0 16px !important;
+    }
+
+    .featured-header {
+        padding: 1.5rem 1rem !important;
+        border-radius: 14px !important;
+        margin-bottom: 20px !important;
+    }
+
+    .featured-title {
+        font-size: 1.4rem !important;
+        margin-bottom: 8px !important;
+    }
+
+    .featured-description {
+        font-size: 0.82rem !important;
+    }
+
+    .section-heading {
+        font-size: 1.2rem !important;
+    }
+
+    .section-subheading {
+        font-size: 0.8rem !important;
+    }
+
+    .menu-carousel-container {
+        padding: 0 !important;
+        margin-top: 8px !important;
+    }
+
+    .menu-carousel {
+        display: flex !important;
+        overflow-x: auto !important;
+        scroll-snap-type: x mandatory !important;
+        gap: 12px !important;
+        padding: 8px 16px 16px !important;
+    }
+
+    /* Card ikan: ~80vw */
+    .menu-item-card {
+        flex: 0 0 78vw !important;
+        min-width: 0 !important;
+        max-width: 78vw !important;
+        scroll-snap-align: start !important;
+        border-radius: 12px !important;
+    }
+
+    .card-img-wrapper {
+        height: 170px !important;
+    }
+
+    .card-content {
+        padding: 12px !important;
+    }
+
+    .card-title {
+        font-size: 0.9rem !important;
+    }
+
+    .card-text {
+        font-size: 0.75rem !important;
+    }
+
+    .price-display {
+        padding: 6px 8px !important;
+    }
+
+    .price-amount {
+        font-size: 1rem !important;
+    }
+
+    .total-price-wrapper {
+        padding: 6px 10px !important;
+        margin: 8px 0 !important;
+    }
+
+    .total-price {
+        font-size: 0.9rem !important;
+    }
+
+    /* ============================================================
+       TUMISAN & SAYURAN — horizontal scroll
+       ============================================================ */
+    .menu-section-tumisan {
+        padding: 28px 0 !important;
+    }
+
+    .menu-section-tumisan .section-header {
+        padding: 0 16px !important;
+    }
+
+    .tumisan-scroll-container {
+        overflow-x: auto !important;
+        width: 100% !important;
+        padding: 8px 0 16px !important;
+        margin: 0 !important;
+    }
+
+    /* Wrapper luar untuk scroll */
+    .tumisan-scroll-container .tumisan-row {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        gap: 12px !important;
+        padding: 8px 16px 8px !important;
+        width: max-content !important;
+        margin: 0 !important;
+    }
+
+    .tumisan-scroll-container .tumisan-row .col-auto {
+        flex: 0 0 auto !important;
+        padding: 0 !important;
+    }
+
+    /* Card tumisan: ~78vw */
+    .tumisan-card {
+        width: 78vw !important;
+        min-width: 78vw !important;
+        max-width: 78vw !important;
+        border-radius: 12px !important;
+    }
+
+    .tumisan-img {
+        height: 170px !important;
+    }
+
+    .tumisan-content {
+        padding: 12px !important;
+    }
+
+    .tumisan-title {
+        font-size: 0.9rem !important;
+    }
+
+    .tumisan-text {
+        font-size: 0.75rem !important;
+    }
+
+    /* ============================================================
+       KIDS MENU — horizontal scroll
+       ============================================================ */
+    .menu-section-kids {
+        padding: 28px 0 !important;
+    }
+
+    .menu-section-kids .section-header {
+        padding: 0 16px !important;
+    }
+
+    .kids-scroll-container {
+        overflow-x: auto !important;
+        width: 100% !important;
+        padding: 8px 0 16px !important;
+    }
+
+    .kids-row {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        justify-content: flex-start !important;
+        gap: 12px !important;
+        padding: 8px 16px !important;
+        width: max-content !important;
+        margin: 0 !important;
+    }
+
+    .kids-scroll-container .col-auto {
+        flex: 0 0 auto !important;
+        width: auto !important;
+        padding: 0 !important;
+    }
+
+    /* Card kids: ~78vw */
+    .kids-card {
+        width: 78vw !important;
+        min-width: 78vw !important;
+        max-width: 78vw !important;
+        border-radius: 12px !important;
+    }
+
+    .kids-img-wrapper {
+        height: 170px !important;
+    }
+
+    .kids-content {
+        padding: 12px !important;
+    }
+
+    .kids-title {
+        font-size: 0.9rem !important;
+    }
+
+    .kids-text {
+        font-size: 0.75rem !important;
+    }
+
+
+    /* ============================================================
+       MENU TAMBAHAN — horizontal scroll
+       ============================================================ */
+    .menu-section-tambahan {
+        padding: 28px 0 !important;
+    }
+
+    .menu-section-tambahan .section-header {
+        padding: 0 16px !important;
+    }
+
+    .tambahan-scroll-container {
+        overflow-x: auto !important;
+        width: 100% !important;
+        padding: 8px 0 16px !important;
+        margin: 0 !important;
+    }
+
+    .tambahan-row {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        justify-content: flex-start !important;
+        gap: 12px !important;
+        padding: 8px 16px !important;
+        width: max-content !important;
+        margin: 0 !important;
+    }
+
+    .tambahan-scroll-container .col-auto {
+        flex: 0 0 auto !important;
+        padding: 0 !important;
+    }
+
+    /* Card tambahan: ~78vw */
+    .tambahan-card {
+        width: 78vw !important;
+        min-width: 78vw !important;
+        max-width: 78vw !important;
+        border-radius: 12px !important;
+    }
+
+    .tambahan-content {
+        padding: 12px !important;
+    }
+
+    .tambahan-title {
+        font-size: 0.9rem !important;
+    }
+
+    .tambahan-text {
+        font-size: 0.75rem !important;
+    }
+
+
+    /* ============================================================
+       NASI & LIWET — horizontal scroll
+       ============================================================ */
+    .menu-section-nasi {
+        padding: 28px 0 !important;
+    }
+
+    .menu-section-nasi .section-header {
+        padding: 0 16px !important;
+    }
+
+    .nasi-scroll-container {
+        overflow-x: auto !important;
+        width: 100% !important;
+        padding: 8px 0 16px !important;
+        margin: 0 !important;
+    }
+
+    .nasi-row {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        gap: 12px !important;
+        padding: 8px 16px !important;
+        width: max-content !important;
+        margin: 0 !important;
+    }
+
+    .nasi-scroll-container .col-auto {
+        flex: 0 0 auto !important;
+        padding: 0 !important;
+    }
+
+    /* Card nasi: ~78vw */
+    .nasi-card {
+        width: 78vw !important;
+        min-width: 78vw !important;
+        max-width: 78vw !important;
+        border-radius: 12px !important;
+    }
+
+    .nasi-img-wrapper {
+        height: 170px !important;
+    }
+
+    .nasi-content {
+        padding: 12px !important;
+    }
+
+    .nasi-title {
+        font-size: 0.9rem !important;
+    }
+
+    .nasi-text {
+        font-size: 0.75rem !important;
+    }
+
+
+    /* ============================================================
+       MINUMAN — 2 row horizontal scroll
+       ============================================================ */
+    .menu-section-minuman {
+        padding: 28px 0 !important;
+    }
+
+    .menu-section-minuman .section-header {
+        padding: 0 16px !important;
+    }
+
+    .minuman-scroll-container {
+        margin-top: 8px !important;
+    }
+
+    .minuman-row-container {
+        overflow-x: auto !important;
+        width: 100% !important;
+        padding: 8px 0 16px !important;
+        margin: 0 0 8px !important;
+    }
+
+    .minuman-row {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        gap: 12px !important;
+        padding: 8px 16px !important;
+        width: max-content !important;
+        margin: 0 !important;
+    }
+
+    .minuman-scroll-container .col-auto {
+        flex: 0 0 auto !important;
+        padding: 0 !important;
+    }
+
+    /* Card minuman: ~78vw */
+    .minuman-card {
+        width: 78vw !important;
+        min-width: 78vw !important;
+        max-width: 78vw !important;
+        border-radius: 12px !important;
+    }
+
+    .minuman-img-wrapper {
+        height: 170px !important;
+    }
+
+    .minuman-content {
+        padding: 12px !important;
+    }
+
+    .minuman-title {
+        font-size: 0.9rem !important;
+    }
+
+    .minuman-text {
+        font-size: 0.75rem !important;
+    }
+
+
+    /* ============================================================
+       PAKET PROMO — horizontal scroll
+       ============================================================ */
+    .menu-section-promo {
+        padding: 28px 0 !important;
+    }
+
+    .menu-section-promo .section-header {
+        padding: 0 16px !important;
+    }
+
+    .promo-scroll-container {
+        overflow-x: auto !important;
+        width: 100% !important;
+    }
+
+    .promo-row-container {
+        overflow: visible !important;
+        padding: 0 !important;
+    }
+
+    .promo-row {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        justify-content: flex-start !important;
+        gap: 12px !important;
+        padding: 8px 16px 16px !important;
+        width: max-content !important;
+        margin: 0 !important;
+    }
+
+    .promo-row .col-auto {
+        flex: 0 0 auto !important;
+        width: auto !important;
+        padding: 0 !important;
+    }
+
+    /* Card promo: ~78vw */
+    .promo-card {
+        width: 78vw !important;
+        min-width: 78vw !important;
+        max-width: 78vw !important;
+        border-radius: 12px !important;
+    }
+
+    .promo-img-wrapper {
+        height: 170px !important;
+    }
+
+    .promo-content {
+        padding: 12px !important;
+    }
+
+    .promo-title {
+        font-size: 0.9rem !important;
+    }
+
+    .promo-text {
+        font-size: 0.75rem !important;
+    }
+
+
+    /* ============================================================
+       SHARED CARD ELEMENTS — semua card di mobile
+       ============================================================ */
+
+    /* Gambar wrapper aspect ratio - object-fit cover */
+    .tumisan-img-wrapper,
+    .kids-img-wrapper,
+    .nasi-img-wrapper,
+    .minuman-img-wrapper,
+    .tambahan-img-wrapper,
+    .promo-img-wrapper {
+        height: 170px !important;
+        width: 100% !important;
+    }
+
+    .tumisan-img,
+    .kids-img,
+    .nasi-img,
+    .minuman-img,
+    .tambahan-img,
+    .promo-img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        display: block !important;
+    }
+
+    /* Tombol quantity — touch friendly min 44px */
+    .btn-qty,
+    .btn-minus, .btn-plus,
+    .btn-tumisan-minus, .btn-tumisan-plus,
+    .btn-kids-minus, .btn-kids-plus,
+    .btn-nasi-minus, .btn-nasi-plus,
+    .btn-minuman-minus, .btn-minuman-plus,
+    .btn-tambahan-minus, .btn-tambahan-plus,
+    .btn-promo-minus, .btn-promo-plus,
+    .btn-quantity {
+        min-width: 32px !important;
+        min-height: 32px !important;
+        width: 32px !important;
+        height: 32px !important;
+    }
+
+    /* Input qty */
+    .tumisan-quantity-input,
+    .kids-quantity-input,
+    .nasi-quantity-input,
+    .minuman-quantity-input,
+    .tambahan-quantity-input,
+    .promo-quantity-input,
+    .quantity-input-sm {
+        min-height: 32px !important;
+        height: 32px !important;
+        font-size: 0.8rem !important;
+    }
+
+    /* Tombol order — full width, solid */
+    .btn-tumisan-order,
+    .btn-kids-order,
+    .btn-nasi-order,
+    .btn-minuman-order,
+    .btn-tambahan-order,
+    .btn-promo-order {
+        padding: 10px 12px !important;
+        font-size: 0.72rem !important;
+        min-height: 40px !important;
+        border-radius: 9px !important;
+    }
+
+    /* Quick add button */
+    .btn-tumisan-quick,
+    .btn-kids-quick,
+    .btn-nasi-quick,
+    .btn-minuman-quick,
+    .btn-tambahan-quick,
+    .btn-promo-quick,
+    .btn-quick-add,
+    .btn-add {
+        width: 28px !important;
+        height: 28px !important;
+        min-width: 28px !important;
+        font-size: 0.85rem !important;
+    }
+
+    /* Harga label kecil */
+    .price-label-small,
+    .tumisan-price .price-label,
+    .kids-price .price-label,
+    .nasi-price .price-label,
+    .minuman-price .price-label,
+    .tambahan-price .price-label,
+    .promo-price .price-label {
+        font-size: 0.6rem !important;
+    }
+
+    /* Harga angka */
+    .tumisan-price .price-amount,
+    .kids-price .price-amount,
+    .nasi-price .price-amount,
+    .minuman-price .price-amount,
+    .tambahan-price .price-amount,
+    .promo-price .price-amount {
+        font-size: 0.95rem !important;
+        font-weight: 700 !important;
+    }
+
+    /* Total price */
+    .tumisan-total,
+    .kids-total,
+    .nasi-total,
+    .minuman-total,
+    .tambahan-total,
+    .promo-total,
+    .total-price-sm {
+        padding: 6px 10px !important;
+        border-radius: 7px !important;
+    }
+
+
+    /* ============================================================
+       MODAL — full screen di mobile
+       ============================================================ */
+    .modal-dialog {
+        margin: 0 !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        min-height: 100vh !important;
+        align-items: flex-end !important;
+    }
+
+    .modal-content {
+        border-radius: 20px 20px 0 0 !important;
+        border-bottom: none !important;
+        min-height: 70vh !important;
+    }
+
+    .modal-header {
+        padding: 16px !important;
+        position: sticky !important;
+        top: 0 !important;
+        z-index: 10 !important;
+    }
+
+    .modal-title {
+        font-size: 1.1rem !important;
+    }
+
+    .modal-body {
+        max-height: 50vh !important;
+        overflow-y: auto !important;
+    }
+
+    .cart-items-container {
+        padding: 12px !important;
+    }
+
+    .cart-item {
+        flex-wrap: wrap !important;
+        gap: 8px !important;
+        padding: 12px !important;
+    }
+
+    .cart-item-info {
+        flex: 0 0 100% !important;
+        margin-right: 0 !important;
+    }
+
+    .cart-item-controls {
+        margin: 0 !important;
+    }
+
+    .cart-item-total {
+        flex: 1 !important;
+        text-align: left !important;
+        min-width: 0 !important;
+    }
+
+    .modal-footer {
+        flex-direction: column !important;
+        gap: 8px !important;
+        padding: 12px 16px !important;
+    }
+
+    .modal-footer button {
+        width: 100% !important;
+        min-width: 100% !important;
+        padding: 12px !important;
+    }
+
+    .cart-summary-section {
+        padding: 12px 16px !important;
+    }
+
+    /* ============================================================
+       FOOTER — mobile
+       ============================================================ */
+    .footer-section {
+        padding: 36px 0 20px !important;
+        text-align: center !important;
+    }
+
+    .footer-section .list-unstyled li {
+        padding-left: 0 !important;
+        justify-content: center !important;
+        display: flex !important;
+        align-items: center !important;
+        gap: 8px !important;
+    }
+
+    .footer-section .list-unstyled li i {
+        position: static !important;
+        transform: none !important;
+    }
+
+    .social-links {
+        justify-content: center !important;
+    }
+
+    .footer-section h5 {
+        border-bottom: none !important;
+        padding-bottom: 0 !important;
+    }
+
+    .footer-section h5.fw-bold:first-of-type {
+        padding-left: 0 !important;
+        text-align: center !important;
+    }
+
+    .footer-section h5.fw-bold:first-of-type::before {
+        position: static !important;
+        display: block !important;
+        margin-bottom: 8px !important;
+    }
+
+    /* ============================================================
+       GARANSI SECTION — mobile
+       ============================================================ */
+    .garansi-header {
+        padding: 20px !important;
+    }
+
+    .garansi-card {
+        margin-bottom: 16px !important;
+    }
+
+    .garansi-footer {
+        padding: 16px !important;
+    }
+
+} /* end @media max-width: 767px */
+
+
+/* ============================================================
+   5. VERY SMALL MOBILE — max-width: 400px
+   ============================================================ */
+@media (max-width: 400px) {
+    .hero-section .hero-title {
+        font-size: 1.3rem !important;
+    }
+
+    .section-title {
+        font-size: 1.25rem !important;
+    }
+
+    .nav-item-btn {
+        padding: 6px 10px !important;
+        font-size: 0.72rem !important;
+    }
+
+    /* Card lebih besar relatif terhadap layar kecil */
+    .carousel-card,
+    .tumisan-card,
+    .kids-card,
+    .nasi-card,
+    .minuman-card,
+    .tambahan-card,
+    .promo-card,
+    .menu-item-card {
+        width: 84vw !important;
+        min-width: 84vw !important;
+        max-width: 84vw !important;
+    }
+
+    .signature-image {
+        height: 190px !important;
+    }
+
+    .price-toggle-price {
+        font-size: 0.85rem !important;
+    }
+}
+
+
+/* ============================================================
+   6. TOUCH DEVICE — hapus hover transform yang ganggu
+   ============================================================ */
+@media (hover: none) and (pointer: coarse) {
+    /* Hapus hover effects yang tidak relevan di touch */
+    .signature-card:hover,
+    .vertical-card:hover,
+    .carousel-card .card:hover,
+    .menu-item-card:hover,
+    .tumisan-card:hover,
+    .kids-card:hover,
+    .nasi-card:hover,
+    .minuman-card:hover,
+    .tambahan-card:hover,
+    .promo-card:hover {
+        transform: none !important;
+        box-shadow: var(--shadow-medium) !important;
+    }
+
+    /* Gambar tidak zoom saat tap */
+    .signature-card:hover .signature-img,
+    .vertical-card:hover .vertical-img,
+    .carousel-card .card:hover .carousel-img,
+    .menu-item-card:hover .card-img,
+    .tumisan-card:hover .tumisan-img,
+    .kids-card:hover .kids-img,
+    .nasi-card:hover .nasi-img,
+    .minuman-card:hover .minuman-img,
+    .tambahan-card:hover .tambahan-img,
+    .promo-card:hover .promo-img {
+        transform: none !important;
+    }
+
+    /* Active state untuk feedback tap */
+    .tumisan-card:active,
+    .kids-card:active,
+    .nasi-card:active,
+    .minuman-card:active,
+    .tambahan-card:active,
+    .promo-card:active,
+    .menu-item-card:active,
+    .carousel-card .card:active {
+        transform: scale(0.98) !important;
+        transition: transform 0.1s ease !important;
+    }
+
+    /* Tombol active state */
+    .btn-order:active,
+    .btn-order-sm:active,
+    .btn-tumisan-order:active,
+    .btn-kids-order:active,
+    .btn-nasi-order:active,
+    .btn-minuman-order:active,
+    .btn-promo-order:active {
+        transform: scale(0.97) !important;
+        transition: transform 0.1s ease !important;
+    }
+}
+
+
+/* ============================================================
+   7. PRINT
+   ============================================================ */
+@media print {
+    .sticky-nav,
+    .btn-order, .btn-order-sm,
+    .btn-tumisan-order, .btn-kids-order,
+    .btn-nasi-order, .btn-minuman-order,
+    .btn-promo-order,
+    .quantity-selector, .quantity-section,
+    .quantity-section-sm {
+        display: none !important;
+    }
+
+    body {
+        padding-top: 0 !important;
+    }
+
+    .menu-section,
+    .menu-section-ikan,
+    .menu-section-tumisan,
+    .menu-section-kids,
+    .menu-section-nasi,
+    .menu-section-minuman,
+    .menu-section-promo {
+        page-break-inside: avoid;
+    }
+}

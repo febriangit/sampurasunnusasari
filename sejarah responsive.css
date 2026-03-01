@@ -1,0 +1,1981 @@
+/* ==========================================================================
+   SEJARAH RESPONSIVE CSS - MOBILE & TABLET ONLY
+   Desktop styling tidak diubah - hanya tambahan untuk mobile & tablet
+   ========================================================================== */
+
+/* ==============================
+   1. GLOBAL RESPONSIVE STYLES
+   ============================== */
+@media (max-width: 767px) {
+    body {
+        padding-top: 70px !important;
+    }
+    
+    .container {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+    
+    section {
+        padding: 2.5rem 0 !important;
+    }
+    
+    h1 {
+        font-size: 2rem !important;
+        line-height: 1.2 !important;
+    }
+    
+    h2.section-title,
+    h2.section-title-light {
+        font-size: 1.6rem !important;
+        text-align: center !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    h2.section-title::after,
+    h2.section-title-light::after {
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+    }
+    
+    .lead {
+        font-size: 1rem !important;
+        text-align: center !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        max-width: 95% !important;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+    
+    section {
+        padding: 3.5rem 0 !important;
+    }
+    
+    h2.section-title,
+    h2.section-title-light {
+        font-size: 2rem !important;
+    }
+}
+
+/* ==============================
+   2. NAVBAR RESPONSIVE
+   ============================== */
+
+/* NAVBAR MOBILE (≤ 767px) */
+@media (max-width: 767px) {
+    nav.navbar.navbar-expand-lg {
+        height: 70px !important;
+        padding: 0 10px !important;
+    }
+    
+    .navbar .container {
+        padding: 0 !important;
+        width: 100% !important;
+    }
+    
+    .navbar-brand img {
+        height: 40px !important;
+        width: auto !important;
+    }
+    
+    /* Hamburger Button */
+    .navbar-toggler {
+        border: 2px solid rgba(255, 255, 255, 0.8) !important;
+        padding: 8px 12px !important;
+        margin-right: 0 !important;
+        background: rgba(210, 105, 30, 0.4) !important;
+        cursor: pointer !important;
+        z-index: 10000 !important;
+    }
+    
+    .navbar-toggler:focus {
+        outline: none !important;
+        box-shadow: 0 0 0 3px rgba(210, 105, 30, 0.5) !important;
+    }
+    
+    .navbar-toggler-icon {
+        width: 28px !important;
+        height: 28px !important;
+    }
+    
+    /* Collapse Menu */
+    .navbar-collapse {
+        position: absolute !important;
+        top: 100% !important;
+        left: 0 !important;
+        right: 0 !important;
+        background: #3A1A04 !important;
+        padding: 15px !important;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8) !important;
+        border-top: 2px solid #D2691E !important;
+        border-bottom: 2px solid #D2691E !important;
+        border-radius: 0 0 15px 15px !important;
+        z-index: 9999 !important;
+        max-height: 80vh !important;
+        overflow-y: auto !important;
+    }
+    
+    /* Mobile Nav Items */
+    .navbar-nav {
+        flex-direction: column !important;
+        gap: 10px !important;
+        width: 100% !important;
+    }
+    
+    .nav-item {
+        width: 100% !important;
+    }
+    
+    .nav-link {
+        padding: 14px 20px !important;
+        text-align: center !important;
+        width: 100% !important;
+        font-size: 1rem !important;
+        font-weight: 600 !important;
+        background: rgba(255, 255, 255, 0.1) !important;
+        border-radius: 8px !important;
+        margin: 3px 0 !important;
+        display: block !important;
+    }
+    
+    .nav-link:hover,
+    .nav-link.active {
+        background: rgba(210, 105, 30, 0.7) !important;
+    }
+    
+    /* Dropdown Mobile */
+    .dropdown-menu {
+        background: #2C1403 !important;
+        border: 1px solid #D2691E !important;
+        margin: 10px 0 !important;
+        width: 100% !important;
+    }
+    
+    .dropdown-item {
+        padding: 12px 20px !important;
+        font-size: 0.95rem !important;
+        border-left: 3px solid transparent !important;
+    }
+    
+    .dropdown-item:hover {
+        background: rgba(210, 105, 30, 0.7) !important;
+        border-left: 3px solid #FFFFFF !important;
+        padding-left: 25px !important;
+    }
+    
+    .dropdown-item i {
+        margin-right: 15px !important;
+    }
+}
+
+/* NAVBAR TABLET (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    nav.navbar.navbar-expand-lg {
+        height: 75px !important;
+    }
+    
+    .navbar-brand img {
+        height: 45px !important;
+    }
+    
+    .navbar-nav {
+        gap: 6px !important;
+    }
+    
+    .nav-link {
+        padding: 10px 14px !important;
+        font-size: 0.9rem !important;
+    }
+    
+    .dropdown-menu {
+        min-width: 200px !important;
+    }
+}
+
+/* ==============================
+   3. HERO SECTION RESPONSIVE
+   ============================== */
+
+/* HERO MOBILE (≤ 767px) */
+@media (max-width: 767px) {
+    .hero-section {
+        min-height: 85vh !important;
+        display: flex !important;
+        align-items: center !important;
+        padding-top: 20px !important;
+        padding-bottom: 20px !important;
+    }
+    
+    .hero-section .container {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        min-height: 70vh !important;
+    }
+    
+    .hero-section .row {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        min-height: 70vh !important;
+        margin: 0 !important;
+        width: 100% !important;
+    }
+    
+    .hero-section .col-lg-8 {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        padding: 20px 15px !important;
+        margin: 0 auto !important;
+    }
+    
+    .hero-section h1 {
+        font-size: 1.8rem !important;
+        line-height: 1.2 !important;
+        margin-bottom: 1.2rem !important;
+        text-align: center !important;
+        width: 100% !important;
+    }
+    
+    .hero-logo {
+        margin: 1.2rem 0 !important;
+        width: 100% !important;
+        text-align: center !important;
+    }
+    
+    .hero-logo img {
+        max-width: 180px !important;
+        height: auto !important;
+        margin: 0 auto !important;
+    }
+    
+    .hero-description {
+        font-size: 0.95rem !important;
+        line-height: 1.5 !important;
+        max-width: 100% !important;
+        padding: 0 10px !important;
+        margin: 0 auto 1.5rem !important;
+        text-align: center !important;
+    }
+    
+    .video-background video {
+        object-position: center 30% !important;
+    }
+}
+
+/* HERO TABLET (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .hero-section {
+        min-height: 90vh !important;
+    }
+    
+    .hero-section h1 {
+        font-size: 2.5rem !important;
+    }
+    
+    .hero-logo img {
+        max-width: 250px !important;
+    }
+    
+    .hero-description {
+        font-size: 1.1rem !important;
+        max-width: 90% !important;
+        margin: 0 auto 2rem !important;
+    }
+}
+
+/* ==============================
+   4. SECTION 2: PENDIRI RESPONSIVE
+   ============================== */
+
+/* PENDIRI MOBILE (≤ 767px) */
+@media (max-width: 767px) {
+    .pendiri-section {
+        padding: 1rem 0 1.5rem 0 !important;
+        margin-top: -1.5rem !important;
+    }
+    
+    .pendiri-section .container {
+        padding: 0 15px !important;
+    }
+    
+    .pendiri-section .row {
+        flex-direction: column !important;
+        gap: 0.8rem !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    .pendiri-image-wrapper {
+        width: 100% !important;
+        max-width: 180px !important;
+        margin: 0 auto 0.6rem !important;
+        padding: 0 !important;
+    }
+    
+    .image-frame {
+        margin-top: 0 !important;
+        padding: 0 !important;
+    }
+    
+    .pendiri-info {
+        padding: 0 !important;
+        margin: 0 !important;
+        text-align: center !important;
+        width: 100% !important;
+    }
+    
+    .section-title {
+        font-size: 1.5rem !important;
+        margin: 0 0 0.5rem 0 !important;
+        padding: 0 !important;
+        text-align: center !important;
+    }
+    
+    .section-title::after {
+        margin-bottom: 0.3rem !important;
+        bottom: -5px !important;
+    }
+    
+    .pendiri-info .lead {
+        font-size: 0.9rem !important;
+        line-height: 1.4 !important;
+        margin: 0 0 0.8rem 0 !important;
+        padding: 0 !important;
+    }
+    
+    .pendiri-details {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+    }
+    
+    .detail-item {
+        flex-direction: row !important;
+        text-align: left !important;
+        padding: 0.8rem 0.7rem !important;
+        margin-bottom: 0.5rem !important;
+        background: rgba(58, 26, 4, 0.8) !important;
+        border-left: 4px solid #D2691E !important;
+        border-radius: 8px !important;
+        align-items: center !important;
+        gap: 0.8rem !important;
+    }
+    
+    .detail-icon {
+        width: 48px !important;
+        height: 48px !important;
+        margin: 0 !important;
+        font-size: 1.2rem !important;
+        border-radius: 8px !important;
+        flex-shrink: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        background: linear-gradient(135deg, #D2691E, #FF8C00) !important;
+        box-shadow: 0 3px 8px rgba(210, 105, 30, 0.3) !important;
+    }
+    
+    .detail-content {
+        flex: 1 !important;
+        min-width: 0 !important;
+    }
+    
+    .detail-content h5 {
+        font-size: 1.05rem !important;
+        margin-bottom: 0.2rem !important;
+        font-weight: 700 !important;
+        line-height: 1.2 !important;
+    }
+    
+    .detail-content p {
+        font-size: 0.9rem !important;
+        line-height: 1.3 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+}
+
+/* PENDIRI TABLET (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .pendiri-section {
+        padding: 1.5rem 0 2rem 0 !important;
+        margin-top: -1rem !important;
+    }
+    
+    .pendiri-section .container {
+        padding: 0 20px !important;
+    }
+    
+    .pendiri-section .row {
+        gap: 1rem !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    
+    .pendiri-image-wrapper {
+        max-width: 250px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    .pendiri-info {
+        padding: 0 0 0 1rem !important;
+        margin: 0 !important;
+    }
+    
+    .section-title {
+        margin: 0 0 0.4rem 0 !important;
+        padding: 0 !important;
+        font-size: 1.7rem !important;
+    }
+    
+    .pendiri-info .lead {
+        margin: 0 0 0.7rem 0 !important;
+        padding: 0 !important;
+        font-size: 1rem !important;
+        line-height: 1.4 !important;
+    }
+    
+    .pendiri-details {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    .detail-item {
+        margin: 0 0 0.4rem 0 !important;
+        padding: 0.8rem 0.7rem !important;
+        gap: 0.8rem !important;
+        flex-direction: row !important;
+        align-items: center !important;
+    }
+    
+    .detail-icon {
+        width: 52px !important;
+        height: 52px !important;
+        margin: 0 !important;
+        font-size: 1.3rem !important;
+        flex-shrink: 0 !important;
+    }
+    
+    .detail-content h5 {
+        margin: 0 0 0.2rem 0 !important;
+        font-size: 1.1rem !important;
+    }
+    
+    .detail-content p {
+        margin: 0 !important;
+        font-size: 0.92rem !important;
+        line-height: 1.3 !important;
+    }
+}
+
+/* ==============================
+   5. SECTION 3: CERITA & VIDEO RESPONSIVE
+   ============================== */
+
+/* CERITA MOBILE (≤ 767px) */
+/* CERITA MOBILE (max-width: 767px) */
+@media (max-width: 767px) {
+    /* SECTION */
+    .cerita-section.py-5 {
+        padding: 2rem 0 !important;
+    }
+    
+    .cerita-section .container {
+        padding: 0 1rem !important;
+    }
+    
+    /* ROW - HAPUS SEMUA GAP */
+    .cerita-section .row.align-items-center.g-5 {
+        --bs-gutter-y: 0 !important;
+        --bs-gutter-x: 0 !important;
+        gap: 0 !important;
+        row-gap: 0 !important;
+        column-gap: 0 !important;
+        margin: 0 !important;
+        display: block !important;
+    }
+    
+    /* KOLOM */
+    .cerita-section .col-lg-6 {
+        padding: 0 !important;
+        margin: 0 !important;
+        width: 100% !important;
+    }
+    
+    .cerita-section .col-lg-6[data-aos="fade-right"] {
+        margin-bottom: 0 !important;
+    }
+    
+    .cerita-section .col-lg-6[data-aos="fade-left"] {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+    
+    /* JUDUL - RATA TENGAH - PAKSA! */
+    .cerita-section h2,
+    .cerita-section .section-title,
+    .cerita-section h2.section-title,
+    .cerita-section h2.section-title.mb-4,
+    .cerita-section .col-lg-6 h2.section-title.mb-4 {
+        text-align: center !important;
+        font-size: 1.75rem !important;
+        margin: 0 0 0.8rem 0 !important;
+        padding: 0 !important;
+        display: block !important;
+        width: 100% !important;
+    }
+    
+    /* CONTENT */
+    .cerita-content {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    /* PARAGRAF */
+    .cerita-content p.fs-5.mb-4 {
+        font-size: 0.95rem !important;
+        line-height: 1.6 !important;
+        text-align: left !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    /* VIDEO SECTION - INI YANG PENTING */
+    .video-wrapper {
+        width: 100% !important;
+        margin: 0.5rem 0 0 0 !important;
+        padding: 0 !important;
+    }
+    
+    .video-wrapper .ratio.ratio-16x9 {
+        margin: 0 !important;
+        padding: 0 !important;
+        --bs-aspect-ratio: 56.25% !important;
+    }
+    
+    .video-wrapper .ratio-16x9::before {
+        padding-top: 56.25% !important;
+    }
+    
+    .video-placeholder.position-relative.rounded-4.overflow-hidden {
+        margin: 0 !important;
+        padding: 0 !important;
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+    }
+    
+    .video-placeholder video.img-fluid.w-100 {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+    }
+}
+
+/* CERITA TABLET (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .cerita-section.py-5 {
+        padding: 2.5rem 0 !important;
+    }
+    
+    .cerita-section .container {
+        padding: 0 1.5rem !important;
+    }
+    
+    .cerita-section .row.g-5 {
+        --bs-gutter-y: 0 !important;
+        gap: 0 !important;
+        row-gap: 0 !important;
+        display: block !important;
+    }
+    
+    .cerita-section .col-lg-6 {
+        padding: 0 !important;
+        margin: 0 !important;
+        width: 100% !important;
+    }
+    
+    .cerita-section .col-lg-6[data-aos="fade-left"] {
+        margin-top: 0 !important;
+    }
+    
+    /* JUDUL RATA TENGAH */
+    .cerita-section h2,
+    .cerita-section .section-title,
+    .cerita-section h2.section-title,
+    .cerita-section h2.section-title.mb-4 {
+        text-align: center !important;
+        font-size: 2rem !important;
+        margin: 0 0 1rem 0 !important;
+        display: block !important;
+        width: 100% !important;
+    }
+    
+    .cerita-content {
+        margin: 0 !important;
+    }
+    
+    .cerita-content p.fs-5.mb-4 {
+        font-size: 1rem !important;
+        line-height: 1.7 !important;
+        text-align: left !important;
+        margin: 0 !important;
+    }
+    
+    .video-wrapper {
+        margin: 0.8rem 0 0 0 !important;
+        padding: 0 !important;
+    }
+    
+    .video-wrapper .ratio-16x9 {
+        margin: 0 !important;
+    }
+}
+
+/* CERITA LANDSCAPE TABLET (992px - 1024px) */
+@media (min-width: 992px) and (max-width: 1024px) and (orientation: landscape) {
+    .cerita-section.py-5.py-lg-7 {
+        padding: 3rem 0 !important;
+    }
+    
+    .cerita-section h2.section-title {
+        font-size: 2.2rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+    
+    .cerita-content p {
+        font-size: 1.05rem !important;
+        line-height: 1.75 !important;
+    }
+}
+
+
+
+/* ==============================
+   6. SECTION 4: FILOSOFI RESPONSIVE
+   ============================== */
+
+/* FILOSOFI MOBILE (≤ 767px) */
+@media (max-width: 767px) {
+    .filosofi-section {
+        padding: 2rem 0 !important;
+        min-height: 50vh !important;
+    }
+    
+    .filosofi-content p {
+        font-size: 1rem !important;
+        text-align: center !important;
+        line-height: 1.5 !important;
+    }
+    
+    .section-title-light {
+        font-size: 1.6rem !important;
+        text-align: center !important;
+    }
+}
+
+/* FILOSOFI TABLET (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .filosofi-section {
+        padding: 3rem 0 !important;
+        min-height: 60vh !important;
+    }
+    
+    .filosofi-content p {
+        font-size: 1.2rem !important;
+    }
+}
+
+
+/* ==============================
+   7. SECTION 5: TIM PENGEMBANG RESPONSIVE
+   ============================== */
+
+/* TIM MOBILE (≤ 767px) */
+/* TIM MOBILE (max-width: 767px) */
+@media (max-width: 767px) {
+    .tim-section.py-5 {
+        padding: 2rem 0 !important;
+    }
+    
+    .tim-section .container {
+        padding: 0 1rem !important;
+    }
+    
+    /* HEADER SECTION */
+    .tim-section .text-center.mb-5 {
+        margin-bottom: 1.5rem !important;
+    }
+    
+    .tim-section .section-title.mb-3 {
+        font-size: 1.75rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+    
+    .tim-section .lead {
+        font-size: 0.95rem !important;
+        margin-bottom: 0 !important;
+    }
+    
+    /* ROW - HAPUS GAP */
+    .tim-section .row.align-items-center.g-4 {
+        --bs-gutter-y: 0 !important;
+        --bs-gutter-x: 0 !important;
+        gap: 0 !important;
+        row-gap: 0 !important;
+        margin: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    
+    /* KOLOM */
+    .tim-section .col-lg-4 {
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 0 1.5rem 0 !important;
+    }
+    
+    .tim-section .col-lg-4:last-child {
+        margin-bottom: 0 !important;
+    }
+    
+    /* URUTAN - DESKRIPSI DI PALING BAWAH */
+    .tim-section .col-lg-4:nth-child(1) {
+        order: 1 !important;
+    }
+    
+    .tim-section .col-lg-4:nth-child(2) {
+        order: 3 !important;
+        margin-top: 1rem !important;
+    }
+    
+    .tim-section .col-lg-4:nth-child(3) {
+        order: 2 !important;
+    }
+    
+    /* IMAGE WRAPPER */
+    .tim-image-wrapper.mb-4 {
+        margin-bottom: 1rem !important;
+    }
+    
+    .image-circle {
+        width: 160px !important;
+        height: 160px !important;
+        margin: 0 auto !important;
+    }
+    
+    /* TIM INFO */
+    .tim-info h3.h4 {
+        font-size: 1.25rem !important;
+        margin-bottom: 0.3rem !important;
+    }
+    
+    .tim-info .text-muted.mb-2 {
+        margin-bottom: 0.5rem !important;
+        font-size: 0.9rem !important;
+    }
+    
+    .tim-info ul {
+        max-width: 280px !important;
+        margin: 0 auto !important;
+        padding: 0 !important;
+    }
+    
+    .tim-info ul li {
+        font-size: 0.9rem !important;
+        margin-bottom: 0.3rem !important;
+    }
+    
+    .tim-info ul li:last-child {
+        margin-bottom: 0 !important;
+    }
+    
+    /* DESKRIPSI BOX */
+    .tim-description.p-4 {
+        padding: 1.5rem !important;
+    }
+    
+    .tim-description h4.h5 {
+        font-size: 1.1rem !important;
+        margin-bottom: 0.8rem !important;
+    }
+    
+    .tim-description p {
+        font-size: 0.9rem !important;
+        line-height: 1.6 !important;
+        margin-bottom: 0.8rem !important;
+    }
+    
+    .tim-description p.mb-0 {
+        margin-bottom: 0 !important;
+    }
+}
+
+/* TIM TABLET (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .tim-section.py-5 {
+        padding: 2.5rem 0 !important;
+    }
+    
+    .tim-section .container {
+        padding: 0 1.5rem !important;
+    }
+    
+    /* HEADER */
+    .tim-section .text-center.mb-5 {
+        margin-bottom: 2rem !important;
+    }
+    
+    .tim-section .section-title {
+        font-size: 2rem !important;
+    }
+    
+    /* ROW */
+    .tim-section .row.g-4 {
+        --bs-gutter-y: 1rem !important;
+        --bs-gutter-x: 1rem !important;
+        gap: 1rem !important;
+        display: flex !important;
+        flex-wrap: wrap !important;
+    }
+    
+    /* KOLOM - 2 KOLOM ATAS, 1 KOLOM BAWAH */
+    .tim-section .col-lg-4:nth-child(1),
+    .tim-section .col-lg-4:nth-child(3) {
+        flex: 0 0 calc(50% - 0.5rem) !important;
+        max-width: calc(50% - 0.5rem) !important;
+    }
+    
+    .tim-section .col-lg-4:nth-child(2) {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        order: 3 !important;
+    }
+    
+    /* IMAGE */
+    .image-circle {
+        width: 180px !important;
+        height: 180px !important;
+    }
+    
+    /* DESKRIPSI */
+    .tim-description {
+        max-width: 90% !important;
+        margin: 0 auto !important;
+    }
+    
+    .tim-description.p-4 {
+        padding: 2rem !important;
+    }
+}
+
+/* TIM LANDSCAPE TABLET (992px - 1024px) */
+@media (min-width: 992px) and (max-width: 1024px) and (orientation: landscape) {
+    .tim-section.py-5.py-lg-7 {
+        padding: 3rem 0 !important;
+    }
+    
+    .tim-section .section-title {
+        font-size: 2.2rem !important;
+    }
+    
+    .image-circle {
+        width: 200px !important;
+        height: 200px !important;
+    }
+}
+
+
+/* ==============================
+   8. SECTION 6: 3 TAHAP PEMBAKARAN RESPONSIVE
+   ============================== */
+
+/* TAHAP MOBILE (≤ 767px) */
+/* TAHAP MOBILE (max-width: 767px) */
+@media (max-width: 767px) {
+    .tahap-section.py-5 {
+        padding: 2rem 0 !important;
+    }
+    
+    .tahap-section .container {
+        padding: 0 1rem !important;
+    }
+    
+    /* HEADER SECTION */
+    .tahap-section .text-center.mb-5 {
+        margin-bottom: 1.5rem !important;
+    }
+    
+    .tahap-section .section-title.mb-3 {
+        font-size: 1.75rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+    
+    .tahap-section .lead {
+        font-size: 0.95rem !important;
+        margin-bottom: 0 !important;
+    }
+    
+    /* ROW - HAPUS GAP BERLEBIH */
+    .tahap-section .row.g-4 {
+        --bs-gutter-y: 0 !important;
+        --bs-gutter-x: 0 !important;
+        gap: 0 !important;
+        row-gap: 1rem !important;
+        margin: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    
+    /* KOLOM */
+    .tahap-section .col-md-4 {
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    
+    /* CARD */
+    .tahap-card {
+        padding: 1.5rem !important;
+        margin: 0 !important;
+        height: auto !important;
+    }
+    
+    .tahap-card.h-100 {
+        height: auto !important;
+    }
+    
+    /* ICON */
+    .tahap-icon.mb-4 {
+        width: 65px !important;
+        height: 65px !important;
+        margin: 0 auto 0.8rem auto !important;
+    }
+    
+    .tahap-icon i {
+        font-size: 1.8rem !important;
+    }
+    
+    /* HEADING */
+    .tahap-card h3.h4.fw-bold.mb-3 {
+        font-size: 1.25rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+    
+    .tahap-card h4.h5.text-muted.mb-3 {
+        font-size: 1rem !important;
+        margin-bottom: 0.8rem !important;
+    }
+    
+    /* PARAGRAF */
+    .tahap-card p.mb-0 {
+        font-size: 0.9rem !important;
+        line-height: 1.5 !important;
+        margin-bottom: 0 !important;
+    }
+}
+
+/* TAHAP TABLET (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .tahap-section.py-5 {
+        padding: 2.5rem 0 !important;
+    }
+    
+    .tahap-section .container {
+        padding: 0 1.5rem !important;
+    }
+    
+    /* HEADER */
+    .tahap-section .text-center.mb-5 {
+        margin-bottom: 2rem !important;
+    }
+    
+    .tahap-section .section-title {
+        font-size: 2rem !important;
+    }
+    
+    /* ROW - GRID 2 KOLOM */
+    .tahap-section .row.g-4 {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1rem !important;
+        row-gap: 1rem !important;
+        margin: 0 !important;
+    }
+    
+    /* CARD KE-3 FULL WIDTH */
+    .tahap-section .col-md-4:nth-child(3) {
+        grid-column: 1 / -1 !important;
+        max-width: 100% !important;
+        padding: 0 10% !important;
+    }
+    
+    /* CARD */
+    .tahap-card {
+        padding: 1.8rem !important;
+    }
+    
+    /* ICON */
+    .tahap-icon {
+        width: 70px !important;
+        height: 70px !important;
+    }
+    
+    .tahap-icon.mb-4 {
+        margin-bottom: 1rem !important;
+    }
+    
+    /* HEADING */
+    .tahap-card h3.mb-3 {
+        margin-bottom: 0.8rem !important;
+    }
+    
+    .tahap-card h4.mb-3 {
+        margin-bottom: 1rem !important;
+    }
+}
+
+/* TAHAP LANDSCAPE TABLET (992px - 1024px) */
+@media (min-width: 992px) and (max-width: 1024px) and (orientation: landscape) {
+    .tahap-section.py-5.py-lg-7 {
+        padding: 3rem 0 !important;
+    }
+    
+    .tahap-section .section-title {
+        font-size: 2.2rem !important;
+    }
+    
+    .tahap-section .row.g-4 {
+        gap: 1.5rem !important;
+    }
+    
+    .tahap-card {
+        padding: 2rem !important;
+    }
+    
+    .tahap-icon {
+        width: 75px !important;
+        height: 75px !important;
+    }
+}
+
+
+/* ==============================
+   9. SECTION 7: GALERI CAROUSEL RESPONSIVE
+   ============================== */
+
+/* GALERI MOBILE (≤ 767px) */
+/* GALERI MOBILE (max-width: 767px) */
+@media (max-width: 767px) {
+    .galeri-section.py-5 {
+        padding: 2rem 0 !important;
+    }
+    
+    .galeri-section .container {
+        padding: 0 1rem !important;
+    }
+    
+    /* HEADER SECTION */
+    .galeri-section .text-center.mb-5 {
+        margin-bottom: 1.5rem !important;
+    }
+    
+    .galeri-section .section-title.mb-3 {
+        font-size: 1.75rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+    
+    .galeri-section .lead {
+        font-size: 0.95rem !important;
+        margin-bottom: 0 !important;
+    }
+    
+    /* CAROUSEL WRAPPER - TAMBAH SPACE BAWAH */
+    .galeri-section #galeriCarousel {
+        margin: 0 0 2.5rem 0 !important;
+        padding: 0 !important;
+        position: relative !important;
+        min-height: 300px !important;
+    }
+    
+    .galeri-section .carousel-inner {
+        padding: 0 !important;
+        margin: 0 !important;
+        position: relative !important;
+    }
+    
+    /* ROW - 1 CARD PER SLIDE DI MOBILE */
+    .galeri-section .carousel-inner .row.g-4 {
+        --bs-gutter-x: 0 !important;
+        --bs-gutter-y: 0 !important;
+        gap: 0 !important;
+        margin: 0 !important;
+        display: flex !important;
+        justify-content: center !important;
+    }
+    
+    /* KOLOM - HIDE 2 & 3 DI MOBILE (1 CARD ONLY) */
+    .galeri-section .carousel-inner .col-md-4 {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+    }
+    
+    .galeri-section .carousel-inner .col-md-4:nth-child(2),
+    .galeri-section .carousel-inner .col-md-4:nth-child(3) {
+        display: none !important;
+    }
+    
+    /* GALERI CARD */
+    .galeri-section .galeri-card {
+        height: 250px !important;
+        margin: 0 !important;
+        border-radius: 1rem !important;
+        overflow: hidden !important;
+        cursor: pointer !important;
+        position: relative !important;
+    }
+    
+    .galeri-section .galeri-card img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+    }
+    
+    /* OVERLAY */
+    .galeri-section .galeri-overlay {
+        position: absolute !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        padding: 1rem !important;
+        background: linear-gradient(to top, rgba(0,0,0,0.8), transparent) !important;
+    }
+    
+    .galeri-section .galeri-overlay h5 {
+        font-size: 1.1rem !important;
+        margin-bottom: 0.2rem !important;
+        color: #fff !important;
+    }
+    
+    .galeri-section .galeri-overlay p {
+        font-size: 0.85rem !important;
+        margin-bottom: 0 !important;
+        color: rgba(255,255,255,0.8) !important;
+    }
+    
+    /* CAROUSEL INDICATORS - BULAT KECIL */
+    .galeri-section .carousel-indicators {
+        position: absolute !important;
+        bottom: -40px !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        width: auto !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 6px !important;
+        z-index: 10 !important;
+    }
+    
+    .galeri-section .carousel-indicators button,
+    .galeri-section .carousel-indicators [data-bs-target] {
+        width: 6px !important;
+        height: 6px !important;
+        border-radius: 50% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        background-color: rgba(139, 69, 19, 0.4) !important;
+        border: none !important;
+        opacity: 1 !important;
+        transition: all 0.3s ease !important;
+        text-indent: 0 !important;
+    }
+    
+    .galeri-section .carousel-indicators button.active,
+    .galeri-section .carousel-indicators .active {
+        background-color: #8B4513 !important;
+        width: 6px !important;
+        height: 6px !important;
+        transform: scale(1.2) !important;
+    }
+    
+    /* CAROUSEL CONTROLS - HIDE DI MOBILE */
+    .galeri-section .carousel-control-prev,
+    .galeri-section .carousel-control-next {
+        display: none !important;
+    }
+    
+    /* MODAL RESPONSIVE */
+    .modal-dialog.modal-lg {
+        max-width: 95% !important;
+        margin: 1rem auto !important;
+    }
+    
+    .modal-content {
+        border-radius: 1rem !important;
+    }
+    
+    .modal-body img {
+        border-radius: 0.5rem !important;
+    }
+    
+    .modal-body p {
+        font-size: 0.9rem !important;
+        line-height: 1.6 !important;
+    }
+}
+
+/* GALERI TABLET (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .galeri-section.py-5 {
+        padding: 2.5rem 0 !important;
+    }
+    
+    .galeri-section .container {
+        padding: 0 1.5rem !important;
+    }
+    
+    /* HEADER */
+    .galeri-section .text-center.mb-5 {
+        margin-bottom: 2rem !important;
+    }
+    
+    .galeri-section .section-title {
+        font-size: 2rem !important;
+    }
+    
+    /* CAROUSEL WRAPPER */
+    .galeri-section #galeriCarousel {
+        padding: 0 !important;
+        margin: 0 0 3rem 0 !important;
+        position: relative !important;
+        min-height: 330px !important;
+    }
+    
+    .galeri-section .carousel-inner {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    /* ROW - 2 CARDS PER SLIDE DI TABLET */
+    .galeri-section .carousel-inner .row.g-4 {
+        gap: 1rem !important;
+        row-gap: 1rem !important;
+        margin: 0 !important;
+        display: flex !important;
+        justify-content: center !important;
+    }
+    
+    /* KOLOM - SHOW 2 CARDS, HIDE 3RD */
+    .galeri-section .carousel-inner .col-md-4 {
+        flex: 0 0 calc(50% - 0.5rem) !important;
+        max-width: calc(50% - 0.5rem) !important;
+        padding: 0 !important;
+    }
+    
+    .galeri-section .carousel-inner .col-md-4:nth-child(3) {
+        display: none !important;
+    }
+    
+    /* GALERI CARD */
+    .galeri-section .galeri-card {
+        height: 280px !important;
+        margin: 0 !important;
+        border-radius: 1rem !important;
+        overflow: hidden !important;
+    }
+    
+    .galeri-section .galeri-card img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        transition: transform 0.3s ease !important;
+    }
+    
+    .galeri-section .galeri-card:hover img {
+        transform: scale(1.05) !important;
+    }
+    
+    /* OVERLAY */
+    .galeri-section .galeri-overlay {
+        padding: 1.2rem !important;
+    }
+    
+    .galeri-section .galeri-overlay h5 {
+        font-size: 1.2rem !important;
+    }
+    
+    .galeri-section .galeri-overlay p {
+        font-size: 0.9rem !important;
+    }
+    
+    /* CAROUSEL INDICATORS - KECIL */
+    .galeri-section .carousel-indicators {
+        position: absolute !important;
+        bottom: -45px !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        width: auto !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 7px !important;
+    }
+    
+    .galeri-section .carousel-indicators button,
+    .galeri-section .carousel-indicators [data-bs-target] {
+        width: 7px !important;
+        height: 7px !important;
+        border-radius: 50% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        background-color: rgba(139, 69, 19, 0.4) !important;
+        border: none !important;
+        opacity: 1 !important;
+        transition: all 0.3s ease !important;
+    }
+    
+    .galeri-section .carousel-indicators button.active,
+    .galeri-section .carousel-indicators .active {
+        background-color: #8B4513 !important;
+        transform: scale(1.3) !important;
+    }
+    
+    /* CAROUSEL CONTROLS */
+    .galeri-section .carousel-control-prev,
+    .galeri-section .carousel-control-next {
+        width: 40px !important;
+        height: 40px !important;
+        background-color: rgba(139, 69, 19, 0.2) !important;
+        border-radius: 50% !important;
+        top: 35% !important;
+        transform: translateY(-50%) !important;
+        opacity: 0.7 !important;
+        backdrop-filter: blur(10px) !important;
+        transition: all 0.3s ease !important;
+    }
+    
+    .galeri-section .carousel-control-prev {
+        left: -20px !important;
+    }
+    
+    .galeri-section .carousel-control-next {
+        right: -20px !important;
+    }
+    
+    .galeri-section .carousel-control-prev:hover,
+    .galeri-section .carousel-control-next:hover {
+        opacity: 1 !important;
+        background-color: rgba(139, 69, 19, 0.4) !important;
+    }
+    
+    .galeri-section .carousel-control-prev-icon,
+    .galeri-section .carousel-control-next-icon {
+        width: 20px !important;
+        height: 20px !important;
+    }
+}
+
+/* GALERI LANDSCAPE TABLET (992px - 1024px) */
+@media (min-width: 992px) and (max-width: 1024px) and (orientation: landscape) {
+    .galeri-section.py-5.py-lg-7 {
+        padding: 3rem 0 !important;
+    }
+    
+    .galeri-section .section-title {
+        font-size: 2.2rem !important;
+    }
+    
+    /* CAROUSEL WRAPPER */
+    .galeri-section #galeriCarousel {
+        padding: 0 !important;
+        margin: 0 0 3.5rem 0 !important;
+        min-height: 350px !important;
+    }
+    
+    .galeri-section .carousel-inner {
+        padding: 0 !important;
+    }
+    
+    /* ROW - 3 CARDS PER SLIDE */
+    .galeri-section .carousel-inner .row.g-4 {
+        gap: 1.5rem !important;
+    }
+    
+    /* SHOW ALL 3 CARDS */
+    .galeri-section .carousel-inner .col-md-4 {
+        flex: 0 0 calc(33.333% - 1rem) !important;
+        max-width: calc(33.333% - 1rem) !important;
+    }
+    
+    .galeri-section .carousel-inner .col-md-4:nth-child(3) {
+        display: block !important;
+    }
+    
+    /* GALERI CARD */
+    .galeri-section .galeri-card {
+        height: 300px !important;
+    }
+    
+    /* CAROUSEL INDICATORS */
+    .galeri-section .carousel-indicators {
+        position: absolute !important;
+        bottom: -50px !important;
+        gap: 8px !important;
+    }
+    
+    .galeri-section .carousel-indicators button,
+    .galeri-section .carousel-indicators [data-bs-target] {
+        width: 8px !important;
+        height: 8px !important;
+        background-color: rgba(139, 69, 19, 0.4) !important;
+    }
+    
+    .galeri-section .carousel-indicators button.active,
+    .galeri-section .carousel-indicators .active {
+        background-color: #8B4513 !important;
+        transform: scale(1.4) !important;
+    }
+    
+    /* CAROUSEL CONTROLS */
+    .galeri-section .carousel-control-prev,
+    .galeri-section .carousel-control-next {
+        background-color: rgba(139, 69, 19, 0.2) !important;
+    }
+    
+    .galeri-section .carousel-control-prev:hover,
+    .galeri-section .carousel-control-next:hover {
+        background-color: rgba(139, 69, 19, 0.4) !important;
+    }
+    
+    .galeri-section .carousel-control-prev {
+        left: -25px !important;
+    }
+    
+    .galeri-section .carousel-control-next {
+        right: -25px !important;
+    }
+}
+
+
+/* ==============================
+   10. SECTION 8: VISI KE DEPAN RESPONSIVE
+   ============================== */
+
+/* VISI MOBILE (≤ 767px) */
+/* VISI MOBILE (max-width: 767px) */
+@media (max-width: 767px) {
+    .visi-section.py-5 {
+        padding: 2rem 0 !important;
+        min-height: auto !important;
+    }
+    
+    .visi-section .container {
+        padding: 0 1rem !important;
+    }
+    
+    /* ROW */
+    .visi-section .row {
+        margin: 0 !important;
+    }
+    
+    .visi-section .col-lg-8 {
+        padding: 0 !important;
+    }
+    
+    /* TITLE */
+    .visi-section .section-title-light.mb-4 {
+        font-size: 1.75rem !important;
+        margin-bottom: 1rem !important;
+        line-height: 1.3 !important;
+    }
+    
+    /* VISI CARD WRAPPER */
+    .visi-card-wrapper {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+        display: block !important;
+    }
+    
+    /* VISI CARD */
+    .visi-card {
+        padding: 1.5rem !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        width: 100% !important;
+    }
+    
+    /* CARD HEADER */
+    .visi-card .card-header {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 0.8rem !important;
+        margin-bottom: 1rem !important;
+        padding: 0 !important;
+    }
+    
+    .visi-card .card-header i {
+        font-size: 1.5rem !important;
+        margin: 0 !important;
+    }
+    
+    .visi-card .card-header h3 {
+        font-size: 1.2rem !important;
+        margin: 0 !important;
+    }
+    
+    /* CARD BODY */
+    .visi-card .card-body {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    
+    /* LIST */
+    .visi-card ul.list-unstyled {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    .visi-card ul li {
+        font-size: 0.9rem !important;
+        padding: 0 !important;
+        margin-bottom: 0.8rem !important;
+        display: flex !important;
+        align-items: flex-start !important;
+        line-height: 1.5 !important;
+    }
+    
+    .visi-card ul li:last-child {
+        margin-bottom: 0 !important;
+    }
+    
+    .visi-card ul li i {
+        font-size: 0.9rem !important;
+        margin-right: 0.5rem !important;
+        margin-top: 0.2rem !important;
+        flex-shrink: 0 !important;
+    }
+    
+    /* VIDEO BACKGROUND */
+    .video-background video {
+        object-fit: cover !important;
+    }
+}
+
+/* VISI TABLET (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .visi-section.py-5 {
+        padding: 2.5rem 0 !important;
+        min-height: auto !important;
+    }
+    
+    .visi-section .container {
+        padding: 0 1.5rem !important;
+    }
+    
+    /* TITLE */
+    .visi-section .section-title-light.mb-4 {
+        font-size: 2rem !important;
+        margin-bottom: 1.3rem !important;
+    }
+    
+    /* VISI CARD WRAPPER */
+    .visi-card-wrapper {
+        margin: 0 auto !important;
+        max-width: 500px !important;
+    }
+    
+    /* VISI CARD */
+    .visi-card {
+        padding: 2rem !important;
+        margin: 0 !important;
+    }
+    
+    /* CARD HEADER */
+    .visi-card .card-header {
+        gap: 1rem !important;
+        margin-bottom: 1.3rem !important;
+    }
+    
+    .visi-card .card-header i {
+        font-size: 1.8rem !important;
+    }
+    
+    .visi-card .card-header h3 {
+        font-size: 1.3rem !important;
+    }
+    
+    /* LIST */
+    .visi-card ul li {
+        font-size: 1rem !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    .visi-card ul li:last-child {
+        margin-bottom: 0 !important;
+    }
+}
+
+/* VISI LANDSCAPE TABLET (992px - 1024px) */
+@media (min-width: 992px) and (max-width: 1024px) and (orientation: landscape) {
+    .visi-section.py-5.py-lg-7 {
+        padding: 3rem 0 !important;
+        min-height: auto !important;
+    }
+    
+    .visi-section .section-title-light {
+        font-size: 2.2rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+    
+    .visi-card-wrapper {
+        max-width: 550px !important;
+    }
+    
+    .visi-card {
+        padding: 2.5rem !important;
+    }
+    
+    .visi-card .card-header {
+        margin-bottom: 1.5rem !important;
+    }
+    
+    .visi-card ul li {
+        font-size: 1.05rem !important;
+        margin-bottom: 1.2rem !important;
+    }
+}
+
+/* ==============================
+   11. SECTION 9: CTA RESPONSIVE
+   ============================== */
+
+/* CTA MOBILE (≤ 767px) */
+@media (max-width: 767px) {
+    .cta-section {
+        padding: 2.5rem 0 !important;
+    }
+    
+    .cta-section h2.section-title {
+        font-size: 1.6rem !important;
+        text-align: center !important;
+        margin-bottom: 1.2rem !important;
+    }
+    
+    .cta-section .lead {
+        font-size: 0.95rem !important;
+        text-align: center !important;
+        margin-bottom: 1.5rem !important;
+        padding: 0 10px !important;
+    }
+    
+    .cta-section .d-flex {
+        flex-direction: column !important;
+        gap: 1rem !important;
+        width: 100% !important;
+    }
+    
+    .btn {
+        width: 100% !important;
+        min-width: 100% !important;
+        padding: 1rem 1.5rem !important;
+        font-size: 1rem !important;
+        margin: 0 !important;
+    }
+}
+
+/* CTA TABLET (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .cta-section {
+        padding: 3.5rem 0 !important;
+    }
+    
+    .cta-section h2.section-title {
+        font-size: 2rem !important;
+    }
+    
+    .cta-section .lead {
+        font-size: 1.1rem !important;
+        margin-bottom: 2.5rem !important;
+    }
+    
+    .btn {
+        min-width: 220px !important;
+        padding: 1.1rem 2.2rem !important;
+    }
+}
+
+/* ==============================
+   12. FOOTER RESPONSIVE
+   ============================== */
+
+/* FOOTER MOBILE (≤ 767px) */
+@media (max-width: 767px) {
+    .footer-modern {
+        padding: 2rem 0 1rem !important;
+        text-align: center !important;
+    }
+    
+    .footer-modern .row > div {
+        margin-bottom: 1.5rem !important;
+        width: 100% !important;
+    }
+    
+    .footer-modern h5 {
+        text-align: center !important;
+        display: block !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    .footer-modern h5::after {
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+    }
+    
+    .footer-links {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+    
+    .footer-links li {
+        margin-bottom: 0.6rem !important;
+    }
+    
+    .footer-contact li {
+        justify-content: center !important;
+        text-align: center !important;
+        margin-bottom: 0.8rem !important;
+    }
+    
+    .social-links {
+        justify-content: center !important;
+        margin-top: 1.2rem !important;
+    }
+    
+    .footer-divider {
+        margin: 1.5rem 0 !important;
+    }
+}
+
+/* FOOTER TABLET (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .footer-modern {
+        padding: 2.5rem 0 1.5rem !important;
+    }
+    
+    .footer-modern .row {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1.5rem !important;
+    }
+    
+    .footer-modern .col-lg-4 {
+        grid-column: 1 / -1 !important;
+    }
+}
+
+/* ==============================
+   13. LANDSCAPE MODE SPECIAL FIXES
+   ============================== */
+
+/* MOBILE LANDSCAPE (≤ 767px) */
+@media (max-width: 767px) and (orientation: landscape) {
+    /* Navbar Landscape */
+    nav.navbar.navbar-expand-lg {
+        height: 60px !important;
+    }
+    
+    .navbar-collapse {
+        max-height: 70vh !important;
+    }
+    
+    /* Hero Landscape */
+    .hero-section {
+        min-height: 70vh !important;
+        padding-top: 15px !important;
+    }
+    
+    .hero-section h1 {
+        font-size: 1.5rem !important;
+        margin-bottom: 0.8rem !important;
+    }
+    
+    .hero-logo img {
+        max-width: 150px !important;
+        margin: 0.5rem auto !important;
+    }
+    
+    .hero-description {
+        font-size: 0.85rem !important;
+        margin-bottom: 1.2rem !important;
+        line-height: 1.3 !important;
+    }
+    
+    /* Section 2: Pendiri Landscape */
+    .pendiri-section .row {
+        flex-direction: row !important;
+        gap: 0.6rem !important;
+    }
+    
+    .pendiri-image-wrapper {
+        max-width: 140px !important;
+        flex: 0 0 140px !important;
+    }
+    
+    .pendiri-info {
+        text-align: left !important;
+    }
+    
+    .section-title {
+        text-align: left !important;
+        font-size: 1.3rem !important;
+    }
+    
+    .section-title::after {
+        left: 0 !important;
+        transform: none !important;
+    }
+    
+    /* Section 3: Video Landscape */
+    .video-wrapper .ratio-16x9 {
+        height: 180px !important;
+    }
+    
+    /* Section 5: Tim Landscape */
+    .tim-section .row {
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+    }
+    
+    .tim-section .col-lg-4 {
+        flex: 0 0 50% !important;
+    }
+    
+    .tim-description {
+        flex: 0 0 100% !important;
+    }
+    
+    /* Galeri Landscape */
+    .galeri-card {
+        height: 160px !important;
+    }
+}
+
+/* TABLET LANDSCAPE (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    /* Hero Tablet Landscape */
+    .hero-section {
+        min-height: 75vh !important;
+    }
+    
+    /* Video naik ke atas */
+    .cerita-section .col-lg-6:last-child {
+        margin-top: -60px !important;
+    }
+    
+    .video-wrapper .ratio-16x9 {
+        height: 200px !important;
+    }
+    
+    /* Tim layout horizontal */
+    .tim-section .row {
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+    }
+    
+    .tim-section .col-lg-4 {
+        flex: 1 !important;
+    }
+    
+    .tim-section .col-lg-4:nth-child(2) {
+        order: 0 !important;
+    }
+    
+    /* 3 tahap horizontal */
+    #section-6 .row {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+    
+    #section-6 .col-md-4:nth-child(3) {
+        grid-column: auto !important;
+        max-width: 100% !important;
+    }
+}
+
+/* ==============================
+   14. EMERGENCY FIXES & UTILITIES
+   ============================== */
+
+@media (max-width: 767px) {
+    /* Force single column untuk semua grid di mobile */
+    .row > [class*="col-"] {
+        width: 100% !important;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        margin-bottom: 1.5rem !important;
+        float: none !important;
+    }
+    
+    .row.g-4, .row.g-5 {
+        margin: 0 !important;
+    }
+    
+    /* Pastikan tidak ada horizontal overflow */
+    html, body {
+        overflow-x: hidden !important;
+        width: 100% !important;
+    }
+    
+    /* Touch-friendly elements */
+    .btn, .nav-link, button, a[role="button"] {
+        min-height: 44px !important;
+        min-width: 44px !important;
+    }
+}
+
+/* Utility Classes */
+.mobile-only {
+    display: none !important;
+}
+
+.tablet-only {
+    display: none !important;
+}
+
+@media (max-width: 767px) {
+    .mobile-only {
+        display: block !important;
+    }
+    
+    .desktop-only {
+        display: none !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .tablet-only {
+        display: block !important;
+    }
+}

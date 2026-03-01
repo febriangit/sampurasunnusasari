@@ -1,0 +1,1298 @@
+/* ============================================================
+   WARUNG SAMBAL BAKAR - INFO LOWONGAN KERJA
+   STYLING KONSISTEN DENGAN INDEX.HTML
+   ============================================================ */
+
+/* ========== 1. RESET & BASE STYLES ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    background-color: #1A0F0A;
+}
+
+body {
+    padding-top: 80px;
+    color: #FFFFFF;
+    line-height: 1.6;
+}
+
+/* ========== 2. NAVBAR CONTAINER ========== */
+nav.navbar.navbar-expand-lg {
+    background: linear-gradient(135deg, #5D2906, #3A1A04);
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 9999;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    border-bottom: 3px solid #D2691E;
+}
+
+nav.navbar .container {
+    max-width: 1200px;
+    padding: 0 20px;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* ========== 3. NAVBAR LOGO ========== */
+.navbar-brand img {
+    height: 50px;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+    transition: transform 0.3s ease;
+}
+
+.navbar-brand img:hover {
+    transform: scale(1.05);
+}
+
+/* ========== 4. NAVIGATION MENU CENTERED ========== */
+@media (min-width: 992px) {
+    .navbar-collapse {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+    }
+    
+    .navbar-nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .nav-item {
+        position: relative;
+    }
+    
+    .nav-link {
+        color: #FFFFFF !important;
+        font-weight: 600;
+        font-size: 0.95rem;
+        padding: 12px 18px;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        white-space: nowrap;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 44px;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
+        letter-spacing: 0.3px;
+    }
+    
+    .nav-link:hover {
+        color: #FFFFFF !important;
+        background: linear-gradient(135deg, #E67E22, #D2691E);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 15px rgba(226, 102, 30, 0.4);
+    }
+    
+    .nav-link.active {
+        color: #FFFFFF !important;
+        background: linear-gradient(135deg, #FF8C00, #D2691E);
+        box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.2),
+                    0 4px 8px rgba(226, 102, 30, 0.5);
+    }
+}
+
+/* ========== 5. DROPDOWN "MORE" STYLING ========== */
+/* 5.1 Dropdown Arrow */
+.dropdown-toggle::after {
+    border-top-color: #FFA726 !important;
+    border-right-color: transparent !important;
+    border-left-color: transparent !important;
+    transition: transform 0.3s ease;
+}
+
+/* 5.2 Dropdown Menu */
+.dropdown-menu {
+    background: #8B4513 !important;
+    border: 1px solid rgba(210, 105, 30, 0.5) !important;
+    border-radius: 12px;
+    padding: 8px 0;
+    box-shadow: 0 10px 30px rgba(93, 41, 6, 0.7);
+    min-width: 220px;
+    margin-top: 10px;
+    animation: fadeIn 0.2s ease-out;
+}
+
+/* 5.3 Dropdown Items - SEMUA WARNA PUTIH */
+.dropdown-item {
+    color: #FFFFFF !important; /* TEKS PUTIH */
+    padding: 12px 20px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+    border-left: 3px solid transparent;
+    display: flex;
+    align-items: center;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+/* 5.4 Dropdown Icons */
+.dropdown-item i.bi {
+    color: #FFA726 !important;
+    font-size: 1.1rem;
+    margin-right: 12px;
+    width: 20px;
+    text-align: center;
+}
+
+/* 5.5 Dropdown Hover Effects */
+.dropdown-item:hover {
+    background: rgba(210, 105, 30, 0.4) !important;
+    padding-left: 25px;
+    border-left: 3px solid #FF8C00;
+    color: #FFFFFF !important; /* TEKS TETAP PUTIH SAAT HOVER */
+}
+
+.dropdown-item:hover i.bi {
+    color: #FFFFFF !important;
+    transform: scale(1.05);
+}
+
+/* 5.6 Dropdown Active State - TEKS PUTIH JUGA */
+.dropdown-item.active {
+    background: rgba(210, 105, 30, 0.3) !important;
+    color: #FFFFFF !important; /* TEKS PUTIH SAAT AKTIF */
+    font-weight: 600;
+}
+
+.dropdown-item.active i.bi {
+    color: #FFFFFF !important; /* IKON PUTIH SAAT AKTIF */
+}
+
+/* 5.7 Dropdown Divider */
+.dropdown-divider {
+    border-color: rgba(255, 255, 255, 0.2) !important;
+    margin: 6px 20px;
+}
+
+/* 5.8 Dropdown Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========== 6. MOBILE RESPONSIVE NAVIGATION ========== */
+@media (max-width: 991.98px) {
+    nav.navbar .container {
+        padding: 0 15px;
+    }
+    
+    .navbar-toggler {
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        padding: 6px 10px;
+    }
+    
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255,255,255,0.9)' stroke-width='2.5' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+    
+    .navbar-collapse {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #5D2906;
+        padding: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        border-top: 2px solid #D2691E;
+        border-radius: 0 0 15px 15px;
+        z-index: 9998;
+    }
+    
+    .navbar-nav {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+    
+    .nav-link {
+        color: #FFFFFF !important;
+        padding: 12px 20px;
+        text-align: left;
+        width: 100%;
+        justify-content: flex-start;
+        border-radius: 8px;
+        margin: 2px 0;
+        font-size: 1rem;
+    }
+    
+    .dropdown-menu {
+        background: #6B3513 !important;
+        margin: 10px 0;
+        width: 100%;
+        border-radius: 8px;
+    }
+    
+    .dropdown-item {
+        color: #FFFFFF !important; /* TEKS PUTIH UNTUK MOBILE */
+        padding: 10px 25px;
+        font-size: 0.95rem;
+    }
+    
+    .dropdown-item i.bi {
+        margin-right: 15px;
+    }
+}
+
+
+
+/* ========== 7. HERO SECTION WITH VIDEO ========== */
+.loker-hero-section {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -80px;
+    padding-top: 120px;
+}
+
+.loker-hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.loker-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.loker-hero-content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    padding: 20px;
+    margin-top: 60px;
+}
+
+/* ========== LOGO CONTAINER ANIMASI ========== */
+.loker-logo-container {
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+}
+
+/* LOGO DENGAN ANIMASI NAIK TURUN */
+.loker-logo-text {
+    max-width: 300px;
+    height: auto;
+    filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.4));
+    animation: floatLogo 3s ease-in-out infinite;
+    transform-origin: center;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* HOVER EFFECT UNTUK LOGO */
+.loker-logo-text:hover {
+    animation-play-state: paused;
+    transform: scale(1.05) rotate(5deg);
+    filter: drop-shadow(0 12px 24px rgba(255, 167, 38, 0.3)) 
+            drop-shadow(0 8px 16px rgba(0, 0, 0, 0.6));
+}
+
+/* ANIMASI NAIK TURUN */
+@keyframes floatLogo {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        transform: translateY(-15px) scale(1.02);
+    }
+}
+
+/* GLOW EFFECT SAAT ANIMASI */
+@keyframes logoGlow {
+    0%, 100% {
+        filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.4));
+    }
+    50% {
+        filter: drop-shadow(0 12px 24px rgba(255, 167, 38, 0.2))
+                drop-shadow(0 8px 16px rgba(0, 0, 0, 0.4));
+    }
+}
+
+.loker-logo-text {
+    animation: floatLogo 3s ease-in-out infinite, 
+               logoGlow 3s ease-in-out infinite;
+}
+
+/* ========== JUDUL HERO ========== */
+.loker-hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: #FFFFFF !important; 
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease-out 0.3s forwards;
+}
+
+/* ========== SUBTITLE HERO ========== */
+.loker-hero-subtitle {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.95) !important;
+    max-width: 600px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease-out 0.6s forwards;
+}
+
+/* ANIMASI FADE IN UP */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========== RESPONSIVE BREAKPOINTS ========== */
+@media (max-width: 1200px) {
+    .loker-hero-title {
+        font-size: 3rem;
+    }
+    
+    .loker-logo-text {
+        max-width: 280px;
+    }
+}
+
+@media (max-width: 768px) {
+    .loker-hero-section {
+        display: flex;
+        align-items: center; 
+        justify-content: center;
+        height: 100vh;
+        /* Menarik seluruh konten ke atas agar pas di tengah layar */
+        padding-bottom: 120px !important; 
+    }
+
+    .loker-hero-content {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* JUDUL */
+    .loker-hero-title {
+        font-size: 1.5rem !important;
+        /* Memberi ruang antara judul dan logo */
+        margin-bottom: 20px !important; 
+        font-weight: 800;
+        line-height: 1.2;
+    }
+
+    /* LOGO */
+    .loker-logo-container {
+        margin-bottom: 15px !important; /* Jarak antara logo dan deskripsi */
+    }
+
+    .loker-logo-text {
+        max-width: 180px !important;
+        height: auto;
+    }
+
+    /* DESKRIPSI (Subtitle) */
+    .loker-hero-subtitle {
+        font-size: 1rem !important;
+        line-height: 1.5;
+        /* Melebarkan area teks agar tidak terlalu banyak baris */
+        max-width: 95% !important; 
+        width: 100%;
+        padding: 0 15px;
+        margin: 0 auto !important;
+        color: #ffffff;
+    }
+}
+
+/* Penyesuaian untuk layar sangat kecil */
+@media (max-width: 480px) {
+    .loker-hero-title {
+        font-size: 1.3rem !important;
+    }
+    .loker-hero-section {
+        padding-bottom: 140px !important;
+    }
+}
+
+
+
+/* ========== 8. LOWONGAN CARDS SECTION ========== */
+:root {
+    --primary-color: #D2691E;
+    --primary-dark: #8B4513;
+    --primary-light: #FFA726;
+    --secondary-color: #3A1A04;
+    --accent-color: #FF6B35;
+    --text-light: #FFFFFF;
+    --text-gray: #E0E0E0;
+    --text-dark: #333333;
+    --bg-dark: #1A120B;
+    --bg-card: rgba(255, 255, 255, 0.05);
+    --border-color: rgba(139, 69, 19, 0.3);
+    --success-color: #4CAF50;
+    --danger-color: #F44336;
+    --shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --border-radius: 16px;
+    --border-radius-sm: 8px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+/* ========== UTILITY CLASSES ========== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mb-5 {
+    margin-bottom: 3rem;
+}
+
+.mt-5 {
+    margin-top: 3rem;
+}
+
+
+
+/* ========== LOWONGAN SECTION ========== */
+
+/* =============================================
+   STYLE UNTUK GRID LOWONGAN (POSTER CARD)
+   ============================================= */
+
+.loker-section {
+    padding: 80px 0;
+    background-color: var(--secondary-color);
+}
+
+/* Memastikan Container Gambar Selalu Kotak (Ratio 1:1) */
+.poster-image-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1; /* KUNCI: Biar jadi kotak sempurna */
+    overflow: hidden;
+    border-radius: 12px 12px 0 0;
+}
+
+.poster-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Biar gambar gak gepeng */
+    transition: transform 0.5s ease;
+}
+
+/* Overlay Efek Hover */
+.poster-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    padding: 20px;
+    text-align: center;
+}
+
+.loker-poster-card:hover .poster-overlay {
+    opacity: 1;
+}
+
+.loker-poster-card:hover .poster-image {
+    transform: scale(1.1);
+}
+
+/* Styling di Dalam Overlay */
+.section-title-loker {
+    color: #fff !important;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.section-subtitle-loker{
+    color: #fff !important;
+    font-size: 1rem;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+
+.info-badge {
+    display: block;
+    color: #ddd !important;
+    font-size: 0.85rem;
+    margin-bottom: 5px;
+}
+
+.btn-apply-now {
+    background-color: #ffc107;
+    color: var(--primary-dark);
+    font-weight: 600;
+    border-radius: 25px;
+    padding: 8px 20px;
+    margin-top: 15px;
+    border: none;
+}
+
+/* Footer Kartu */
+.poster-footer {
+    padding: 15px;
+    background: var(--primary-dark);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.poster-date {
+    font-size: 0.75rem;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.badge-open {
+    background: var(--primary-light);
+    color: #ffffff;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+/* =============================================
+   RESPONSIVE (MOBILE OPTIMIZATION)
+   ============================================= */
+
+@media (max-width: 768px) {
+    .section-title-loker {
+        font-size: 1.5rem !important;
+    }
+    
+    /* Di HP, kita buat 1 baris isi 1 atau 2 kartu tergantung kenyamanan */
+    .loker-poster-card {
+        max-width: 350px;
+        margin: 0 auto;
+    }
+    
+    .poster-title {
+        font-size: 1.1rem;
+    }
+}
+
+
+
+/* ========== 9. FAQ SECTION ========== */
+/* ========== FAQ SECTION STYLING ========== */
+.faq-section {
+    padding: 80px 0;
+    background: #3A1A04;
+    position: relative;
+    border-top: 1px solid #8B4513;
+    border-bottom: 1px solid #8B4513;
+}
+
+/* Section Header */
+.faq-section .text-center.mb-5 {
+    margin-bottom: 4rem !important;
+}
+
+.faq-section .section-title-loker {
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin-bottom: 16px;
+    color: #FFFFFF !important;
+    position: relative;
+    display: inline-block;
+    letter-spacing: -0.5px;
+}
+
+.faq-section .section-title-loker::after {
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: #D2691E;
+    border-radius: 2px;
+}
+
+.faq-section .section-subtitle-loker {
+    font-size: 1.1rem;
+    color: #FFFFFF !important;
+    max-width: 600px;
+    margin: 0 auto;
+    font-weight: 300;
+    line-height: 1.8;
+    opacity: 0.9;
+}
+
+/* FAQ Container */
+.faq-section .row.justify-content-center {
+    display: flex;
+    justify-content: center;
+}
+
+.faq-section .col-lg-8 {
+    width: 100%;
+    max-width: 800px;
+}
+
+/* FAQ Item Styling */
+.faq-item {
+    background: rgba(255, 255, 255, 0.03);
+    border: 2px solid #8B4513;
+    border-radius: 12px;
+    padding: 0;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.faq-item.active {
+    border-color: #D2691E;
+}
+
+.faq-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: #D2691E;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.faq-item:hover::before,
+.faq-item.active::before {
+    opacity: 1;
+}
+
+/* FAQ Question */
+.faq-question {
+    font-size: 1.25rem;
+    font-weight: 700; /* Font tebal untuk pertanyaan */
+    color: #FFFFFF !important; /* Warna putih */
+    padding: 24px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    line-height: 1.4;
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover .faq-question {
+    color: #FFFFFF !important; /* Tetap putih saat hover */
+}
+
+.faq-question span {
+    flex: 1;
+    font-weight: 700; /* Tambahan untuk memastikan ketebalan */
+}
+
+/* Icon Styling */
+.faq-question i.bi-question-circle {
+    color: #FFFFFF; /* Warna putih untuk icon pertanyaan */
+    font-size: 1.3rem;
+    margin-right: 12px;
+    transition: transform 0.3s ease;
+    opacity: 0.8;
+}
+
+.faq-item:hover .faq-question i.bi-question-circle {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.faq-question .arrow-icon {
+    color: #FFFFFF; /* Warna putih untuk arrow */
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    margin-left: 10px;
+    opacity: 0.8;
+}
+
+.faq-item:hover .arrow-icon {
+    opacity: 1;
+}
+
+.faq-item.active .arrow-icon {
+    transform: rotate(180deg);
+    color: #FFFFFF !important; /* Tetap putih saat aktif */
+    opacity: 1;
+}
+
+/* FAQ Answer */
+.faq-answer {
+    color: #FFFFFF !important; /* Warna putih penuh */
+    line-height: 1.7;
+    font-size: 1rem;
+    margin: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+    padding: 0 30px;
+    font-weight: 400; /* Normal untuk jawaban */
+}
+
+.faq-item.active .faq-answer {
+    max-height: 500px;
+    opacity: 1;
+    padding: 0 30px 24px 30px;
+}
+
+.faq-answer p {
+    margin: 0;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2); /* Border putih transparan */
+    color: #FFFFFF !important; /* Pastikan paragraf juga putih */
+    opacity: 0.9; /* Sedikit transparansi untuk kontras */
+}
+
+/* Animation untuk FAQ items */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.faq-item {
+    animation: fadeInUp 0.6s ease forwards;
+    opacity: 0;
+}
+
+.faq-item:nth-child(1) { animation-delay: 0.1s; }
+.faq-item:nth-child(2) { animation-delay: 0.2s; }
+.faq-item:nth-child(3) { animation-delay: 0.3s; }
+.faq-item:nth-child(4) { animation-delay: 0.4s; }
+.faq-item:nth-child(5) { animation-delay: 0.5s; }
+
+/* Hover Effects */
+.faq-item:hover {
+    background: rgba(255, 255, 255, 0.05); /* Sedikit lebih terang saat hover */
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .faq-section {
+        padding: 60px 0;
+    }
+    
+    .faq-section .section-title-loker {
+        font-size: 2.4rem;
+    }
+    
+    .faq-section .section-subtitle-loker {
+        font-size: 1rem;
+        padding: 0 20px;
+    }
+    
+    .faq-section .col-lg-8 {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .faq-section .section-title-loker {
+        font-size: 2rem;
+    }
+    
+    .faq-item {
+        margin-bottom: 16px;
+    }
+    
+    .faq-question {
+        font-size: 1.1rem;
+        padding: 20px 24px;
+        font-weight: 700 !important; /* Tetap tebal di mobile */
+    }
+    
+    .faq-answer {
+        font-size: 0.95rem;
+        color: #FFFFFF !important;
+    }
+    
+    .faq-item.active .faq-answer {
+        padding: 0 24px 20px 24px;
+    }
+    
+    .faq-question i.bi-question-circle {
+        font-size: 1.1rem;
+        margin-right: 10px;
+        color: #FFFFFF;
+    }
+    
+    .faq-answer p {
+        color: #FFFFFF !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .faq-section .section-title-loker {
+        font-size: 1.8rem;
+    }
+    
+    .faq-question {
+        font-size: 1rem;
+        padding: 16px 20px;
+        font-weight: 700 !important;
+    }
+    
+    .faq-question i.bi-question-circle {
+        display: inline-block; /* Tetap tampil di mobile */
+        color: #FFFFFF;
+    }
+    
+    .faq-item.active .faq-answer {
+        padding: 0 20px 16px 20px;
+    }
+    
+    .faq-answer p {
+        padding-top: 12px;
+        color: #FFFFFF !important;
+    }
+    
+    .faq-question .arrow-icon {
+        color: #FFFFFF;
+    }
+}
+
+/* Utility Classes */
+.mx-auto {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.mb-5 {
+    margin-bottom: 3rem !important;
+}
+
+/* Pastikan semua teks di section FAQ berwarna putih */
+.faq-section * {
+    color: #FFFFFF !important;
+}
+
+/* Override khusus untuk elemen tertentu */
+.faq-section .faq-question {
+    color: #FFFFFF !important;
+    font-weight: 700 !important;
+}
+
+.faq-section .faq-answer,
+.faq-section .faq-answer p {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* ========== 11. FOOTER STYLES ========== */
+/* ========== FOOTER MODERN STYLING ========== */
+.footer-modern {
+    background-color: #3A1A04;
+    padding: 80px 0 30px;
+    color: #FFFFFF;
+    position: relative;
+    border-top: 2px solid #8B4513;
+}
+
+/* Footer Background Pattern */
+.footer-modern::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        #D2691E 50%, 
+        transparent 100%);
+}
+
+/* Container */
+.footer-modern .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Footer Row */
+.footer-modern .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+/* Footer Columns */
+.footer-modern .col-lg-4,
+.footer-modern .col-lg-3,
+.footer-modern .col-lg-2,
+.footer-modern .col-md-6 {
+    padding: 0 15px;
+    margin-bottom: 30px;
+}
+
+/* Logo Section - LOGO WARNA ASLI */
+.footer-modern .mb-3 {
+    margin-bottom: 1rem !important;
+}
+
+.footer-modern img[alt="Logo"] {
+    /* Biarkan warna asli logo */
+    transition: transform 0.3s ease;
+    height: 50px;
+    width: auto;
+}
+
+.footer-modern img[alt="Logo"]:hover {
+    transform: scale(1.05);
+}
+
+/* Footer Text - WARNA PUTIH */
+.footer-modern p.text-white-50 {
+    color: #FFFFFF !important;
+    font-size: 1rem;
+    line-height: 1.7;
+    opacity: 0.9;
+    max-width: 300px;
+    margin-bottom: 20px;
+}
+
+/* Social Links - WARNA ASLI ICON TANPA HOVER EFFECT */
+.footer-modern .social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.footer-modern .social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    position: relative;
+}
+
+/* Instagram - Warna asli Instagram (gradient) */
+.footer-modern .social-links a:first-child {
+    background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+    border: none;
+}
+
+.footer-modern .social-links a:first-child i.bi-instagram {
+    color: #FFFFFF;
+}
+
+/* TikTok - Warna asli TikTok (hitam & merah) */
+.footer-modern .social-links a:last-child {
+    background: #000000;
+    border: none;
+}
+
+.footer-modern .social-links a:last-child i.bi-tiktok {
+    color: #FFFFFF;
+    position: relative;
+}
+
+/* Tambahkan efek "musical note" kecil untuk TikTok */
+.footer-modern .social-links a:last-child i.bi-tiktok::after {
+    content: '';
+    position: absolute;
+    top: -3px;
+    right: -3px;
+    width: 8px;
+    height: 8px;
+    background: #FF0050;
+    border-radius: 50%;
+}
+
+/* Simple hover effect tetap ada tapi subtle */
+.footer-modern .social-links a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer Headings - WARNA PUTIH */
+.footer-modern h5.text-white {
+    color: #FFFFFF !important;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+
+
+/* Footer Links Lists */
+.footer-modern .footer-links,
+.footer-modern .footer-contact {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-modern .footer-links li,
+.footer-modern .footer-contact li {
+    margin-bottom: 12px;
+}
+
+/* Footer Links - WARNA PUTIH */
+.footer-modern .footer-links a {
+    color: #FFFFFF !important;
+    text-decoration: none;
+    font-size: 1rem;
+    opacity: 0.9;
+    transition: all 0.3s ease;
+    display: inline-block;
+    position: relative;
+    padding-left: 20px;
+}
+
+.footer-modern .footer-links a::before {
+    content: '›';
+    position: absolute;
+    left: 0;
+    color: #D2691E;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.footer-modern .footer-links a:hover {
+    color: #D2691E !important;
+    opacity: 1;
+    padding-left: 25px;
+}
+
+.footer-modern .footer-links a:hover::before {
+    transform: translateX(5px);
+}
+
+/* Footer Contact Info - WARNA PUTIH */
+.footer-modern .footer-contact li {
+    color: #FFFFFF !important;
+    font-size: 1rem;
+    opacity: 0.9;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.footer-modern .footer-contact li i {
+    color: #D2691E;
+    font-size: 1.1rem;
+    margin-right: 12px;
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+/* Footer Divider */
+.footer-modern .footer-divider {
+    border: none;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 60px 0 30px;
+}
+
+/* Footer Copyright - WARNA PUTIH */
+.footer-modern .text-center.text-white-50 {
+    color: #FFFFFF !important;
+    font-size: 0.95rem;
+    opacity: 0.7;
+}
+
+.footer-modern .text-center.text-white-50 p {
+    margin-bottom: 0;
+}
+
+/* Responsive Design */
+/* =============================================
+   FOOTER RESPONSIVE (FIX CENTERED DESIGN)
+   ============================================= */
+
+@media (max-width: 992px) {
+    .footer-modern {
+        padding: 60px 0 30px;
+        text-align: center; /* Dasar utama teks ke tengah */
+    }
+
+    /* 1. Logo & Deskripsi */
+    .footer-modern img {
+        margin: 0 auto 20px auto !important;
+        display: block; /* Agar margin auto bekerja */
+    }
+
+    .footer-modern p.text-white-50 {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 85%;
+    }
+
+    /* 2. Sosmed Icon */
+    .footer-modern .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-bottom: 30px;
+    }
+
+    /* 3. Judul Kolom (H5) */
+    .footer-modern h5.text-white {
+        margin-top: 10px;
+        margin-bottom: 25px;
+        font-weight: 700;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* 4. List Menu & Layanan */
+    .footer-links {
+        padding: 0;
+        margin: 0 auto;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Memaksa konten list ke tengah */
+    }
+
+    .footer-links li {
+        margin-bottom: 12px;
+        width: 100%;
+    }
+
+    /* 5. List Kontak (Ikon + Teks) */
+    .footer-contact {
+        padding: 0;
+        margin: 0 auto;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-contact li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    /* 6. GARIS OREN (Divider Kecil di Bawah Judul) */
+    /* Jika garis oren itu adalah footer-divider di HTML kamu */
+    .footer-divider {
+        margin: 30px auto !important; /* Margin auto agar ke tengah */
+        width: 80%; /* Lebar garis */
+        border-top: 2px solid #ffc107;
+        opacity: 1;
+    }
+
+    /* Jika garis oren itu berasal dari h5::after (dekorasi judul) */
+    .footer-modern h5.text-white::after {
+        content: "";
+        display: block;
+        width: 50px; /* Lebar garis oren kecil */
+        height: 2px;
+        background: #ffc107;
+        margin: 10px auto 0; /* margin auto ini yang membuatnya ke tengah */
+    }
+
+    /* Memastikan kolom Bootstrap full width */
+    .footer-modern .col-lg-4,
+    .footer-modern .col-lg-3,
+    .footer-modern .col-lg-2,
+    .footer-modern .col-md-6 {
+        width: 100% !important;
+        margin-bottom: 50px;
+    }
+}

@@ -1,0 +1,2575 @@
+/* ============================================
+   RESPONSIVE STYLES - MOBILE & TABLET
+   Organized by Section for Sewa Tempat Page
+   ============================================ */
+
+/* ========== GLOBAL RESPONSIVE SETTINGS ========== */
+@media (max-width: 1200px) {
+    .container {
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+    
+    h1 {
+        font-size: 2rem !important;
+    }
+    
+    h2 {
+        font-size: 1.75rem !important;
+    }
+    
+    .section-padding {
+        padding: 3rem 0 !important;
+    }
+}
+
+/* ========== NAVBAR RESPONSIVE ========== */
+/* ========================================
+   DESKTOP STYLES (> 992px)
+   ======================================== */
+
+.navbar {
+    background: white !important;
+    padding: 0.75rem 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.navbar-brand img {
+    height: 50px;
+    transition: height 0.3s ease;
+}
+
+/* Desktop Navigation */
+.navbar-nav .nav-link {
+    font-weight: 500;
+    color: #333 !important;
+    padding: 0.5rem 1rem !important;
+    transition: all 0.3s ease;
+    margin: 0 0.2rem;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #6b4423 !important;
+}
+
+.navbar-nav .nav-link.active {
+    color: #6b4423 !important;
+    font-weight: 600;
+}
+
+/* Desktop Dropdown */
+.dropdown-menu-orange {
+    border: none;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    border-radius: 12px;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.dropdown-menu-orange .dropdown-item {
+    border-radius: 8px;
+    padding: 0.7rem 1rem;
+    transition: all 0.3s ease;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.dropdown-menu-orange .dropdown-item i {
+    color: #6b4423;
+    transition: color 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.dropdown-menu-orange .dropdown-item:hover {
+    background: #6b4423;
+    color: white;
+}
+
+.dropdown-menu-orange .dropdown-item:hover i {
+    color: white;
+}
+
+/* ========================================
+   TABLET & MOBILE RESPONSIVE (< 992px)
+   ======================================== */
+
+@media (max-width: 991.98px) {
+    
+    /* =====================================
+       HAMBURGER BUTTON - ORANGE SEMU TUA
+       ===================================== */
+    
+    .navbar-toggler {
+        display: block !important;
+        border: 2px solid #d97706 !important;
+        background-color: #d97706 !important;
+        padding: 0.5rem 0.75rem;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 8px rgba(217, 119, 6, 0.2);
+        position: relative;
+        z-index: 1050;
+    }
+    
+    .navbar-toggler:hover {
+        background-color: #d97706 !important;
+        border-color: #d97706 !important;
+        transform: scale(1.05);
+        box-shadow: 0 4px 12px rgba(217, 119, 6, 0.35);
+    }
+    
+    .navbar-toggler:focus {
+        box-shadow: 0 0 0 0.3rem rgba(217, 119, 6, 0.3) !important;
+        outline: none !important;
+    }
+    
+    /* Icon Hamburger - Orange Semu Tua */
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23d97706' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2.5' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+        width: 1.5rem;
+        height: 1.5rem;
+        display: block !important;
+    }
+    
+    .navbar-toggler:hover .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='white' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2.5' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+    }
+    
+    .navbar-toggler[aria-expanded="true"] {
+        background-color: #d97706 !important;
+        border-color: #d97706 !important;
+    }
+    
+    .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='white' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2.5' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+        transform: rotate(90deg);
+    }
+    
+    /* =====================================
+       MENU CONTAINER - COKLAT SEMU TUA GELAP
+       ===================================== */
+    
+    .navbar-collapse {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
+        margin-right: calc(-50vw + 50%);
+        /* COKLAT SEMU TUA GELAP */
+        background: linear-gradient(135deg, #3e2723 0%, #2d1b14 100%) !important;
+        padding: 1.5rem 0;
+        margin-top: 0.75rem;
+        border-radius: 0 0 16px 16px;
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+        z-index: 1040;
+        /* SCROLLABLE */
+        max-height: 80vh;
+        overflow-y: auto;
+        overflow-x: hidden;
+        /* Custom Scrollbar */
+        scrollbar-width: thin;
+        scrollbar-color: rgba(217, 119, 6, 0.6) rgba(0, 0, 0, 0.3);
+    }
+    
+    /* Webkit Scrollbar - Orange */
+    .navbar-collapse::-webkit-scrollbar {
+        width: 8px;
+    }
+    
+    .navbar-collapse::-webkit-scrollbar-track {
+        background: rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+        margin: 10px 0;
+    }
+    
+    .navbar-collapse::-webkit-scrollbar-thumb {
+        background: linear-gradient(180deg, #d97706 0%, #b45309 100%);
+        border-radius: 10px;
+        transition: all 0.3s ease;
+    }
+    
+    .navbar-collapse::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(180deg, #f59e0b 0%, #d97706 100%);
+    }
+    
+    /* Hide Menu by Default */
+    .navbar-collapse:not(.show) {
+        display: none !important;
+    }
+    
+    /* Show Menu When Active */
+    .navbar-collapse.show {
+        display: block !important;
+        animation: slideDownFade 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    }
+    
+    @keyframes slideDownFade {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    .navbar-collapse.collapsing {
+        display: block !important;
+        transition: height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    /* =====================================
+       NAVIGATION ITEMS - ORANGE BORDERS
+       ===================================== */
+    
+    .navbar-nav {
+        display: flex !important;
+        flex-direction: column;
+        width: 100%;
+        padding: 0 1.5rem;
+        gap: 0;
+    }
+    
+    .nav-item {
+        width: 100%;
+        margin: 0;
+        position: relative;
+        /* BORDER ORANGE */
+        border-bottom: 2px solid rgba(217, 119, 6, 0.3);
+        padding-bottom: 0;
+    }
+    
+    .nav-item:last-child {
+        border-bottom: none;
+    }
+    
+    /* Glowing Border Effect */
+    .nav-item::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: linear-gradient(90deg, #d97706, #f59e0b, #d97706);
+        transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 0 8px rgba(217, 119, 6, 0.6);
+    }
+    
+    .nav-item:hover::after {
+        width: 100%;
+    }
+    
+    /* =====================================
+       NAV LINKS - TEKS PUTIH TEBAL
+       ===================================== */
+    
+    .navbar-nav .nav-link {
+        color: #ffffff !important;
+        font-weight: 700 !important;
+        font-size: 1.05rem !important;
+        padding: 1.2rem 1.3rem !important;
+        margin: 0 !important;
+        border-radius: 10px;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+        letter-spacing: 0.3px;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    /* Gradient Overlay on Hover - Orange */
+    .navbar-nav .nav-link::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(217, 119, 6, 0.15), transparent);
+        transition: left 0.5s ease;
+    }
+    
+    .navbar-nav .nav-link:hover::before {
+        left: 100%;
+    }
+    
+    .navbar-nav .nav-link:hover {
+        background: rgba(217, 119, 6, 0.12) !important;
+        color: #ffffff !important;
+        transform: translateX(10px);
+        padding-left: 1.6rem !important;
+        box-shadow: inset 3px 0 0 #d97706;
+    }
+    
+    .navbar-nav .nav-link.active {
+        background: rgba(217, 119, 6, 0.2) !important;
+        color: #ffffff !important;
+        font-weight: 800 !important;
+        border-left: 4px solid #d97706;
+        box-shadow: 0 0 15px rgba(217, 119, 6, 0.3);
+    }
+    
+    /* =====================================
+       DROPDOWN TOGGLE
+       ===================================== */
+    
+    .nav-item.dropdown {
+        width: 100%;
+    }
+    
+    .dropdown-toggle {
+        width: 100%;
+        display: flex !important;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .dropdown-toggle::after {
+        margin-left: auto;
+        border-top-color: #ffffff;
+        border-width: 0.4em;
+        transition: transform 0.3s ease;
+        filter: drop-shadow(0 0 3px rgba(217, 119, 6, 0.5));
+    }
+    
+    .dropdown-toggle[aria-expanded="true"]::after {
+        transform: rotate(180deg);
+        filter: drop-shadow(0 0 5px rgba(217, 119, 6, 0.8));
+    }
+    
+    /* =====================================
+       DROPDOWN MENU - COKLAT LEBIH GELAP
+       ===================================== */
+    
+    .dropdown-menu {
+        position: static !important;
+        float: none;
+        width: 100%;
+        margin: 0.75rem 0 0 0 !important;
+        padding: 0.75rem 1rem !important;
+        /* COKLAT SEMU TUA LEBIH GELAP */
+        background: rgba(20, 14, 10, 0.6) !important;
+        border: 2px solid rgba(217, 119, 6, 0.3) !important;
+        border-radius: 12px;
+        box-shadow: inset 0 2px 12px rgba(0, 0, 0, 0.3), 
+                    0 0 15px rgba(217, 119, 6, 0.2);
+        /* SCROLLABLE */
+        max-height: 300px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        scrollbar-width: thin;
+        scrollbar-color: rgba(217, 119, 6, 0.7) rgba(0, 0, 0, 0.4);
+    }
+    
+    /* Dropdown Scrollbar - Orange */
+    .dropdown-menu::-webkit-scrollbar {
+        width: 6px;
+    }
+    
+    .dropdown-menu::-webkit-scrollbar-track {
+        background: rgba(0, 0, 0, 0.4);
+        border-radius: 8px;
+    }
+    
+    .dropdown-menu::-webkit-scrollbar-thumb {
+        background: linear-gradient(180deg, #d97706 0%, #b45309 100%);
+        border-radius: 8px;
+    }
+    
+    .dropdown-menu::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(180deg, #f59e0b 0%, #d97706 100%);
+    }
+    
+    /* =====================================
+       DROPDOWN ITEMS - ICON BERWARNA
+       ===================================== */
+    
+    .dropdown-menu .dropdown-item {
+        color: #ffffff !important;
+        font-weight: 700 !important;
+        padding: 1rem 1.1rem;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+        font-size: 0.98rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        margin-bottom: 0.4rem;
+        width: 100%;
+        position: relative;
+        border: 1px solid transparent;
+    }
+    
+    .dropdown-menu .dropdown-item:last-child {
+        margin-bottom: 0;
+    }
+    
+    /* Orange Accent on Items */
+    .dropdown-menu .dropdown-item::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 3px;
+        height: 0;
+        background: linear-gradient(180deg, #d97706, #f59e0b);
+        border-radius: 2px;
+        transition: height 0.3s ease;
+    }
+    
+    .dropdown-menu .dropdown-item:hover::before {
+        height: 70%;
+    }
+    
+    /* Icon Base Style */
+    .dropdown-menu .dropdown-item i {
+        font-size: 1.2rem;
+        flex-shrink: 0;
+        transition: all 0.3s ease;
+    }
+    
+    /* =====================================
+       ICON COLORS - VIVID & GLOWING
+       ===================================== */
+    
+    /* Peluang Investasi - Hijau Cerah */
+    .dropdown-menu .dropdown-item i.bi-graph-up {
+        color: #4ade80 !important;
+        filter: drop-shadow(0 0 5px rgba(74, 222, 128, 0.7));
+    }
+    
+    /* Info Loker - Biru Cerah */
+    .dropdown-menu .dropdown-item i.bi-briefcase {
+        color: #60a5fa !important;
+        filter: drop-shadow(0 0 5px rgba(96, 165, 250, 0.7));
+    }
+    
+    /* Sewa Tempat - Orange Cerah */
+    .dropdown-menu .dropdown-item i.bi-people {
+        color: #fb923c !important;
+        filter: drop-shadow(0 0 5px rgba(251, 146, 60, 0.7));
+    }
+    
+    /* Berita - Pink Cerah */
+    .dropdown-menu .dropdown-item i.bi-tag {
+        color: #f472b6 !important;
+        filter: drop-shadow(0 0 5px rgba(244, 114, 182, 0.7));
+    }
+    
+    /* Hover Effects */
+    .dropdown-menu .dropdown-item:hover {
+        background: rgba(217, 119, 6, 0.15) !important;
+        color: #ffffff !important;
+        transform: translateX(8px);
+        border-color: rgba(217, 119, 6, 0.3);
+        box-shadow: 0 3px 10px rgba(217, 119, 6, 0.2);
+    }
+    
+    .dropdown-menu .dropdown-item:hover i {
+        transform: scale(1.2) rotate(5deg);
+        filter: brightness(1.4) drop-shadow(0 0 10px currentColor);
+    }
+    
+    /* Dropdown Divider - Orange */
+    .dropdown-divider {
+        border-color: rgba(217, 119, 6, 0.4) !important;
+        margin: 0.6rem 0;
+        opacity: 0.8;
+        box-shadow: 0 1px 3px rgba(217, 119, 6, 0.2);
+    }
+    
+    /* Logo */
+    .navbar-brand img {
+        height: 45px;
+    }
+}
+
+/* ========================================
+   MOBILE SMALL (< 576px)
+   ======================================== */
+
+@media (max-width: 575.98px) {
+    
+    .navbar-brand img {
+        height: 40px;
+    }
+    
+    .navbar {
+        padding: 0.5rem 0;
+    }
+    
+    .navbar-toggler {
+        padding: 0.45rem 0.7rem;
+    }
+    
+    .navbar-toggler-icon {
+        width: 1.35rem !important;
+        height: 1.35rem !important;
+    }
+    
+    .navbar-collapse {
+        padding: 1.2rem 0;
+        margin-top: 0.6rem;
+        max-height: 70vh;
+    }
+    
+    .navbar-nav {
+        padding: 0 1rem;
+    }
+    
+    .navbar-nav .nav-link {
+        font-size: 0.98rem !important;
+        padding: 1rem 1.1rem !important;
+    }
+    
+    .navbar-nav .nav-link:hover {
+        padding-left: 1.4rem !important;
+    }
+    
+    .dropdown-menu {
+        max-height: 250px;
+    }
+    
+    .dropdown-menu .dropdown-item {
+        font-size: 0.92rem;
+        padding: 0.85rem 1rem;
+    }
+    
+    .dropdown-menu .dropdown-item i {
+        font-size: 1.1rem;
+    }
+}
+
+/* ========================================
+   MOBILE EXTRA SMALL (< 380px)
+   ======================================== */
+
+@media (max-width: 379.98px) {
+    
+    .navbar-brand img {
+        height: 36px;
+    }
+    
+    .navbar-toggler {
+        padding: 0.4rem 0.6rem;
+    }
+    
+    .navbar-toggler-icon {
+        width: 1.2rem !important;
+        height: 1.2rem !important;
+    }
+    
+    .navbar-collapse {
+        max-height: 65vh;
+    }
+    
+    .navbar-nav {
+        padding: 0 0.75rem;
+    }
+    
+    .navbar-nav .nav-link {
+        font-size: 0.92rem !important;
+        padding: 0.9rem 1rem !important;
+    }
+    
+    .dropdown-menu {
+        padding: 0.5rem 0.75rem !important;
+        max-height: 200px;
+    }
+    
+    .dropdown-menu .dropdown-item {
+        font-size: 0.88rem;
+        padding: 0.75rem 0.9rem;
+    }
+    
+    .dropdown-menu .dropdown-item i {
+        font-size: 1rem;
+    }
+}
+
+/* ========================================
+   ACCESSIBILITY & POLISH
+   ======================================== */
+
+.navbar-nav .nav-link:focus-visible,
+.dropdown-menu .dropdown-item:focus-visible {
+    outline: 2px solid #d97706;
+    outline-offset: 3px;
+    box-shadow: 0 0 10px rgba(217, 119, 6, 0.5);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Prevent Text Selection */
+.navbar-toggler,
+.navbar-nav .nav-link,
+.dropdown-menu .dropdown-item {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+/* Smooth Scrolling Indicator */
+.navbar-collapse::after {
+    content: '';
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+    background: linear-gradient(to top, rgba(45, 27, 20, 0.95), transparent);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.navbar-collapse.show::after {
+    opacity: 1;
+}
+
+
+
+/* ========== SECTION 1: HERO RESPONSIVE ========== */
+/* Base Hero Section */
+.sewa-hero-section {
+    position: relative;
+    overflow: hidden;
+}
+
+/* ========================================
+   TABLET (< 992px)
+   ======================================== */
+
+@media (max-width: 992px) {
+    .sewa-hero-section {
+        /* TINGGI DITAMBAH MAKSIMAL */
+        min-height: 95vh !important;
+        height: 95vh !important;
+        padding-top: 80px;
+        /* FORCE VERTICAL CENTERING */
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    
+    /* Container Centering */
+    .sewa-hero-section .container {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        height: 100% !important;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        margin-top: -20px; /* NAIKKAN KE ATAS */
+    }
+    
+    /* Row Centering */
+    .sewa-hero-section .row {
+        align-items: center !important;
+        justify-content: center !important;
+        margin: 0 !important;
+    }
+    
+    /* Content Column */
+    .sewa-hero-section .col-lg-8,
+    .sewa-hero-section .col-md-10,
+    .sewa-hero-section .col-12 {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    
+    /* Judul - Font Lebih Kecil */
+    .sewa-hero-section h1.display-2 {
+        font-size: 1.4rem !important;
+        letter-spacing: 0.5px;
+        line-height: 1.2;
+        margin-bottom: 1.2rem !important;
+        text-align: center;
+    }
+    
+    /* Logo */
+    .logo-container {
+        margin: 1.5rem 0 !important;
+    }
+    
+    .logo-container img {
+        height: 90px !important;
+        width: auto;
+    }
+    
+    /* Deskripsi */
+    .sewa-hero-section .lead {
+        font-size: 1.05rem !important;
+        padding: 0.8rem 1rem;
+        margin-top: 1.5rem !important;
+        margin-bottom: 0 !important;
+        text-align: center;
+    }
+}
+
+/* ========================================
+   MOBILE MEDIUM (< 768px)
+   ======================================== */
+
+@media (max-width: 768px) {
+    .sewa-hero-section {
+        /* TINGGI DITAMBAH MAKSIMAL */
+        min-height: 90vh !important;
+        height: 90vh !important;
+        padding-top: 70px;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    
+    /* Container */
+    .sewa-hero-section .container {
+        margin-top: -30px; /* NAIKKAN LEBIH KE ATAS */
+    }
+    
+    /* Judul - Font Lebih Kecil */
+    .sewa-hero-section h1.display-2 {
+        font-size: 1.2rem !important;
+        white-space: normal;
+        line-height: 1.25;
+        margin-bottom: 1rem !important;
+        letter-spacing: 0.3px;
+    }
+    
+    /* Logo */
+    .logo-container {
+        margin: 1.2rem 0 !important;
+    }
+    
+    .logo-container img {
+        height: 75px !important;
+    }
+    
+    /* Deskripsi */
+    .sewa-hero-section .lead {
+        font-size: 0.95rem !important;
+        padding: 0.7rem 0.9rem;
+        margin-top: 1.2rem !important;
+        line-height: 1.4;
+    }
+}
+
+/* ========================================
+   MOBILE SMALL (< 576px)
+   ======================================== */
+
+@media (max-width: 576px) {
+    .sewa-hero-section {
+        /* TINGGI DITAMBAH MAKSIMAL - Hampir full screen */
+        min-height: 85vh !important;
+        height: 85vh !important;
+        padding-top: 60px;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    
+    /* Container */
+    .sewa-hero-section .container {
+        margin-top: -25px; /* NAIKKAN KE ATAS */
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+    
+    /* Judul - Font Lebih Kecil */
+    .sewa-hero-section h1.display-2 {
+        font-size: 1.05rem !important;
+        letter-spacing: 0.2px;
+        margin-bottom: 0.8rem !important;
+        line-height: 1.3;
+    }
+    
+    /* Logo */
+    .logo-container {
+        margin: 1rem 0 !important;
+    }
+    
+    .logo-container img {
+        height: 65px !important;
+    }
+    
+    /* Deskripsi */
+    .sewa-hero-section .lead {
+        font-size: 0.85rem !important;
+        line-height: 1.4;
+        padding: 0.6rem 0.8rem;
+        margin-top: 1rem !important;
+    }
+}
+
+/* ========================================
+   MOBILE EXTRA SMALL (< 400px)
+   ======================================== */
+
+@media (max-width: 400px) {
+    .sewa-hero-section {
+        min-height: 82vh !important;
+        height: 82vh !important;
+        padding-top: 55px;
+    }
+    
+    .sewa-hero-section .container {
+        margin-top: -20px;
+    }
+    
+    .sewa-hero-section h1.display-2 {
+        font-size: 0.95rem !important;
+        margin-bottom: 0.7rem !important;
+        letter-spacing: 0.2px;
+    }
+    
+    .logo-container {
+        margin: 0.8rem 0 !important;
+    }
+    
+    .logo-container img {
+        height: 55px !important;
+    }
+    
+    .sewa-hero-section .lead {
+        font-size: 0.8rem !important;
+        padding: 0.5rem 0.7rem;
+        margin-top: 0.8rem !important;
+    }
+}
+
+/* ========================================
+   FORCE VERTICAL CENTERING
+   ======================================== */
+
+@media (max-width: 992px) {
+    /* Remove any conflicting positioning */
+    .sewa-hero-section > .container {
+        position: relative !important;
+        top: auto !important;
+        transform: none !important;
+    }
+    
+    /* Ensure video container doesn't interfere */
+    .hero-video-container {
+        z-index: 0;
+    }
+    
+    .sewa-hero-section .container {
+        z-index: 1;
+    }
+    
+    /* Remove extra spacing */
+    .sewa-hero-section .row {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+}
+
+/* ========== SECTION 2: WHY CHOOSE US RESPONSIVE ========== */
+@media (max-width: 991px) {
+    .why-choose-section {
+        padding: 3.5rem 0 !important;
+    }
+    
+    /* Section Header */
+    .why-choose-section h2.display-5 {
+        font-size: 2rem !important;
+        margin-bottom: 0.8rem !important;
+    }
+    
+    .why-choose-section .lead {
+        font-size: 1.1rem !important;
+        margin-bottom: 2.5rem !important;
+        padding: 0 1rem;
+    }
+    
+    /* HIDE DESKTOP GRID, SHOW MOBILE CAROUSEL */
+    .why-choose-section .d-none.d-lg-block {
+        display: none !important;
+    }
+    
+    .why-choose-section .d-block.d-lg-none {
+        display: block !important;
+    }
+    
+    /* SWIPER CAROUSEL STYLING */
+    .whyChooseCarousel {
+        padding: 0 15px 40px;
+        position: relative;
+    }
+    
+    .whyChooseCarousel .swiper-wrapper {
+        padding: 10px 0;
+    }
+    
+    .whyChooseCarousel .swiper-slide {
+        height: auto;
+        padding: 5px;
+    }
+    
+    /* Card Styling */
+    .whyChooseCarousel .card {
+        height: 100%;
+        background: #3a2318;
+        border: 2px solid #FF8C00 !important;
+        border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        margin: 0;
+    }
+    
+    .whyChooseCarousel .card-body {
+        padding: 1.5rem;
+    }
+    
+    .whyChooseCarousel .icon-wrapper {
+        width: 65px;
+        height: 65px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1.2rem;
+        border: 2px solid rgba(255, 140, 0, 0.3);
+    }
+    
+    .whyChooseCarousel .icon-wrapper i {
+        font-size: 1.6rem;
+        color: #FFFFFF !important;
+    }
+    
+    .whyChooseCarousel .card-title {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #FFFFFF !important;
+        margin-bottom: 0.8rem;
+    }
+    
+    .whyChooseCarousel .card-text {
+        font-size: 0.95rem;
+        color: #FFFFFF !important;
+        line-height: 1.5;
+        opacity: 0.9;
+    }
+    
+    /* REMOVE ARROW BUTTONS */
+    .whyChooseCarousel .swiper-button-next,
+    .whyChooseCarousel .swiper-button-prev {
+        display: none !important;
+    }
+    
+    /* PAGINATION DOTS - POSITION FIXED */
+    .whyChooseCarousel .swiper-pagination {
+        position: absolute !important;
+        bottom: 10px !important;
+        left: 0 !important;
+        width: 100% !important;
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 20px;
+    }
+    
+    .whyChooseCarousel .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+        background: rgba(255, 255, 255, 0.4);
+        opacity: 1;
+        transition: all 0.3s ease;
+        margin: 0 4px !important;
+    }
+    
+    .whyChooseCarousel .swiper-pagination-bullet-active {
+        background: #FF8C00;
+        transform: scale(1.2);
+    }
+}
+
+/* SMALL TABLET (576px - 767px) */
+@media (max-width: 767px) {
+    .why-choose-section {
+        padding: 3rem 0 !important;
+    }
+    
+    .why-choose-section h2.display-5 {
+        font-size: 1.8rem !important;
+        margin-bottom: 0.6rem !important;
+    }
+    
+    .why-choose-section .lead {
+        font-size: 1rem !important;
+        margin-bottom: 2rem !important;
+    }
+    
+    .whyChooseCarousel {
+        padding: 0 10px 35px;
+    }
+    
+    .whyChooseCarousel .card-body {
+        padding: 1.3rem;
+    }
+    
+    .whyChooseCarousel .icon-wrapper {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 1rem;
+    }
+    
+    .whyChooseCarousel .icon-wrapper i {
+        font-size: 1.5rem;
+    }
+    
+    .whyChooseCarousel .card-title {
+        font-size: 1.1rem;
+        margin-bottom: 0.6rem;
+    }
+    
+    .whyChooseCarousel .card-text {
+        font-size: 0.9rem;
+    }
+    
+    .whyChooseCarousel .swiper-pagination {
+        bottom: 5px !important;
+    }
+    
+    .whyChooseCarousel .swiper-pagination-bullet {
+        width: 9px;
+        height: 9px;
+    }
+}
+
+/* MOBILE (Up to 575px) */
+@media (max-width: 575px) {
+    .why-choose-section {
+        padding: 2.5rem 0 !important;
+    }
+    
+    .why-choose-section h2.display-5 {
+        font-size: 1.6rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+    
+    .why-choose-section .lead {
+        font-size: 0.9rem !important;
+        margin-bottom: 1.8rem !important;
+        padding: 0 0.5rem;
+    }
+    
+    .whyChooseCarousel {
+        padding: 0 5px 30px;
+    }
+    
+    .whyChooseCarousel .swiper-slide {
+        padding: 3px;
+    }
+    
+    .whyChooseCarousel .card {
+        border-width: 1.5px !important;
+        border-radius: 12px;
+    }
+    
+    .whyChooseCarousel .card-body {
+        padding: 1rem;
+    }
+    
+    .whyChooseCarousel .icon-wrapper {
+        width: 55px;
+        height: 55px;
+        margin-bottom: 0.8rem;
+    }
+    
+    .whyChooseCarousel .icon-wrapper i {
+        font-size: 1.4rem;
+    }
+    
+    .whyChooseCarousel .card-title {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .whyChooseCarousel .card-text {
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+    
+    .whyChooseCarousel .swiper-pagination {
+        bottom: 0 !important;
+    }
+    
+    .whyChooseCarousel .swiper-pagination-bullet {
+        width: 8px;
+        height: 8px;
+        margin: 0 3px !important;
+    }
+}
+
+/* EXTRA SMALL MOBILE (Up to 375px) */
+@media (max-width: 375px) {
+    .why-choose-section {
+        padding: 2rem 0 !important;
+    }
+    
+    .why-choose-section h2.display-5 {
+        font-size: 1.4rem !important;
+    }
+    
+    .why-choose-section .lead {
+        font-size: 0.85rem !important;
+    }
+    
+    .whyChooseCarousel .card-body {
+        padding: 0.8rem;
+    }
+    
+    .whyChooseCarousel .icon-wrapper {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .whyChooseCarousel .icon-wrapper i {
+        font-size: 1.3rem;
+    }
+    
+    .whyChooseCarousel .card-title {
+        font-size: 0.95rem;
+    }
+    
+    .whyChooseCarousel .card-text {
+        font-size: 0.8rem;
+    }
+}
+
+/* ========== SECTION 3: VENUE GALLERY RESPONSIVE ========== */
+@media (max-width: 1200px) {
+    /* Change from 4 columns to 2 columns on tablet */
+    .venue-row {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 20px;
+    }
+    
+    .venue-card {
+        height: 280px;
+    }
+}
+
+@media (max-width: 768px) {
+    .venue-gallery-section {
+        padding: 3rem 0 !important;
+    }
+    
+    .venue-gallery-section h2.display-5 {
+        font-size: 1.8rem !important;
+        margin-bottom: 1rem;
+    }
+    
+    .venue-gallery-section .lead {
+        font-size: 1rem !important;
+        margin-bottom: 2rem;
+    }
+    
+    /* Single column for mobile */
+    .venue-row {
+        grid-template-columns: 1fr !important;
+        gap: 15px;
+    }
+    
+    .venue-row:first-child {
+        margin-bottom: 15px;
+    }
+    
+    .venue-card {
+        height: 250px;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .venue-card-overlay {
+        padding: 20px;
+    }
+    
+    .venue-card-content h5 {
+        font-size: 1.1rem;
+    }
+    
+    .venue-card-content p {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .venue-gallery-section h2.display-5 {
+        font-size: 1.6rem !important;
+    }
+    
+    .venue-gallery-section .lead {
+        font-size: 0.9rem !important;
+    }
+    
+    .venue-card {
+        height: 220px;
+    }
+    
+    .venue-card-overlay {
+        padding: 15px;
+    }
+    
+    .venue-card-content h5 {
+        font-size: 1rem;
+        margin-bottom: 5px;
+    }
+    
+    .venue-card-content p {
+        font-size: 0.8rem;
+    }
+}
+
+
+
+/* ========== SECTION 4: PACKAGE PROMO RESPONSIVE ========== */
+/* ========================================
+   PACKAGE SECTION - RESPONSIVE FIXED
+   Cards Position Raised Up
+   ======================================== */
+
+/* ========================================
+   TABLET (< 992px)
+   ======================================== */
+
+@media (max-width: 992px) {
+    .package-section {
+        padding: 4rem 0 !important;
+        /* TAMBAH PADDING TOP lebih banyak lagi */
+        padding-top: 6.5rem !important;
+    }
+    
+    .package-section h2.display-5 {
+        font-size: 2rem !important;
+        /* TAMBAH MARGIN BOTTOM lebih banyak */
+        margin-bottom: 2.5rem !important;
+    }
+    
+    .package-section .lead {
+        /* TAMBAH MARGIN BOTTOM lebih besar */
+        margin-bottom: 3.5rem !important;
+    }
+    
+    /* NAIKKAN CAROUSEL CONTAINER lebih tinggi */
+    .package-carousel-container {
+        padding: 0 30px;
+        margin-top: 2rem !important;
+    }
+    
+    /* Adjust carousel for tablet - 2 cards per slide */
+    .col-lg-4 {
+        flex: 0 0 50% !important;
+        max-width: 50% !important;
+    }
+    
+    .carousel-control-prev {
+        left: -15px;
+    }
+    
+    .carousel-control-next {
+        right: -15px;
+    }
+    
+    .package-card {
+        margin: 0 5px;
+    }
+}
+
+/* ========================================
+   MOBILE MEDIUM (< 768px)
+   ======================================== */
+
+@media (max-width: 768px) {
+    .package-section {
+        padding: 3rem 0 !important;
+        /* TAMBAH PADDING TOP lebih banyak lagi */
+        padding-top: 5.5rem !important;
+    }
+    
+    .package-section h2.display-5 {
+        font-size: 1.8rem !important;
+        /* TAMBAH MARGIN BOTTOM lebih banyak */
+        margin-bottom: 2.2rem !important;
+    }
+    
+    .package-section .lead {
+        font-size: 1rem !important;
+        /* TAMBAH MARGIN BOTTOM lebih besar lagi */
+        margin-bottom: 3.5rem !important;
+    }
+    
+    /* NAIKKAN CAROUSEL CONTAINER lebih tinggi */
+    .package-carousel-container {
+        padding: 0 15px;
+        margin-top: 2.5rem !important;
+    }
+    
+    /* Single card per slide on mobile */
+    .col-lg-4 {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+    
+    /* Hide carousel controls on mobile */
+    .carousel-control-prev,
+    .carousel-control-next {
+        display: none;
+    }
+    
+    /* Adjust card sizing */
+    .card-header {
+        min-height: 140px;
+        padding: 1.5rem 1rem;
+    }
+    
+    .package-title {
+        font-size: 1.3rem;
+    }
+    
+    .price-amount {
+        font-size: 2.2rem;
+    }
+    
+    .card-body {
+        padding: 1.5rem 1rem;
+    }
+    
+    .features-list li {
+        font-size: 0.9rem;
+        padding: 0.5rem 0;
+    }
+    
+    .package-btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.95rem;
+    }
+    
+    /* Custom package CTA */
+    .custom-package-cta {
+        padding: 2rem 1.5rem;
+        margin-top: 2rem;
+    }
+    
+    .custom-package-cta h4 {
+        font-size: 1.4rem;
+    }
+    
+    .custom-package-cta p {
+        font-size: 0.95rem;
+    }
+}
+
+/* ========================================
+   MOBILE SMALL (< 576px)
+   ======================================== */
+
+@media (max-width: 576px) {
+    .package-section {
+        /* TAMBAH PADDING TOP lebih banyak lagi */
+        padding-top: 5rem !important;
+    }
+    
+    .package-section h2.display-5 {
+        font-size: 1.6rem !important;
+        /* TAMBAH MARGIN BOTTOM lebih banyak */
+        margin-bottom: 2rem !important;
+    }
+    
+    .package-section .lead {
+        font-size: 0.9rem !important;
+        /* TAMBAH MARGIN BOTTOM lebih besar lagi */
+        margin-bottom: 3rem !important;
+    }
+    
+    /* NAIKKAN CAROUSEL CONTAINER lebih tinggi */
+    .package-carousel-container {
+        margin-top: 3rem !important;
+    }
+    
+    .carousel-indicators {
+        bottom: -30px;
+    }
+    
+    .carousel-indicators button {
+        width: 8px;
+        height: 8px;
+        margin: 0 3px;
+    }
+    
+    .package-card {
+        margin: 0 2px;
+    }
+    
+    .custom-package-cta {
+        padding: 1.5rem 1rem;
+    }
+    
+    .custom-icon {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 1rem;
+    }
+    
+    .custom-icon i {
+        font-size: 1.8rem;
+    }
+    
+    .whatsapp-btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.95rem;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* ========================================
+   MOBILE EXTRA SMALL (< 400px)
+   ======================================== */
+
+@media (max-width: 400px) {
+    .package-section {
+        padding-top: 4.5rem !important;
+    }
+    
+    .package-section h2.display-5 {
+        font-size: 1.4rem !important;
+        margin-bottom: 1.8rem !important;
+    }
+    
+    .package-section .lead {
+        font-size: 0.85rem !important;
+        margin-bottom: 2.5rem !important;
+    }
+    
+    .package-carousel-container {
+        margin-top: 2.5rem !important;
+    }
+}
+
+/* ========================================
+   ADDITIONAL SPACING FIX
+   ======================================== */
+
+@media (max-width: 992px) {
+    /* Tambah spacing antara section header dan carousel */
+    .package-section .text-center {
+        margin-bottom: 4rem !important;
+    }
+    
+    /* Pastikan cards tidak overlap dengan judul */
+    .carousel-inner {
+        padding-top: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .package-section .text-center {
+        margin-bottom: 3.5rem !important;
+    }
+    
+    .carousel-inner {
+        padding-top: 1.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .package-section .text-center {
+        margin-bottom: 3rem !important;
+    }
+    
+    .carousel-inner {
+        padding-top: 1rem;
+    }
+}
+
+
+
+/* ========== SECTION 5: EVENT PORTFOLIO RESPONSIVE ========== */
+/* ========================================
+   PORTFOLIO SECTION - RESPONSIVE FIXED
+   Category Buttons Horizontal Layout
+   ======================================== */
+
+/* ========================================
+   TABLET (< 992px)
+   ======================================== */
+
+@media (max-width: 992px) {
+    .portfolio-section {
+        padding: 4rem 0 !important;
+    }
+    
+    .portfolio-section h2.display-5 {
+        font-size: 2rem !important;
+    }
+    
+    /* PERDEKAT JARAK - KURANGI MARGIN BOTTOM */
+    #portfolioTab {
+        margin-bottom: 1rem !important;
+    }
+    
+    /* TOMBOL KATEGORI - HORIZONTAL SEJAJAR */
+    .nav-pills {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        justify-content: center !important;
+        gap: 0.5rem;
+        margin-bottom: 1rem !important;
+    }
+    
+    .nav-pills .nav-item {
+        flex: 0 0 auto !important;
+    }
+    
+    .nav-pills .nav-link {
+        padding: 10px 18px !important;
+        font-size: 0.9rem !important;
+        white-space: nowrap !important;
+        margin: 0 !important;
+    }
+    
+    /* 2 cards per row on tablet */
+    .col-lg-4 {
+        flex: 0 0 50% !important;
+        max-width: 50% !important;
+    }
+    
+    /* Adjust carousel controls */
+    .carousel-control-prev {
+        left: -10px;
+    }
+    
+    .carousel-control-next {
+        right: -10px;
+    }
+    
+    .portfolio-card {
+        height: 250px;
+    }
+}
+
+/* ========================================
+   MOBILE MEDIUM (< 768px)
+   ======================================== */
+
+@media (max-width: 768px) {
+    .portfolio-section {
+        padding: 3rem 0 !important;
+    }
+    
+    .portfolio-section h2.display-5 {
+        font-size: 1.8rem !important;
+    }
+    
+    .portfolio-section .lead {
+        font-size: 1rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+    
+    /* PERDEKAT JARAK - KURANGI MARGIN */
+    #portfolioTab {
+        margin-bottom: 0.8rem !important;
+    }
+    
+    /* 3 TOMBOL KATEGORI - SEMUA TERLIHAT SEJAJAR DALAM 1 BARIS */
+    .nav-pills {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 0.4rem !important;
+        padding: 0 0.5rem !important;
+        width: 100% !important;
+        overflow: visible !important;
+        margin-bottom: 0.8rem !important;
+    }
+    
+    .nav-pills .nav-item {
+        flex: 1 1 auto !important;
+        display: inline-block !important;
+        margin: 0 !important;
+        max-width: 33% !important;
+    }
+    
+    .nav-pills .nav-link {
+        display: block !important;
+        padding: 9px 8px !important;
+        font-size: 0.8rem !important;
+        white-space: nowrap !important;
+        margin: 0 !important;
+        text-align: center !important;
+        width: 100% !important;
+    }
+    
+    /* PERDEKAT CARD KE TOMBOL */
+    .tab-content {
+        margin-top: 0.5rem !important;
+    }
+    
+    .carousel {
+        padding: 10px 15px !important;
+    }
+    
+    /* Single card per row on mobile */
+    .col-lg-4 {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+    
+    /* Hide carousel controls */
+    .carousel-control-prev,
+    .carousel-control-next {
+        display: none;
+    }
+    
+    /* Card adjustments */
+    .portfolio-card {
+        height: 220px;
+        margin: 0 5px;
+    }
+    
+    .overlay-content {
+        padding: 15px;
+    }
+    
+    .overlay-content h5 {
+        font-size: 1rem;
+    }
+    
+    .overlay-content p {
+        font-size: 0.85rem;
+    }
+}
+
+/* ========================================
+   MOBILE SMALL (< 576px)
+   ======================================== */
+
+@media (max-width: 576px) {
+    .portfolio-section h2.display-5 {
+        font-size: 1.6rem !important;
+    }
+    
+    .portfolio-section .lead {
+        font-size: 0.9rem !important;
+        margin-bottom: 1.2rem !important;
+    }
+    
+    /* PERDEKAT JARAK LEBIH LAGI */
+    #portfolioTab {
+        margin-bottom: 0.6rem !important;
+    }
+    
+    /* 3 TOMBOL KATEGORI - SEMUA MUAT DALAM 1 BARIS */
+    .nav-pills {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        gap: 0.3rem !important;
+        padding: 0 0.3rem !important;
+        overflow: visible !important;
+        margin-bottom: 0.6rem !important;
+    }
+    
+    .nav-pills .nav-item {
+        flex: 1 1 auto !important;
+        display: inline-block !important;
+        max-width: 33% !important;
+    }
+    
+    .nav-pills .nav-link {
+        display: block !important;
+        padding: 8px 5px !important;
+        font-size: 0.72rem !important;
+        white-space: nowrap !important;
+        margin: 0 !important;
+        text-align: center !important;
+        width: 100% !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+    }
+    
+    /* PERDEKAT CARD */
+    .tab-content {
+        margin-top: 0.4rem !important;
+    }
+    
+    .carousel {
+        padding: 8px 10px !important;
+    }
+    
+    .portfolio-card {
+        height: 200px;
+        margin: 0 2px;
+    }
+    
+    .overlay-content {
+        padding: 12px;
+    }
+    
+    .overlay-content h5 {
+        font-size: 0.95rem;
+    }
+    
+    .overlay-content p {
+        font-size: 0.8rem;
+    }
+    
+    .carousel-indicators.position-relative {
+        margin-top: 1.5rem !important;
+    }
+}
+
+/* ========================================
+   MOBILE EXTRA SMALL (< 400px)
+   ======================================== */
+
+@media (max-width: 400px) {
+    .portfolio-section h2.display-5 {
+        font-size: 1.4rem !important;
+    }
+    
+    .portfolio-section .lead {
+        font-size: 0.85rem !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    /* PERDEKAT JARAK MAKSIMAL */
+    #portfolioTab {
+        margin-bottom: 0.5rem !important;
+    }
+    
+    /* 3 TOMBOL - SANGAT COMPACT TAPI SEMUA TERLIHAT */
+    .nav-pills {
+        gap: 0.25rem !important;
+        padding: 0 0.25rem !important;
+        justify-content: space-between !important;
+        margin-bottom: 0.5rem !important;
+    }
+    
+    .nav-pills .nav-item {
+        flex: 1 1 auto !important;
+        max-width: 33% !important;
+    }
+    
+    .nav-pills .nav-link {
+        padding: 7px 4px !important;
+        font-size: 0.68rem !important;
+    }
+    
+    /* PERDEKAT CARD */
+    .tab-content {
+        margin-top: 0.3rem !important;
+    }
+    
+    .carousel {
+        padding: 5px 8px !important;
+    }
+    
+    .portfolio-card {
+        height: 180px;
+    }
+}
+
+/* ========================================
+   ADDITIONAL FIXES
+   ======================================== */
+
+/* CRITICAL: Override Bootstrap default that causes wrapping */
+@media (max-width: 992px) {
+    /* PERDEKAT JARAK TOMBOL KE CARD */
+    .text-center.mb-5 {
+        margin-bottom: 2rem !important;
+    }
+    
+    /* FORCE INLINE DISPLAY - NO WRAPPING */
+    .nav-pills {
+        display: inline-flex !important;
+        flex-wrap: nowrap !important;
+    }
+    
+    .nav-pills .nav-item {
+        display: inline-block !important;
+        float: none !important;
+    }
+    
+    .nav-pills .nav-link {
+        display: inline-block !important;
+        float: none !important;
+    }
+    
+    /* Remove any Bootstrap classes that force wrapping */
+    ul.nav-pills {
+        list-style: none !important;
+        padding-left: 0 !important;
+    }
+    
+    ul.nav-pills li {
+        display: inline-block !important;
+    }
+    
+    /* KURANGI PADDING CAROUSEL */
+    .carousel-inner {
+        padding-top: 0 !important;
+    }
+}
+
+/* Hide scrollbar on desktop but keep functionality */
+@media (min-width: 993px) {
+    .nav-pills {
+        overflow: visible !important;
+    }
+}
+
+
+/* ========== SECTION 6: BOOKING CTA RESPONSIVE ========== */
+/* ========================================
+   BOOKING CTA SECTION - RESPONSIVE FIXED
+   Compact & Attractive WhatsApp Button
+   ======================================== */
+
+/* ========================================
+   TABLET (< 992px)
+   ======================================== */
+
+@media (max-width: 992px) {
+    .booking-cta-section {
+        padding: 4rem 0 !important;
+        min-height: 500px;
+    }
+    
+    .booking-cta-section h2.display-4 {
+        font-size: 2.4rem !important;
+        line-height: 1.3 !important;
+    }
+    
+    .booking-cta-section .lead {
+        font-size: 1.15rem !important;
+        margin-bottom: 2rem !important;
+    }
+    
+    /* TOMBOL WHATSAPP - LEBIH PENDEK & RAPIH */
+    .btn-cta-booking {
+        min-width: auto !important;
+        max-width: 320px !important;
+        padding: 1rem 1.8rem !important;
+        white-space: nowrap !important;
+    }
+    
+    .btn-cta-booking span {
+        font-size: 1rem !important;
+    }
+    
+    .btn-cta-booking i {
+        font-size: 1.3rem !important;
+    }
+}
+
+/* ========================================
+   MOBILE MEDIUM (< 768px)
+   ======================================== */
+
+@media (max-width: 768px) {
+    .booking-cta-section {
+        padding: 3rem 0 !important;
+        min-height: 400px;
+    }
+    
+    .booking-cta-section h2.display-4 {
+        font-size: 2rem !important;
+    }
+    
+    .booking-cta-section .lead {
+        font-size: 1rem !important;
+        line-height: 1.5 !important;
+        margin-bottom: 1.5rem !important;
+    }
+    
+    /* TOMBOL WHATSAPP - LEBIH PENDEK LAGI */
+    .btn-cta-booking {
+        min-width: auto !important;
+        max-width: 280px !important;
+        padding: 0.9rem 1.5rem !important;
+        gap: 0.6rem !important;
+        white-space: nowrap !important;
+    }
+    
+    .btn-cta-booking span {
+        font-size: 0.95rem !important;
+    }
+    
+    .btn-cta-booking i {
+        font-size: 1.2rem !important;
+    }
+    
+    /* Additional Info */
+    .additional-info {
+        margin-top: 2rem;
+        max-width: 100%;
+    }
+    
+    .additional-info p {
+        font-size: 0.95rem !important;
+    }
+}
+
+/* ========================================
+   MOBILE SMALL (< 576px)
+   ======================================== */
+
+@media (max-width: 576px) {
+    .booking-cta-section {
+        padding: 2.5rem 0 !important;
+        min-height: 350px;
+    }
+    
+    .booking-cta-section h2.display-4 {
+        font-size: 1.7rem !important;
+    }
+    
+    .booking-cta-section .lead {
+        font-size: 0.9rem !important;
+        line-height: 1.4 !important;
+        margin-bottom: 1.2rem !important;
+    }
+    
+    /* TOMBOL WHATSAPP - COMPACT & RAPIH */
+    .btn-cta-booking {
+        min-width: auto !important;
+        max-width: 260px !important;
+        padding: 0.85rem 1.3rem !important;
+        gap: 0.5rem !important;
+        white-space: nowrap !important;
+    }
+    
+    .btn-cta-booking span {
+        font-size: 0.88rem !important;
+        letter-spacing: 0.2px;
+    }
+    
+    .btn-cta-booking i {
+        font-size: 1.1rem !important;
+    }
+    
+    /* Additional Info */
+    .additional-info {
+        margin-top: 1.5rem;
+        padding-top: 1rem;
+        max-width: 100%;
+    }
+    
+    .additional-info p {
+        font-size: 0.85rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+    
+    .additional-info i {
+        font-size: 1rem;
+    }
+}
+
+/* ========================================
+   MOBILE EXTRA SMALL (< 400px)
+   ======================================== */
+
+@media (max-width: 400px) {
+    .booking-cta-section {
+        padding: 2rem 0 !important;
+        min-height: 320px;
+    }
+    
+    .booking-cta-section h2.display-4 {
+        font-size: 1.5rem !important;
+    }
+    
+    .booking-cta-section .lead {
+        font-size: 0.85rem !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    /* TOMBOL WHATSAPP - SANGAT COMPACT */
+    .btn-cta-booking {
+        max-width: 240px !important;
+        padding: 0.8rem 1.2rem !important;
+        gap: 0.4rem !important;
+    }
+    
+    .btn-cta-booking span {
+        font-size: 0.82rem !important;
+    }
+    
+    .btn-cta-booking i {
+        font-size: 1rem !important;
+    }
+    
+    .additional-info {
+        margin-top: 1.2rem;
+    }
+    
+    .additional-info p {
+        font-size: 0.8rem !important;
+    }
+}
+
+/* ========================================
+   ADDITIONAL STYLING
+   ======================================== */
+
+@media (max-width: 992px) {
+    /* Center button */
+    .btn-cta-booking {
+        display: inline-flex !important;
+        margin: 0 auto;
+    }
+    
+    /* Ensure text doesn't wrap */
+    .btn-cta-booking span {
+        white-space: nowrap;
+        font-weight: 700;
+    }
+    
+    /* Icon spacing */
+    .btn-cta-booking i {
+        flex-shrink: 0;
+    }
+    
+    /* Additional info center on mobile */
+    .additional-info {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+/* ========== SECTION 7: FAQ RESPONSIVE ========== */
+/* === TABLET (768px - 992px) === */
+@media (max-width: 992px) {
+    .faq-section h2.display-5 {
+        font-size: 0.9rem !important; /* DARI 1.1rem KE 0.9rem */
+        line-height: 1.3 !important;
+        padding: 0 0.25rem;
+    }
+}
+
+/* === MOBILE (576px - 768px) === */
+@media (max-width: 768px) {
+    .faq-section h2.display-5 {
+        font-size: 0.8rem !important; /* DARI 0.95rem KE 0.8rem */
+        padding: 0 0.15rem;
+    }
+}
+
+/* === MOBILE KECIL (< 576px) === */
+@media (max-width: 576px) {
+    .faq-section h2.display-5 {
+        font-size: 0.75rem !important; /* DARI 0.85rem KE 0.75rem */
+        padding: 0 0.1rem;
+    }
+    
+    /* BUAT JUDUL LEBIH PENDEK */
+    .faq-section h2.display-5 br {
+        display: none; /* HAPUS LINE BREAK */
+    }
+}
+
+/* === EKSTRA KECIL (< 375px) === */
+@media (max-width: 375px) {
+    .faq-section h2.display-5 {
+        font-size: 0.7rem !important; /* PALING KECIL BANGET */
+    }
+}
+
+/* ========== FOOTER RESPONSIVE ========== */
+/* ========================================
+   FOOTER - RESPONSIVE CENTERED LAYOUT
+   All Elements Centered on Mobile/Tablet
+   ======================================== */
+
+/* ========================================
+   TABLET (< 992px)
+   ======================================== */
+
+@media (max-width: 992px) {
+    .footer-modern {
+        padding: 3rem 0 1.5rem;
+        text-align: center !important;
+    }
+    
+    /* FORCE ALL COLUMNS CENTERED */
+    .footer-modern .row {
+        justify-content: center !important;
+        text-align: center !important;
+    }
+    
+    .footer-modern .col-lg-4,
+    .footer-modern .col-lg-2,
+    .footer-modern .col-lg-3,
+    .footer-modern .col-md-6 {
+        text-align: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    
+    /* Logo & Description - CENTERED */
+    .footer-modern img {
+        margin: 0 auto 1rem !important;
+        display: block !important;
+    }
+    
+    .footer-modern p {
+        text-align: center !important;
+        max-width: 400px;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    
+    /* Social Links - CENTERED */
+    .social-links {
+        justify-content: center !important;
+        margin-top: 1rem !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+    
+    /* Footer Links - CENTERED */
+    .footer-links {
+        list-style: none !important;
+        padding: 0 !important;
+        text-align: center !important;
+        margin: 0 auto !important;
+    }
+    
+    .footer-links li {
+        text-align: center !important;
+        display: block !important;
+        margin: 0 auto !important;
+    }
+    
+    .footer-links a {
+        text-align: center !important;
+        display: inline-block !important;
+    }
+    
+    /* Heading - CENTERED */
+    .footer-modern h5 {
+        text-align: center !important;
+        width: 100% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    
+    /* Contact List - CENTERED */
+    .footer-contact {
+        list-style: none !important;
+        padding: 0 !important;
+        text-align: center !important;
+        margin: 0 auto !important;
+    }
+    
+    .footer-contact li {
+        text-align: center !important;
+        justify-content: center !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+}
+
+/* ========================================
+   MOBILE MEDIUM (< 768px)
+   ======================================== */
+
+@media (max-width: 768px) {
+    .footer-modern {
+        padding: 2.5rem 0 1.5rem;
+        text-align: center !important;
+    }
+    
+    /* FORCE FULL WIDTH CENTERED COLUMNS */
+    .footer-modern .row {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+    
+    .footer-modern .col-lg-4,
+    .footer-modern .col-lg-2,
+    .footer-modern .col-lg-3,
+    .footer-modern .col-md-6 {
+        width: 100% !important;
+        max-width: 400px !important;
+        margin-bottom: 2rem !important;
+        text-align: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    
+    /* Logo Section - FORCED CENTER */
+    .footer-modern img {
+        height: 45px !important;
+        margin: 0 auto 1rem !important;
+        display: block !important;
+    }
+    
+    .footer-modern p.text-white-50 {
+        font-size: 0.95rem !important;
+        line-height: 1.6 !important;
+        text-align: center !important;
+        padding: 0 1rem !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    
+    /* Social Links - FORCED CENTER */
+    .social-links {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 1rem !important;
+        margin-top: 1rem !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    
+    .social-links a {
+        width: 45px !important;
+        height: 45px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    
+    /* Headings - FORCED CENTER */
+    .footer-modern h5 {
+        font-size: 1.2rem !important;
+        text-align: center !important;
+        margin-bottom: 1.2rem !important;
+        width: 100% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    
+    /* Footer Links - FORCED CENTER */
+    .footer-links {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 0.7rem !important;
+        padding: 0 !important;
+        margin: 0 auto !important;
+        list-style: none !important;
+    }
+    
+    .footer-links li {
+        width: 100% !important;
+        text-align: center !important;
+        display: block !important;
+        margin: 0 auto !important;
+    }
+    
+    .footer-links a {
+        font-size: 0.95rem !important;
+        display: inline-block !important;
+        text-align: center !important;
+    }
+    
+    /* Contact List - FORCED CENTER */
+    .footer-contact {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 0.8rem !important;
+        padding: 0 !important;
+        margin: 0 auto !important;
+        list-style: none !important;
+    }
+    
+    .footer-contact li {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        font-size: 0.95rem !important;
+        width: 100% !important;
+    }
+    
+    .footer-contact i {
+        flex-shrink: 0 !important;
+    }
+    
+    /* Footer Divider */
+    .footer-divider {
+        margin: 2rem 0 1.5rem !important;
+        opacity: 0.3 !important;
+    }
+    
+    /* Copyright - FORCED CENTER */
+    .footer-modern .text-center {
+        text-align: center !important;
+    }
+    
+    .footer-modern .text-center p {
+        font-size: 0.9rem !important;
+        padding: 0 1rem !important;
+        text-align: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}
+
+/* ========================================
+   MOBILE SMALL (< 576px)
+   ======================================== */
+
+@media (max-width: 576px) {
+    .footer-modern {
+        padding: 2rem 0 1.2rem;
+    }
+    
+    /* Columns */
+    .footer-modern .col-lg-4,
+    .footer-modern .col-lg-2,
+    .footer-modern .col-lg-3,
+    .footer-modern .col-md-6 {
+        margin-bottom: 1.8rem;
+        padding: 0 1rem;
+    }
+    
+    /* Logo */
+    .footer-modern img {
+        height: 40px;
+        margin-bottom: 0.8rem;
+    }
+    
+    /* Description */
+    .footer-modern p.text-white-50 {
+        font-size: 0.88rem;
+        line-height: 1.5;
+        padding: 0 0.5rem;
+    }
+    
+    /* Social Links */
+    .social-links {
+        gap: 0.8rem;
+        margin-top: 0.8rem;
+    }
+    
+    .social-links a {
+        width: 42px;
+        height: 42px;
+        font-size: 1.2rem;
+    }
+    
+    /* Headings */
+    .footer-modern h5 {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+    
+    /* Footer Links */
+    .footer-links {
+        gap: 0.6rem;
+    }
+    
+    .footer-links a {
+        font-size: 0.9rem;
+    }
+    
+    /* Contact List */
+    .footer-contact {
+        gap: 0.7rem;
+    }
+    
+    .footer-contact li {
+        font-size: 0.88rem;
+    }
+    
+    .footer-contact i {
+        font-size: 1rem;
+    }
+    
+    /* Divider */
+    .footer-divider {
+        margin: 1.8rem 0 1.2rem;
+    }
+    
+    /* Copyright */
+    .footer-modern .text-center p {
+        font-size: 0.85rem;
+        padding: 0 0.5rem;
+    }
+}
+
+/* ========================================
+   MOBILE EXTRA SMALL (< 400px)
+   ======================================== */
+
+@media (max-width: 400px) {
+    .footer-modern {
+        padding: 1.8rem 0 1rem;
+    }
+    
+    /* Columns */
+    .footer-modern .col-lg-4,
+    .footer-modern .col-lg-2,
+    .footer-modern .col-lg-3,
+    .footer-modern .col-md-6 {
+        margin-bottom: 1.5rem;
+        padding: 0 0.75rem;
+    }
+    
+    /* Logo */
+    .footer-modern img {
+        height: 36px;
+        margin-bottom: 0.7rem;
+    }
+    
+    /* Description */
+    .footer-modern p.text-white-50 {
+        font-size: 0.82rem;
+        line-height: 1.45;
+    }
+    
+    /* Social Links */
+    .social-links a {
+        width: 38px;
+        height: 38px;
+        font-size: 1.1rem;
+    }
+    
+    /* Headings */
+    .footer-modern h5 {
+        font-size: 1.05rem;
+        margin-bottom: 0.9rem;
+    }
+    
+    /* Footer Links */
+    .footer-links a {
+        font-size: 0.85rem;
+    }
+    
+    /* Contact List */
+    .footer-contact li {
+        font-size: 0.82rem;
+    }
+    
+    .footer-contact i {
+        font-size: 0.95rem;
+    }
+    
+    /* Divider */
+    .footer-divider {
+        margin: 1.5rem 0 1rem;
+    }
+    
+    /* Copyright */
+    .footer-modern .text-center p {
+        font-size: 0.8rem;
+    }
+}
+
+/* ========================================
+   ADDITIONAL STYLING - FORCE CENTER
+   ======================================== */
+
+@media (max-width: 992px) {
+    /* UNIVERSAL CENTERING - OVERRIDE EVERYTHING */
+    .footer-modern,
+    .footer-modern * {
+        text-align: center !important;
+    }
+    
+    /* Remove any left/right alignment */
+    .footer-modern .text-start,
+    .footer-modern .text-end,
+    .footer-modern .ms-auto,
+    .footer-modern .me-auto {
+        text-align: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    
+    /* Center ALL flex items */
+    .footer-modern .d-flex,
+    .footer-modern [class*="flex"] {
+        justify-content: center !important;
+        align-items: center !important;
+    }
+    
+    /* Links hover effect */
+    .footer-links a {
+        transition: all 0.3s ease !important;
+    }
+    
+    .footer-links a:hover {
+        transform: translateY(-2px) !important;
+        color: #ff8c00 !important;
+    }
+    
+    /* Contact icons color */
+    .footer-contact i {
+        color: #ff8c00 !important;
+    }
+    
+    /* Override Bootstrap column alignments */
+    .footer-modern [class*="col-"] {
+        text-align: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+}
+
+/* Ensure proper spacing */
+@media (max-width: 768px) {
+    .footer-modern .row.g-4 {
+        gap: 0 !important;
+    }
+    
+    .footer-modern .row.g-4 > * {
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+    }
+    
+    /* Force center on all direct children */
+    .footer-modern > * {
+        text-align: center !important;
+    }
+    
+    .footer-modern .container > * {
+        text-align: center !important;
+    }
+}

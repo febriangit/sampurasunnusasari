@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info Lowongan Kerja - Warung Sambal Bakar</title>
+    
+    <!-- ========== CSS LIBRARIES ========== -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- FONT AWESOME 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="loker.css">
+    
+    <!-- CSS khusus untuk halaman loker -->
+    <style>
+        /* ========== SECTION 1: HERO WITH VIDEO ========== */
+        .loker-hero-section {
+            position: relative;
+            height: 100vh;
+            min-height: 600px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .loker-hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+        
+        .loker-hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 2;
+        }
+        
+        .loker-hero-content {
+            position: relative;
+            z-index: 3;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+        
+        .loker-logo-container {
+            margin-bottom: 30px;
+        }
+        
+        .loker-logo-text {
+            max-width: 300px;
+            height: auto;
+        }
+        
+        .loker-hero-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        @media (max-width: 768px) {
+            .loker-hero-title {
+                font-size: 2.5rem;
+            }
+        }
+        
+        .loker-hero-subtitle {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 40px;
+            line-height: 1.6;
+        }
+        
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 3;
+            color: white;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            40% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+            60% {
+                transform: translateX(-50%) translateY(-5px);
+            }
+        }
+        
+        /* ========== SECTION 2: LOWONGAN CARDS ========== */
+        .loker-section {
+            padding: 80px 0;
+        }
+        
+        .section-title-loker {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        
+        .section-subtitle-loker {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 50px;
+            max-width: 600px;
+        }
+        
+        .loker-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+        }
+        
+        .loker-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        .loker-img-container {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .loker-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .loker-card:hover .loker-img {
+            transform: scale(1.05);
+        }
+        
+        .loker-card-body {
+            padding: 25px;
+        }
+        
+        .loker-position {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        
+        .loker-desc {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .btn-detail {
+            background: #FF6B35;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 25px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-detail:hover {
+            background: #e55a2b;
+            transform: scale(1.05);
+        }
+        
+        /* ========== SECTION 3: PELAMAR KERJA ========== */
+        .lamaran-section {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+        
+        .lamaran-card {
+            background: white;
+            border-radius: 15px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            height: 100%;
+        }
+        
+        .lamaran-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .lamaran-icon {
+            font-size: 3.5rem;
+            color: #FF6B35;
+            margin-bottom: 25px;
+        }
+        
+        .lamaran-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        
+        .lamaran-desc {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        
+        .btn-lamar {
+            background: #FF6B35;
+            color: white;
+            padding: 12px 35px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-block;
+            transition: all 0.3s ease;
+            border: none;
+            font-size: 1.1rem;
+        }
+        
+        .btn-lamar:hover {
+            background: #e55a2b;
+            color: white;
+            transform: scale(1.05);
+        }
+        
+        /* ========== SECTION 4: FAQ ========== */
+        .faq-section {
+            padding: 80px 0;
+        }
+        
+        .faq-item {
+            margin-bottom: 25px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 25px;
+        }
+        
+        .faq-question {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .faq-answer {
+            color: #666;
+            line-height: 1.6;
+        }
+    </style>
+
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        
+        question.addEventListener('click', () => {
+            // Tutup semua FAQ yang lain
+            faqItems.forEach(otherItem => {
+                if (otherItem !== item && otherItem.classList.contains('active')) {
+                    otherItem.classList.remove('active');
+                }
+            });
+            
+            // Toggle FAQ yang diklik
+            item.classList.toggle('active');
+        });
+    });
+    
+    // Optional: Buka FAQ pertama secara default
+    // faqItems[0].classList.add('active');
+});
+    </script>
+
+</head>
+<body>
+
+    <!-- ========== NAVIGATION BAR ========== -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="asset/Logo Warung Bakakak.png" alt="Logo Restoran" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#hero">Wilujeng Sumping</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="program.html">Program & Partnership</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pilih menu cabang.html">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#location-preview">Lokasi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="promo.html">Promo Spesial</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                            More
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-orange">
+                            <li><a class="dropdown-item" href="sewa tempat.html"><i class="bi bi-calendar-event me-2"></i>Sewa Tempat Acara</a></li>
+                            <li><a class="dropdown-item" href="index.html#footer-modern"><i class="bi bi-envelope me-2"></i>Kontak</a></li>
+                            <li><a class="dropdown-item active" href="loker.html"><i class="bi bi-briefcase me-2"></i>Info Loker</a></li>
+                            <li><a class="dropdown-item" href="investasi.html"><i class="bi bi-graph-up me-2"></i>Peluang Investasi</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="blog.html"><i class="bi bi-newspaper me-2"></i>Berita</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== SECTION 1: HERO WITH VIDEO ========== -->
+    <section class="loker-hero-section">
+        <!-- Background Video -->
+        <video autoplay muted loop playsinline class="loker-hero-video">
+            <source src="asset/vid SECTION BG.mp4" type="video/mp4">
+        </video>
+        
+        <!-- Overlay -->
+        <div class="loker-hero-overlay"></div>
+        
+        <!-- Content -->
+        <div class="loker-hero-content">
+            <div class="container">              
+                <!-- Judul -->
+                <h1 class="loker-hero-title">KARIR DI SAMPURASUN NUSASARI</h1>
+                <!-- Logo -->
+                <div class="loker-logo-container">
+                    <img src="asset/Logo Warung Bakakak.png" alt="Logo Warung Sambal Bakar" class="loker-logo-text">
+                </div>
+                <!-- Deskripsi -->
+                <p class="loker-hero-subtitle">
+                    Bergabunglah dengan tim yang penuh semangat dan berkembang bersama kami. 
+                    Temukan peluang karir yang menarik di lingkungan kerja yang supportif.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SECTION 2: LOWONGAN TERBUKA ========== -->
+     <section id="lowongan" class="loker-section">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-title-loker">Lowongan Terbuka Saat Ini</h2>
+            <p class="section-subtitle-loker mx-auto">
+                Daftar posisi yang sedang tersedia. Pilih yang sesuai dengan keahlian dan minat Anda.
+            </p>
+        </div>
+        
+        <!-- Grid Container -->
+        <div class="row g-4 justify-content-center">
+            
+            <!-- Card 1: Chef -->
+            <div class="col-lg-4 col-md-6">
+                <div class="loker-poster-card" data-job-id="chef">
+                    <div class="poster-image-container">
+                        <img src="asset/Customer Relation Officer.jpeg" 
+                             alt="Chef" 
+                             class="poster-image">
+                        <div class="poster-overlay">
+                            <div class="overlay-content">
+                                <h3 class="poster-title">Customer Relation Officer</h3>
+                                <div class="poster-info">
+                                    <span class="info-badge"><i class="bi bi-clock me-1"></i> Full Time</span>
+                                    <span class="info-badge"><i class="bi bi-geo-alt me-1"></i> Sumedang | Soreang | Pasteur</span>
+                                    <!-- <span class="info-badge"><i class="bi bi-cash me-1"></i> Rp 8-10 Juta</span> -->
+                                </div>
+                                <button class="btn btn-apply-now" onclick="showJobDetail('chef')">
+                                    <i class="bi bi-send me-2"></i>Lamar Sekarang
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="poster-footer">
+                        <span class="poster-date">Posted: 15 Jan 2024</span>
+                        <span class="poster-status badge-open">Open</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 2: Waitress -->
+            <div class="col-lg-4 col-md-6">
+                <div class="loker-poster-card" data-job-id="waitress">
+                    <div class="poster-image-container">
+                        <img src="https://i.pinimg.com/1200x/50/bd/ce/50bdcef6f6d4725cd5822ee19595532e.jpg" 
+                             alt="Waitress" 
+                             class="poster-image">
+                        <div class="poster-overlay">
+                            <div class="overlay-content">
+                                <h3 class="poster-title">Waitress / Pelayan</h3>
+                                <div class="poster-info">
+                                    <span class="info-badge"><i class="bi bi-clock me-1"></i> Part Time</span>
+                                    <span class="info-badge"><i class="bi bi-geo-alt me-1"></i> Bandung</span>
+                                    <span class="info-badge"><i class="bi bi-cash me-1"></i> Rp 3-4 Juta</span>
+                                </div>
+                                <button class="btn btn-apply-now" onclick="showJobDetail('waitress')">
+                                    <i class="bi bi-send me-2"></i>Lamar Sekarang
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="poster-footer">
+                        <span class="poster-date">Posted: 14 Jan 2024</span>
+                        <span class="poster-status badge-open">Open</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 3: Kasir -->
+            <div class="col-lg-4 col-md-6">
+                <div class="loker-poster-card" data-job-id="kasir">
+                    <div class="poster-image-container">
+                        <img src="https://i.pinimg.com/1200x/3a/f8/04/3af804a6c33278fdde8aeb19c4e4a437.jpg" 
+                             alt="Kasir" 
+                             class="poster-image">
+                        <div class="poster-overlay">
+                            <div class="overlay-content">
+                                <h3 class="poster-title">Kasir</h3>
+                                <div class="poster-info">
+                                    <span class="info-badge"><i class="bi bi-clock me-1"></i> Full Time</span>
+                                    <span class="info-badge"><i class="bi bi-geo-alt me-1"></i> BSD</span>
+                                    <span class="info-badge"><i class="bi bi-cash me-1"></i> Rp 5-6 Juta</span>
+                                </div>
+                                <button class="btn btn-apply-now" onclick="showJobDetail('kasir')">
+                                    <i class="bi bi-send me-2"></i>Lamar Sekarang
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="poster-footer">
+                        <span class="poster-date">Posted: 13 Jan 2024</span>
+                        <span class="poster-status badge-open">Open</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 4: Manager -->
+            <div class="col-lg-4 col-md-6">
+                <div class="loker-poster-card" data-job-id="manager">
+                    <div class="poster-image-container">
+                        <img src="https://i.pinimg.com/736x/88/b0/ef/88b0efbc60be3173b92507808461c52a.jpg" 
+                             alt="Manager" 
+                             class="poster-image">
+                        <div class="poster-overlay">
+                            <div class="overlay-content">
+                                <h3 class="poster-title">Restaurant Manager</h3>
+                                <div class="poster-info">
+                                    <span class="info-badge"><i class="bi bi-clock me-1"></i> Full Time</span>
+                                    <span class="info-badge"><i class="bi bi-geo-alt me-1"></i> Jakarta</span>
+                                    <span class="info-badge"><i class="bi bi-cash me-1"></i> Rp 15-20 Juta</span>
+                                </div>
+                                <button class="btn btn-apply-now" onclick="showJobDetail('manager')">
+                                    <i class="bi bi-send me-2"></i>Lamar Sekarang
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="poster-footer">
+                        <span class="poster-date">Posted: 12 Jan 2024</span>
+                        <span class="poster-status badge-open">Open</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 5: Barista -->
+            <div class="col-lg-4 col-md-6">
+                <div class="loker-poster-card" data-job-id="barista">
+                    <div class="poster-image-container">
+                        <img src="https://i.pinimg.com/736x/35/5c/89/355c896de29c364d2e54007b1d0e1ca6.jpg" 
+                             alt="Barista" 
+                             class="poster-image">
+                        <div class="poster-overlay">
+                            <div class="overlay-content">
+                                <h3 class="poster-title">Barista</h3>
+                                <div class="poster-info">
+                                    <span class="info-badge"><i class="bi bi-clock me-1"></i> Full Time</span>
+                                    <span class="info-badge"><i class="bi bi-geo-alt me-1"></i> Bandung</span>
+                                    <span class="info-badge"><i class="bi bi-cash me-1"></i> Rp 4-6 Juta</span>
+                                </div>
+                                <button class="btn btn-apply-now" onclick="showJobDetail('barista')">
+                                    <i class="bi bi-send me-2"></i>Lamar Sekarang
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="poster-footer">
+                        <span class="poster-date">Posted: 11 Jan 2024</span>
+                        <span class="poster-status badge-open">Open</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 6: Marketing -->
+            <div class="col-lg-4 col-md-6">
+                <div class="loker-poster-card" data-job-id="marketing">
+                    <div class="poster-image-container">
+                        <img src="https://i.pinimg.com/736x/51/a4/86/51a4862d1dbfb9f45315d381c1526f21.jpg" 
+                             alt="Marketing" 
+                             class="poster-image">
+                        <div class="poster-overlay">
+                            <div class="overlay-content">
+                                <h3 class="poster-title">Marketing</h3>
+                                <div class="poster-info">
+                                    <span class="info-badge"><i class="bi bi-clock me-1"></i> Full Time</span>
+                                    <span class="info-badge"><i class="bi bi-geo-alt me-1"></i> Jakarta</span>
+                                    <span class="info-badge"><i class="bi bi-cash me-1"></i> Rp 7-9 Juta</span>
+                                </div>
+                                <button class="btn btn-apply-now" onclick="showJobDetail('marketing')">
+                                    <i class="bi bi-send me-2"></i>Lamar Sekarang
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="poster-footer">
+                        <span class="poster-date">Posted: 10 Jan 2024</span>
+                        <span class="poster-status badge-open">Open</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 7: Kitchen Helper -->
+            <div class="col-lg-4 col-md-6">
+                <div class="loker-poster-card" data-job-id="kitchen-helper">
+                    <div class="poster-image-container">
+                        <img src="https://i.pinimg.com/736x/fa/27/1a/fa271ad9477efa256999b3a4c8347adc.jpg" 
+                             alt="Kitchen Helper" 
+                             class="poster-image">
+                        <div class="poster-overlay">
+                            <div class="overlay-content">
+                                <h3 class="poster-title">Kitchen Helper</h3>
+                                <div class="poster-info">
+                                    <span class="info-badge"><i class="bi bi-clock me-1"></i> Full Time</span>
+                                    <span class="info-badge"><i class="bi bi-geo-alt me-1"></i> Surabaya</span>
+                                    <span class="info-badge"><i class="bi bi-cash me-1"></i> Rp 3-4 Juta</span>
+                                </div>
+                                <button class="btn btn-apply-now" onclick="showJobDetail('kitchen-helper')">
+                                    <i class="bi bi-send me-2"></i>Lamar Sekarang
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="poster-footer">
+                        <span class="poster-date">Posted: 09 Jan 2024</span>
+                        <span class="poster-status badge-open">Open</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 8: Delivery Driver -->
+            <div class="col-lg-4 col-md-6">
+                <div class="loker-poster-card" data-job-id="delivery-driver">
+                    <div class="poster-image-container">
+                        <img src="https://i.pinimg.com/736x/e0/59/41/e059415d83dc8ddfadc84c4a7da7ccd5.jpg" 
+                             alt="Delivery Driver" 
+                             class="poster-image">
+                        <div class="poster-overlay">
+                            <div class="overlay-content">
+                                <h3 class="poster-title">Delivery Driver</h3>
+                                <div class="poster-info">
+                                    <span class="info-badge"><i class="bi bi-clock me-1"></i> Full Time</span>
+                                    <span class="info-badge"><i class="bi bi-geo-alt me-1"></i> Jakarta</span>
+                                    <span class="info-badge"><i class="bi bi-cash me-1"></i> Rp 4-5 Juta</span>
+                                </div>
+                                <button class="btn btn-apply-now" onclick="showJobDetail('delivery-driver')">
+                                    <i class="bi bi-send me-2"></i>Lamar Sekarang
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="poster-footer">
+                        <span class="poster-date">Posted: 08 Jan 2024</span>
+                        <span class="poster-status badge-open">Open</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 9: Cleaning Service -->
+            <div class="col-lg-4 col-md-6">
+                <div class="loker-poster-card" data-job-id="cleaning-service">
+                    <div class="poster-image-container">
+                        <img src="https://i.pinimg.com/736x/8c/e2/01/8ce2017bf1913ae82f8bedd2173a9289.jpg" 
+                             alt="Cleaning Service" 
+                             class="poster-image">
+                        <div class="poster-overlay">
+                            <div class="overlay-content">
+                                <h3 class="poster-title">Cleaning Service</h3>
+                                <div class="poster-info">
+                                    <span class="info-badge"><i class="bi bi-clock me-1"></i> Part Time</span>
+                                    <span class="info-badge"><i class="bi bi-geo-alt me-1"></i> BSD</span>
+                                    <span class="info-badge"><i class="bi bi-cash me-1"></i> Rp 2.5-3 Juta</span>
+                                </div>
+                                <button class="btn btn-apply-now" onclick="showJobDetail('cleaning-service')">
+                                    <i class="bi bi-send me-2"></i>Lamar Sekarang
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="poster-footer">
+                        <span class="poster-date">Posted: 07 Jan 2024</span>
+                        <span class="poster-status badge-open">Open</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 10: Chef Assistant -->
+            <div class="col-lg-4 col-md-6">
+                <div class="loker-poster-card" data-job-id="chef-assistant">
+                    <div class="poster-image-container">
+                        <img src="https://i.pinimg.com/736x/bd/8d/8a/bd8d8aa0975455588054addcd2b351d0.jpg" 
+                             alt="Chef Assistant" 
+                             class="poster-image">
+                        <div class="poster-overlay">
+                            <div class="overlay-content">
+                                <h3 class="poster-title">Chef Assistant</h3>
+                                <div class="poster-info">
+                                    <span class="info-badge"><i class="bi bi-clock me-1"></i> Full Time</span>
+                                    <span class="info-badge"><i class="bi bi-geo-alt me-1"></i> Bandung</span>
+                                    <span class="info-badge"><i class="bi bi-cash me-1"></i> Rp 5-7 Juta</span>
+                                </div>
+                                <button class="btn btn-apply-now" onclick="showJobDetail('chef-assistant')">
+                                    <i class="bi bi-send me-2"></i>Lamar Sekarang
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="poster-footer">
+                        <span class="poster-date">Posted: 06 Jan 2024</span>
+                        <span class="poster-status badge-open">Open</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 11: Supervisor -->
+            <div class="col-lg-4 col-md-6">
+                <div class="loker-poster-card" data-job-id="supervisor">
+                    <div class="poster-image-container">
+                        <img src="https://i.pinimg.com/736x/da/78/da/da78da72e129d5b137a17a3785cb5123.jpg" 
+                             alt="Supervisor" 
+                             class="poster-image">
+                        <div class="poster-overlay">
+                            <div class="overlay-content">
+                                <h3 class="poster-title">Supervisor</h3>
+                                <div class="poster-info">
+                                    <span class="info-badge"><i class="bi bi-clock me-1"></i> Full Time</span>
+                                    <span class="info-badge"><i class="bi bi-geo-alt me-1"></i> Jakarta</span>
+                                    <span class="info-badge"><i class="bi bi-cash me-1"></i> Rp 10-12 Juta</span>
+                                </div>
+                                <button class="btn btn-apply-now" onclick="showJobDetail('supervisor')">
+                                    <i class="bi bi-send me-2"></i>Lamar Sekarang
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="poster-footer">
+                        <span class="poster-date">Posted: 05 Jan 2024</span>
+                        <span class="poster-status badge-open">Open</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 12: Baker -->
+            <div class="col-lg-4 col-md-6">
+                <div class="loker-poster-card" data-job-id="baker">
+                    <div class="poster-image-container">
+                        <img src="https://i.pinimg.com/736x/21/29/0c/21290c2f29d87cf42d97aad43ccc041e.jpg" 
+                             alt="Baker" 
+                             class="poster-image">
+                        <div class="poster-overlay">
+                            <div class="overlay-content">
+                                <h3 class="poster-title">Baker</h3>
+                                <div class="poster-info">
+                                    <span class="info-badge"><i class="bi bi-clock me-1"></i> Full Time</span>
+                                    <span class="info-badge"><i class="bi bi-geo-alt me-1"></i> Surabaya</span>
+                                    <span class="info-badge"><i class="bi bi-cash me-1"></i> Rp 6-8 Juta</span>
+                                </div>
+                                <button class="btn btn-apply-now" onclick="showJobDetail('baker')">
+                                    <i class="bi bi-send me-2"></i>Lamar Sekarang
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="poster-footer">
+                        <span class="poster-date">Posted: 04 Jan 2024</span>
+                        <span class="poster-status badge-open">Open</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 13: HRD Staff -->
+            <div class="col-lg-4 col-md-6">
+                <div class="loker-poster-card" data-job-id="hrd-staff">
+                    <div class="poster-image-container">
+                        <img src="https://i.pinimg.com/736x/b5/ce/6e/b5ce6e44b64262afefb5774a2b1a93b0.jpg" 
+                             alt="HRD Staff" 
+                             class="poster-image">
+                        <div class="poster-overlay">
+                            <div class="overlay-content">
+                                <h3 class="poster-title">HRD Staff</h3>
+                                <div class="poster-info">
+                                    <span class="info-badge"><i class="bi bi-clock me-1"></i> Full Time</span>
+                                    <span class="info-badge"><i class="bi bi-geo-alt me-1"></i> Jakarta</span>
+                                    <span class="info-badge"><i class="bi bi-cash me-1"></i> Rp 6-8 Juta</span>
+                                </div>
+                                <button class="btn btn-apply-now" onclick="showJobDetail('hrd-staff')">
+                                    <i class="bi bi-send me-2"></i>Lamar Sekarang
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="poster-footer">
+                        <span class="poster-date">Posted: 03 Jan 2024</span>
+                        <span class="poster-status badge-open">Open</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 14: Procurement Staff -->
+            <div class="col-lg-4 col-md-6">
+                <div class="loker-poster-card" data-job-id="procurement-staff">
+                    <div class="poster-image-container">
+                        <img src="https://i.pinimg.com/736x/50/78/8e/50788eeb514a350337a0cd0ac4a4298b.jpg" 
+                             alt="Procurement Staff" 
+                             class="poster-image">
+                        <div class="poster-overlay">
+                            <div class="overlay-content">
+                                <h3 class="poster-title">Procurement Staff</h3>
+                                <div class="poster-info">
+                                    <span class="info-badge"><i class="bi bi-clock me-1"></i> Full Time</span>
+                                    <span class="info-badge"><i class="bi bi-geo-alt me-1"></i> Bandung</span>
+                                    <span class="info-badge"><i class="bi bi-cash me-1"></i> Rp 5-7 Juta</span>
+                                </div>
+                                <button class="btn btn-apply-now" onclick="showJobDetail('procurement-staff')">
+                                    <i class="bi bi-send me-2"></i>Lamar Sekarang
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="poster-footer">
+                        <span class="poster-date">Posted: 02 Jan 2024</span>
+                        <span class="poster-status badge-open">Open</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 15: Gardener -->
+            <div class="col-lg-4 col-md-6">
+                <div class="loker-poster-card" data-job-id="gardener">
+                    <div class="poster-image-container">
+                        <img src="https://i.pinimg.com/736x/b6/97/48/b69748b974ceeb4368d97f2dceef5397.jpg" 
+                             alt="Gardener" 
+                             class="poster-image">
+                        <div class="poster-overlay">
+                            <div class="overlay-content">
+                                <h3 class="poster-title">Gardener</h3>
+                                <div class="poster-info">
+                                    <span class="info-badge"><i class="bi bi-clock me-1"></i> Part Time</span>
+                                    <span class="info-badge"><i class="bi bi-geo-alt me-1"></i> BSD</span>
+                                    <span class="info-badge"><i class="bi bi-cash me-1"></i> Rp 2-3 Juta</span>
+                                </div>
+                                <button class="btn btn-apply-now" onclick="showJobDetail('gardener')">
+                                    <i class="bi bi-send me-2"></i>Lamar Sekarang
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="poster-footer">
+                        <span class="poster-date">Posted: 01 Jan 2024</span>
+                        <span class="poster-status badge-open">Open</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- ========== SECTION 4: FAQ ========== -->
+     <section class="faq-section">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-title-loker">Pertanyaan Umum</h2>
+            <p class="section-subtitle-loker mx-auto">
+                Temukan jawaban dari pertanyaan yang sering diajukan
+            </p>
+        </div>
+        
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="bi bi-question-circle me-2"></i>
+                        <span>Berapa lama proses seleksi berlangsung?</span>
+                        <i class="bi bi-chevron-down arrow-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Proses seleksi biasanya berlangsung 1-2 minggu setelah tanggal tutup lowongan. 
+                            Anda akan dihubungi via WhatsApp atau email untuk tahapan selanjutnya.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="bi bi-question-circle me-2"></i>
+                        <span>Apakah boleh mengirim CV via email?</span>
+                        <i class="bi bi-chevron-down arrow-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Untuk proses yang lebih terstruktur, kami hanya menerima lamaran melalui 
+                            formulir online (Google Form) yang tersedia di halaman ini.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 3 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="bi bi-question-circle me-2"></i>
+                        <span>Berapa lama masa training?</span>
+                        <i class="bi bi-chevron-down arrow-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Masa training dilakukan selama 2 minggu dan bersifat tentatif yang bertujuan untuk mengenalkan calon karyawan terhadap standar dan ketentuan yang berlaku di perusahaan 
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 5 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <i class="bi bi-question-circle me-2"></i>
+                        <span>Bagaimana jika ingin melamar lebih dari satu posisi?</span>
+                        <i class="bi bi-chevron-down arrow-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Anda boleh melamar maksimal 2 posisi yang sesuai dengan kualifikasi. 
+                            Silakan isi formulir terpisah untuk setiap posisi.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- ========== MODALS UNTUK DETAIL LOWONGAN ========== -->
+    
+    <!-- Modal Chef -->
+    <div class="modal fade" id="detailChef" tabindex="-1" aria-labelledby="detailChefLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="detailChefLabel">Detail Lowongan: Chef / Koki</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>📋 Deskripsi Pekerjaan:</h6>
+                    <ul>
+                        <li>Memasak menu utama dan menu spesial</li>
+                        <li>Mengatur persediaan bahan makanan</li>
+                        <li>Menjaga kualitas dan konsistensi masakan</li>
+                        <li>Mengembangkan menu baru bersama tim</li>
+                        <li>Memastikan kebersihan dan sanitasi dapur</li>
+                    </ul>
+                    
+                    <h6 class="mt-4">✅ Persyaratan:</h6>
+                    <ul>
+                        <li>Minimal SMK/SMA Jurusan Tata Boga</li>
+                        <li>Pengalaman minimal 2 tahun sebagai koki</li>
+                        <li>Usia 25-40 tahun</li>
+                        <li>Bersertifikat hygiene dan sanitasi makanan</li>
+                        <li>Kreatif dan mampu bekerja dalam tim</li>
+                    </ul>
+                    
+                    <h6 class="mt-4">💰 Benefit:</h6>
+                    <ul>
+                        <li>Gaji kompetitif + tunjangan</li>
+                        <li>BPJS Kesehatan & Ketenagakerjaan</li>
+                        <li>Makan siang gratis saat kerja</li>
+                        <li>Bonus tahunan dan insentif</li>
+                        <li>Pelatihan dan pengembangan karir</li>
+                    </ul>
+                    
+                    <h6 class="mt-4">📍 Lokasi Penempatan:</h6>
+                    <p>Jakarta, Bandung, atau sesuai kebutuhan cabang</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal Waitress -->
+    <div class="modal fade" id="detailWaitress" tabindex="-1" aria-labelledby="detailWaitressLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="detailWaitressLabel">Detail Lowongan: Waitress / Pelayan</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>📋 Deskripsi Pekerjaan:</h6>
+                    <ul>
+                        <li>Menyambut dan melayani pelanggan dengan ramah</li>
+                        <li>Mengambil order makanan dan minuman</li>
+                        <li>Mengantar pesanan ke meja pelanggan</li>
+                        <li>Menjaga kebersihan area restoran</li>
+                        <li>Menangani komplain pelanggan dengan baik</li>
+                    </ul>
+                    
+                    <h6 class="mt-4">✅ Persyaratan:</h6>
+                    <ul>
+                        <li>Minimal SMA/SMK sederajat</li>
+                        <li>Usia 18-30 tahun</li>
+                        <li>Penampilan menarik dan komunikatif</li>
+                        <li>Bersedia bekerja shift (pagi/sore/malam)</li>
+                        <li>Pengalaman di bidang F&B lebih disukai</li>
+                    </ul>
+                    
+                    <h6 class="mt-4">💰 Benefit:</h6>
+                    <ul>
+                        <li>Gaji pokok + tip pelanggan</li>
+                        <li>Seragam kerja disediakan</li>
+                        <li>BPJS Kesehatan & Ketenagakerjaan</li>
+                        <li>Makan siang gratis saat kerja</li>
+                        <li>Bonus loyalitas</li>
+                    </ul>
+                    
+                    <h6 class="mt-4">📍 Lokasi Penempatan:</h6>
+                    <p>Semua cabang Warung Sambal Bakar</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal Kasir -->
+    <div class="modal fade" id="detailKasir" tabindex="-1" aria-labelledby="detailKasirLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="detailKasirLabel">Detail Lowongan: Kasir</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>📋 Deskripsi Pekerjaan:</h6>
+                    <ul>
+                        <li>Melakukan transaksi pembayaran (tunai/non-tunai)</li>
+                        <li>Mengelola uang kas dan laporan harian</li>
+                        <li>Memastikan keakuratan struk pembayaran</li>
+                        <li>Melayani customer dengan ramah</li>
+                        <li>Melakukan rekonsiliasi kas harian</li>
+                    </ul>
+                    
+                    <h6 class="mt-4">✅ Persyaratan:</h6>
+                    <ul>
+                        <li>Minimal SMA/SMK Akuntansi</li>
+                        <li>Usia 20-35 tahun</li>
+                        <li>Jujur, teliti, dan bertanggung jawab</li>
+                        <li>Menguasai operasional mesin kasir</li>
+                        <li>Pengalaman sebagai kasir minimal 1 tahun</li>
+                    </ul>
+                    
+                    <h6 class="mt-4">💰 Benefit:</h6>
+                    <ul>
+                        <li>Gaji pokok + insentif</li>
+                        <li>BPJS Kesehatan & Ketenagakerjaan</li>
+                        <li>Jam kerja tetap (tidak shift malam)</li>
+                        <li>Makan siang gratis</li>
+                        <li>Asuransi kecelakaan kerja</li>
+                    </ul>
+                    
+                    <h6 class="mt-4">📍 Lokasi Penempatan:</h6>
+                    <p>Jakarta, BSD, Bandung (pilihan)</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== FOOTER ========== -->
+    <!-- COPY DARI index.html -->
+    <footer class="footer-modern">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <img src="asset/Logo Warung Bakakak.png" alt="Logo" height="50" class="mb-3">
+                    <p class="text-white-50">Waroeng Sambal Bakar menghadirkan cita rasa autentik Indonesia dengan 18 jenis sambal spesial dan pelayanan terbaik.</p>
+                    <div class="social-links mt-3">
+                        <a href="https://www.instagram.com/sampurasunnusasari?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@sampurasunnusasari?is_from_webapp=1&sender_device=pc"><i class="bi bi-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="text-white mb-3">Menu</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html#hero">Beranda</a></li>
+                        <li><a href="index.html#menu-highlight">Menu Favorit</a></li>
+                        <li><a href="program.html">Program Partnership</a></li>
+                        <li><a href="promo.html">Promo & Kemitraan</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-3">Layanan</h5>
+                    <ul class="footer-links">
+                        <li><a href="peluang-investasi.html">Peluang Investasi</a></li>
+                        <li><a href="info-loker.html">Info Loker</a></li>
+                        <li><a href="sewa-tempat.html">Sewa Tempat</a></li>
+                        <li><a href="index.html#location-preview">Lokasi</a></li>
+                        <li><a href="blog.html">Berita</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-3">Kontak</h5>
+                    <ul class="footer-contact">
+                        <li><i class="bi bi-envelope-fill me-2"></i>info@waroengsambalbakar.com</li>
+                        <li><i class="bi bi-telephone-fill me-2"></i>021-12345678</li>
+                        <li><i class="bi bi-whatsapp me-2"></i>0812-3456-7890</li>
+                        <li><i class="bi bi-clock-fill me-2"></i>10.00 - 22.00 WIB</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="text-center text-white-50">
+                <p class="mb-0">&copy; 2026 Sampurasun Nusasari. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== JAVASCRIPT LIBRARIES ========== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Smooth Scroll untuk Section 2 -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scroll untuk tombol scroll indicator
+            const scrollIndicator = document.querySelector('.scroll-indicator');
+            if (scrollIndicator) {
+                scrollIndicator.addEventListener('click', function() {
+                    document.getElementById('lowongan').scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            }
+            
+            // Tandai link aktif di navbar
+            const currentPage = window.location.pathname;
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === currentPage || 
+                    (currentPage.includes('info-loker.html') && link.textContent.includes('Info Loker'))) {
+                    link.classList.add('active');
+                }
+            });
+            
+            // Tambahkan hover effect untuk cards
+            const cards = document.querySelectorAll('.loker-card, .lamaran-card');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transition = 'all 0.3s ease';
+                });
+            });
+        });
+        
+        // Fungsi untuk mengisi link Google Form nantinya
+        function setGoogleFormLinks(umumLink, magangLink) {
+            document.getElementById('lamarUmum').href = umumLink;
+            document.getElementById('lamarMagang').href = magangLink;
+        }
+        
+        // Contoh penggunaan (nanti diisi dengan link asli):
+        // setGoogleFormLinks(
+        //     'https://forms.google.com/...', // Link untuk pelamar umum
+        //     'https://forms.google.com/...'  // Link untuk magang
+        // );
+    </script>
+</body>
+</html>
