@@ -1,0 +1,1682 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warung Bakakak Sampurasun Nusasari - Home</title>
+    
+    <!-- ========== CSS LIBRARIES ========== -->
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    
+    <!-- ========== INLINE STYLE (Minimal untuk testing) ========== -->
+    <style>
+        /* Temporary style untuk testing responsive */
+        .testing-responsive {
+            display: none;
+        }
+        
+        /* Pastikan video background responsif */
+        video.hero-video, 
+        video.happy-video-bg, 
+        video.video-background {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        /* Fix untuk Bootstrap navbar di mobile */
+        @media (max-width: 991.98px) {
+            .navbar-collapse {
+                background: #5D2906;
+                padding: 20px;
+                border-radius: 0 0 10px 10px;
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ========== NAVIGATION BAR ========== -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="#hero">
+                <img src="asset/Logo Warung Bakakak.png" alt="Logo Warung Sambal Bakar" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#hero">Wilujeng Sumping</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="program.html">Program & Partnership</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pilih menu cabang.html">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#location-preview">Lokasi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="promo.html">Promo Spesial</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            More
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-orange" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="sewa tempat.html"><i class="bi bi-calendar-event me-2"></i>Sewa Tempat Acara</a></li>
+                            <li><a class="dropdown-item" href="#footer-modern"><i class="bi bi-envelope me-2"></i>Kontak</a></li>
+                            <li><a class="dropdown-item" href="loker.html"><i class="bi bi-briefcase me-2"></i>Info Loker</a></li>
+                            <li><a class="dropdown-item" href="investasi.html"><i class="bi bi-graph-up me-2"></i>Peluang Investasi</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="blog.html"><i class="bi bi-newspaper me-2"></i>Berita</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== MUSIC PLAYER BUTTON ========== -->
+    <div class="fixed-social-container">
+        <div class="music-player-wrapper">
+            <button class="music-player-btn" id="musicPlayerBtn" aria-label="Play/Pause background music">
+                <i class="fas fa-play" id="musicIcon"></i>
+                <div class="music-wave" id="musicWave">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="music-tooltip">Putar Musik</div>
+            </button>
+        </div>
+        
+        <audio id="backgroundMusic" preload="auto" loop style="display: none;">
+            <source src="asset/JINGLE SAMPURASUN 2026 (1).wav" type="audio/wav">
+            <source src="asset/JINGLE SAMPURASUN 2026 (1).mp3" type="audio/mpeg">
+            <source src="https://assets.mixkit.co/music/preview/mixkit-tech-house-vibes-130.mp3" type="audio/mpeg">
+            Browser Anda tidak mendukung elemen audio.
+        </audio>
+    </div>
+
+    <!-- ========== HERO BANNER SECTION ========== -->
+    <section id="hero" class="hero-video-section">
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="asset/vid SECTION BG.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="container text-center">
+                <h1 class="hero-greeting" data-aos="fade-down" data-aos-duration="1000">Wilujeng Sumping di</h1>
+                <div class="hero-logo-container" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="200">
+                    <img src="asset/Logo Warung Bakakak.png" alt="Logo Warung Sambal Bakar" class="hero-logo-text">
+                </div>
+                <div class="hero-buttons" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                    <a href="#menu-highlight" class="btn btn-primary btn-lg me-3">
+                        <i class="bi bi-book me-2"></i>Lihat Menu
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== TENTANG KAMI SECTION ========== -->
+    <section id="about" class="about-3d-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="rotating-image-container">
+                        <div class="rotating-3d-image">
+                            <!-- <div class="image-3d-card">
+                                <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&h=600&fit=crop" alt="Interior Restoran" class="image-main">
+                            </div> -->
+                            <div class="image-3d-card image-back">
+                                <img src="asset/Sampurasub.png" alt="sampurasun nusasari" class="image-main">
+                                <div class="image-label">Sampurasun Nusasari</div>
+                            </div>
+                            <div class="image-3d-card image-side">
+                                <img src="asset/ayam bakakak.jpeg" alt="Ayam" class="image-main">
+                                <!-- <div class="image-label">Menu Favorit</div> -->
+                            </div>
+                            <div class="image-3d-card image-side-2">
+                                <img src="https://i.pinimg.com/736x/40/6d/46/406d46fceb14325939a08e9133e9bc75.jpg" alt="Ayam Bakakak" class="image-main">
+                                <div class="image-label">Ayam Bakakak Kampung</div>
+                            </div>
+                        </div>
+                        <div class="rotating-glow"></div>
+                        <div class="floating-element elem-1">
+                            <i class="fas fa-pepper-hot"></i>
+                        </div>
+                        <div class="floating-element elem-2">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <div class="floating-element elem-3">
+                            <i class="fas fa-fire"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000">
+                    <h2 class="section-title-light mb-4">Jejak Rasa dalam Sebuah Cerita</h2>
+                    <p class="text-light mb-3">
+                        Warung Bakakak Sampurasun Nusasari bukan sekadar destinasi kuliner biasa. Kami adalah perawat cita rasa autentik yang telah terjaga konsistensinya sejak tahun 1996. Berawal dari dedikasi Bapak Encup Supriadi di Cisalak, Subang, kami menghadirkan kembali kelezatan resep warisan keluarga asli tanah Pasundan ke meja makan Anda.
+                    </p>
+                    <div class="mt-4 mb-5" data-aos="fade-up" data-aos-delay="400">
+                        <a href="sejarah.html" class="btn btn-orange-here">
+                            <span>Info Lengkap</span>
+                            <i class="fas fa-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== HAPPY SECTION DENGAN VIDEO BACKGROUND ========== -->
+    <section id="happy-section" class="happy-section">
+        <div class="video-background-wrapper">
+            <video autoplay muted loop playsinline preload="auto" class="happy-video-bg" id="happyVideo">
+                <source src="asset/vid SECTION BG.mp4" type="video/mp4">
+            </video>
+            <div class="video-overlay"></div>
+        </div>
+        
+        <div class="container content-wrapper">
+            <div class="text-center mb-5">
+                <h2 class="section-title" data-aos="fade-up">Apa yang Spesial di Sampurasun?</h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Jelajahi keunikan dan berbagai keunggulan yang hanya akan Anda temukan di warung kami:</p>
+            </div>
+            
+            <div class="happy-carousel-container" data-aos="fade-up" data-aos-delay="200">
+                <button class="happy-carousel-nav prev" aria-label="Previous slide">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                
+                <button class="happy-carousel-nav next" aria-label="Next slide">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                
+                <div class="happy-carousel">
+                    <div class="happy-slide-track" id="happySlideTrack">
+                        <!-- Card 1 -->
+                        <div class="happy-card">
+                            <div class="happy-icon">
+                                <i class="fas fa-pepper-hot"></i>
+                            </div>
+                            <h4 class="happy-title">Spesialis Menu Ayam Kampung</h4>
+                            <p class="happy-description">Cari Ayam Kampung yang beneran gurih dan nggak alot? Di sini tempatnya! Nikmati sajian ayam kampung istimewa dengan karakter rasa yang bikin kamu susah pindah ke lain hati</p>
+                            <div class="happy-number">01</div>
+                        </div>
+                        
+                        <!-- Card 2 -->
+                        <div class="happy-card">
+                            <div class="happy-icon">
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                            <h4 class="happy-title">Hidangan Nusantara Kaya Rempah</h4>
+                            <p class="happy-description">Menghadirkan resep warisan mulai dari ayam bakar hingga olahan laut, semuanya diolah dengan bumbu rahasia yang meresap sempurna hingga ke dalam.</p>
+                            <div class="happy-number">02</div>
+                        </div>
+                        
+                        <!-- Card 3 -->
+                        <div class="happy-card">
+                            <div class="happy-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h4 class="happy-title">Tempat Berkumpul keluarga Yang Hangat</h4>
+                            <p class="happy-description">Sehangat sapaan Sampurasun, kami menyediakan ruang bagi tawa dan canda keluarga Anda. Nikmati momen berkumpul yang bersahaja dengan hidangan bakakak yang menyatukan rasa.</p>
+                            <div class="happy-number">03</div>
+                        </div>
+                        
+                        <!-- Card 4 -->
+                        <div class="happy-card">
+                            <div class="happy-icon">
+                                <i class="fas fa-calendar-alt"></i>
+                            </div>
+                            <h4 class="happy-title">Ruang Temu & Gathering Nyaman</h4>
+                            <p class="happy-description">Lebih dari sekadar tempat makan, kami menyediakan area yang luas dan nyaman untuk merayakan ulang tahun, reuni, atau acara kantor dengan pelayanan istimewa.</p>
+                            <div class="happy-number">04</div>
+                        </div>
+                        
+                        <!-- Card 5 -->
+                        <div class="happy-card">
+                            <div class="happy-icon">
+                                <i class="fas fa-truck"></i>
+                            </div>
+                            <h4 class="happy-title">Layanan Pengiriman Cepat (Delivery)</h4>
+                            <p class="happy-description">Pesanan sampai dengan cepat dalam kondisi makanan yang tetap hangat dan dikemas menggunakan wadah yang rapi serta aman.</p>
+                            <div class="happy-number">05</div>
+                        </div>
+                        
+                        <!-- Card 6 -->
+                        <div class="happy-card">
+                            <div class="happy-icon">
+                                <i class="fas fa-coins"></i>
+                            </div>
+                            <h4 class="happy-title">Harga Murah, Rasa Mewah</h4>
+                            <p class="happy-description">Kualitas Premium, Harga Terjangkau Kami menghadirkan hidangan kualitas terbaik dengan harga yang bersahabat bagi semua kalangan.</p>
+                            <div class="happy-number">06</div>
+                        </div>
+                        
+                        <!-- Card 7 -->
+                        <div class="happy-card">
+                            <div class="happy-icon">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+                            <h4 class="happy-title">Bahan Segar & Alami</h4>
+                            <p class="happy-description">Kelezatan hidangan kami berasal dari bahan pilihan dan bumbu alami yang segar setiap harinya, menjamin hidangan yang sehat bagi seluruh keluarga.</p>
+                            <div class="happy-number">07</div>
+                        </div>
+                        
+                        <!-- Card 8 -->
+                        <div class="happy-card">
+                            <div class="happy-icon">
+                                <i class="fas fa-music"></i>
+                            </div>
+                            <h4 class="happy-title">Suasana Nyaman & Menenangkan</h4>
+                            <p class="happy-description">Tempat yang sangat nyaman dan tenang, membuat Anda betah untuk berkumpul bersama orang tersayang sambil diiringi musik yang menenangkan.</p>
+                            <div class="happy-number">08</div>
+                        </div>
+                        
+                        <!-- Card 9 -->
+                        <div class="happy-card">
+                            <div class="happy-icon">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <h4 class="happy-title">Pelayanan Ramah & Sepenuh Hati</h4>
+                            <p class="happy-description">Pelayanan yang prima dan ramah (soméah) menjadi prioritas utama kami, memastikan Anda merasa nyaman dan disambut hangat selayaknya berada di rumah sendiri.</p>
+                            <div class="happy-number">09</div>
+                        </div>
+                        
+                        <!-- Card 10 -->
+                        <div class="happy-card">
+                            <div class="happy-icon">
+                                <i class="fas fa-parking"></i>
+                            </div>
+                            <h4 class="happy-title">Area Parkir Luas & Aman</h4>
+                            <p class="happy-description">Tersedia area parkir yang luas dan aman, baik untuk kendaraan roda dua maupun roda empat, sehingga Anda dapat menikmati hidangan dengan tenang.</p>
+                            <div class="happy-number">10</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Dots Indicator -->
+                <div class="happy-carousel-dots" id="happyCarouselDots" role="tablist" aria-label="Carousel navigation dots"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== MENU HIGHLIGHT CAROUSEL SECTION (10 ITEMS) ========== -->
+    <section id="menu-highlight" class="menu-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title-light">Jelajahi 12 Menu Favorit Sampurasun</h2>
+                <p class="section-subtitle-light">
+                    Setiap menu diracik dengan bumbu rahasia khas Sampurasun Nusasari untuk menjamin kepuasan di setiap suapan.
+                </p>
+            </div>
+
+            <!-- Menu Slider Container -->
+            <div class="menu-slider-container">
+                <!-- Radio buttons untuk slider control -->
+                <input type="radio" name="menu-slider" id="menu-slide-1" checked>
+                <input type="radio" name="menu-slider" id="menu-slide-2">
+                <input type="radio" name="menu-slider" id="menu-slide-3">
+                <input type="radio" name="menu-slider" id="menu-slide-4">
+                
+                <!-- Menu Cards Wrapper -->
+                <div class="menu-cards-wrapper">
+                    <!-- Slide 1 - Menu 1-3 -->
+                    <div class="menu-slide slide-1">
+                        <!-- Menu 1: Sate Ayam Bakakak -->
+                        <div class="menu-photo-card card-1">
+                            <div class="photo-container">
+                                <img src="https://i.pinimg.com/736x/e1/0e/ec/e10eec18d82878a5cd846f0aad7a5724.jpg" alt="Ayam Bakakak Kampung">
+                                <div class="photo-info-overlay">
+                                    <h5 class="menu-title">Ayam Bakakak Kampung</h5>
+                                    <p class="menu-desc">Disajikan dari Ayam Kampung pilihan dibakar utuh dengan bumbu tradisional khas Sunda, aroma harum membangkitkan selera. Dagingnya empuk, rasa rempah meresap sempurna. Nikmatnya autentik, bikin momen makan makin spesial!</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Menu 2: Ikan Bakar Sambal -->
+                        <div class="menu-photo-card card-2"> 
+                            <div class="photo-container">
+                                <img src="https://i.pinimg.com/1200x/af/b1/9e/afb19ec56bb9ee1a182ec0f89455626d.jpg" alt="Ikan Bakar Sambal">
+                                <div class="photo-info-overlay">
+                                    <h5 class="menu-title">Ayan Goreng & Banjur Kampung</h5>
+                                    <p class="menu-desc">Potongan ayam pilihan dimarinasi rempah rahasia, digoreng dua kali hingga kulit super krispi dan dagingnya juicy. Ayam goreng yang disiram sambal banjur yang nikmat dan melimpah. Paduan pedas, gurih, dan segar yang langsung menggugah selera!</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Menu 3: Rendang Sapi -->
+                        <div class="menu-photo-card card-3">
+                            <div class="photo-container">
+                                <img src="https://i.pinimg.com/1200x/d3/1f/63/d31f639960fd5c7e619482b36dc7ac51.jpg" alt="Rendang Sapi">
+                                <div class="photo-info-overlay">
+                                    <h5 class="menu-title">Soto Bandung</h5>
+                                    <p class="menu-desc">Kuah Soto Bandung hangat penuh cita rasa, dipenuhipotongan daging sapi empuk dan sayuran segar. Gurih dan segar dalam setiap sendok, soto khas Bandung yang bikin hati dan perut nyaman!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 - Menu 4-6 -->
+                    <div class="menu-slide slide-2">
+                        <!-- Menu 4: Mie Goreng Jawa -->
+                        <div class="menu-photo-card card-4">
+                            <div class="photo-container">
+                                <img src="https://i.pinimg.com/1200x/e1/7d/78/e17d7897074570a97c777d75a59f5ead.jpg" alt="Mie Goreng Jawa">
+                                <div class="photo-info-overlay">
+                                    <h5 class="menu-title">Ikan Laut Bakar</h5>
+                                    <p class="menu-desc">Dibakar di atas bara kelapa, daging ikan laut segar ini terselimuti bumbu rempah khas pesisir—aroma asapnya menggoda, rasanya gurih pedas meresap hingga ke serat.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Menu 5: Soto Ayam Lamongan -->
+                        <div class="menu-photo-card card-5">
+                            <div class="photo-container">
+                                <img src="https://i.pinimg.com/736x/76/aa/ec/76aaec3cc54ee20190d6a1a98416a68b.jpg" alt="Soto Ayam Lamongan">
+                                <div class="photo-info-overlay">
+                                    <h5 class="menu-title">Aneka Gurame Spesial <br>"Bakar, Goreng, Cobek & Banjur"</h5>
+                                    <p class="menu-desc">Nikmati empat sensasi Gurame Spesial pilih antara varian Bakar bumbu meresap, Goreng Tepung krispi, Cobek pedas segar, atau Banjur siram rempah yang menggoda selera!</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Menu 6: Nasi Liwet -->
+                        <div class="menu-photo-card card-6">
+                            <div class="photo-container">
+                                <img src="https://i.pinimg.com/1200x/1e/b6/d3/1eb6d3637c62e60cfbbe695814077b91.jpg" alt="Nasi Liwet">
+                                <div class="photo-info-overlay">
+                                    <h5 class="menu-title">Aneka Ikan Nila Spesial <br>"Bakar, Goreng, Cobek & Banjur"</h5>
+                                    <p class="menu-desc">Nikmati kelezatan Aneka Nila Spesial pilih varian Bakar bumbu meresap, Goreng Cobek pedas segar, atau Goreng Banjur dengan siraman sambal melimpah yang menggoda selera!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 - Menu 7-9 -->
+                    <div class="menu-slide slide-3">
+                        <!-- Menu 7: Ayam Bakar Madu -->
+                        <div class="menu-photo-card card-7">
+                            <div class="photo-container">
+                                <img src="https://i.pinimg.com/1200x/8f/27/37/8f2737d2fbb6487f1d932bbcfe0d1950.jpg" alt="Ayam Bakar Madu">
+                                <div class="photo-info-overlay">
+                                    <h5 class="menu-title">Menu Tumisan</h5>
+                                    <p class="menu-desc">Manjakan lidah dengan Tumisan Spesial yang kaya rasa. Paduan protein premium dan sayuran segar yang ditumis kilat untuk mengunci rasa manis alami bahan, menghasilkan aroma yang menggoda di setiap piringnya</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Menu 8: Gado-Gado -->
+                        <div class="menu-photo-card card-8">
+                            <div class="photo-container">
+                                <img src="https://i.pinimg.com/1200x/ff/ae/e9/ffaee9d8e2fc5e41631992e14031713c.jpg" alt="Gado-Gado">
+                                <div class="photo-info-overlay">
+                                    <h5 class="menu-title">Kids Menu</h5>
+                                    <p class="menu-desc">Manjakan si kecil dengan Kids Menu yang lucu dan lezat nikmati gurihnya Nasi Goreng Mentega berkarakter, Sosis & Nugget yang krispi, atau Telor Dadar lembut yang bikin anak makan makin lahap!</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Menu 9: Gurame Bakar -->
+                        <div class="menu-photo-card card-9">
+                            <div class="photo-container">
+                                <img src="https://i.pinimg.com/1200x/15/c3/14/15c314504823c47def7a5a257c98d8dc.jpg" alt="Gurame Bakar">
+                                <div class="photo-info-overlay">
+                                    <h5 class="menu-title">Menu Rujak</h5>
+                                    <p class="menu-desc">Segarkan harimu dengan Rujak Buah yang renyah dan dingin, disiram bumbu kacang pedas manis yang kental sensasi asam manisnya bener-bener bikin melek!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 4 - Menu 10-12 -->
+                    <div class="menu-slide slide-4">
+                        <!-- Menu 10: Sop Buntut -->
+                        <div class="menu-photo-card card-10">
+                            <div class="photo-container">
+                                <img src="https://i.pinimg.com/1200x/75/c5/56/75c556c5603eb91710ec18a7b5d8692c.jpg" alt="Sop Buntut">
+                                <div class="photo-info-overlay">
+                                    <h5 class="menu-title">Sambal Khas Sampurasun</h5>
+                                    <p class="menu-desc">Lengkapi hidanganmu dengan Sambal Khas Sampurasun perpaduan pedas nendang dan rempah autentik yang bikin nasi hangat makin ludes!</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Menu 11: Nasi Goreng Seafood -->
+                        <div class="menu-photo-card card-11">
+                            <div class="photo-container">
+                                <img src="https://i.pinimg.com/1200x/ae/23/42/ae234252f0d8110b326201e0bfc63696.jpg" alt="Nasi Goreng Seafood">
+                                <div class="photo-info-overlay">
+                                    <h5 class="menu-title">Nasi Liwet</h5>
+                                    <p class="menu-desc">Nikmati Nasi Liwet Dadakan yang wangi rempah dan gurih autentik, disajikan hangat dengan pilihan topping Peuteuy, Ikan Teri, atau Ikan Asin yang bikin nambah terus!</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Menu 12: Es Cendol -->
+                        <div class="menu-photo-card card-12">
+                            <div class="photo-container">
+                                <img src="https://i.pinimg.com/736x/1f/4b/01/1f4b01bbf72e864ca76410feae2d09ec.jpg" alt="Es Cendol">
+                                <div class="photo-info-overlay">
+                                    <h5 class="menu-title">Menu Minuman</h5>
+                                    <p class="menu-desc">Nikmati kesegaran hakiki dengan aneka Minuman Dingin & Segar pilihan, mulai dari kelapa muda murni, berbagai olahan jus buah, hingga pilihan susu kocok yang manisnya pas untuk melepas dahaga!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <div class="menu-navigation">
+                    <!-- Previous Buttons -->
+                    <label for="menu-slide-4" class="menu-btn prev-btn btn-slide-1">
+                        <i class="fas fa-chevron-left"></i>
+                    </label>
+                    <label for="menu-slide-1" class="menu-btn prev-btn btn-slide-2">
+                        <i class="fas fa-chevron-left"></i>
+                    </label>
+                    <label for="menu-slide-2" class="menu-btn prev-btn btn-slide-3">
+                        <i class="fas fa-chevron-left"></i>
+                    </label>
+                    <label for="menu-slide-3" class="menu-btn prev-btn btn-slide-4">
+                        <i class="fas fa-chevron-left"></i>
+                    </label>
+                    
+                    <!-- Next Buttons -->
+                    <label for="menu-slide-2" class="menu-btn next-btn btn-slide-1">
+                        <i class="fas fa-chevron-right"></i>
+                    </label>
+                    <label for="menu-slide-3" class="menu-btn next-btn btn-slide-2">
+                        <i class="fas fa-chevron-right"></i>
+                    </label>
+                    <label for="menu-slide-4" class="menu-btn next-btn btn-slide-3">
+                        <i class="fas fa-chevron-right"></i>
+                    </label>
+                    <label for="menu-slide-1" class="menu-btn next-btn btn-slide-4">
+                        <i class="fas fa-chevron-right"></i>
+                    </label>
+                </div>
+
+                <!-- Dots Pagination -->
+                <div class="menu-pagination">
+                    <label for="menu-slide-1" class="menu-dot dot-1 active"></label>
+                    <label for="menu-slide-2" class="menu-dot dot-2"></label>
+                    <label for="menu-slide-3" class="menu-dot dot-3"></label>
+                    <label for="menu-slide-4" class="menu-dot dot-4"></label>
+                </div>
+            </div>
+            
+            <!-- TOMBOL LIHAT SEMUA -->
+            <div class="text-center mt-5 pt-3">
+                <a href="pilih menu cabang.html" class="btn-view-all">
+                    <span>Lihat Semua Menu</span>
+                    <i class="fas fa-arrow-right ms-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== TESTIMONIAL CAROUSEL SECTION (LENGKAP 10 ITEMS) ========== -->
+     <section id="testimonial" class="testimonial-section">
+    <!-- Background Video -->
+    <div class="video-background-container">
+        <video class="video-background" autoplay muted loop playsinline>
+            <source src="asset/vid SECTION BG.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    
+    <!-- Video Overlay -->
+    <div class="testimonial-video-overlay">
+        <div class="overlay-texture"></div>
+    </div>
+    
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="section-title-light">Kata Mereka Tentang Sampurasun</h2>
+            <p class="section-subtitle-light">Bukan sekadar kata, tapi soal rasa! Intip testimoni para tokoh ternama yang sudah membuktikan sendiri keaslian bumbu rahasia Sampurasun Nusasari.</p>
+        </div>
+
+        <!-- Testimonial Slider Container -->
+        <div class="testimonial-slider-container">
+            <!-- Radio buttons untuk slider control -->
+            <input type="radio" name="testimonial-slider" id="testimonial-slide-1" checked>
+            <input type="radio" name="testimonial-slider" id="testimonial-slide-2">
+            <input type="radio" name="testimonial-slider" id="testimonial-slide-3">
+            <input type="radio" name="testimonial-slider" id="testimonial-slide-4">
+            
+            <!-- Testimonial Cards Wrapper -->
+            <div class="testimonial-cards-wrapper">
+                <!-- Slide 1 - Cards 1-3 -->
+                <div class="testimonial-slide slide-1">
+                    <!-- Card 1: Baim Wong -->
+                    <div class="testimonial-photo-card card-1">
+                        <div class="photo-container">
+                            <img src="asset/BAIM WONG.png" alt="Baim Wong">
+                            <div class="photo-info-overlay">
+                                <div class="testimonial-rating">
+                                    <span class="rating-star active"><i class="fas fa-star"></i></span>
+                                    <span class="rating-star active"><i class="fas fa-star"></i></span>
+                                    <span class="rating-star active"><i class="fas fa-star"></i></span>
+                                    <span class="rating-star active"><i class="fas fa-star"></i></span>
+                                    <span class="rating-star active"><i class="fas fa-star"></i></span>
+                                    <span class="rating-score">5.0</span>
+                                </div>
+                                <p class="testimonial-text">
+                                    "Definisi bakakak juara! Dagingnya juicy, bumbunya medok, dan sambalnya nampol pisan. Sekali coba langsung ketagihan!"
+                                </p>
+                                <h5 class="testimonial-name">Baim Wong</h5>
+                                <p class="testimonial-role">Entertainer & Entrepreneur</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 2: Charly Van Houten -->
+                    <div class="testimonial-photo-card card-2">
+                        <div class="photo-container">
+                            <img src="asset/CHARLY VAN HOUTEN.png" alt="Charly Van Houten">
+                            <div class="photo-info-overlay">
+                                <div class="testimonial-rating">
+                                    <span class="rating-star active"><i class="fas fa-star"></i></span>
+                                    <span class="rating-star active"><i class="fas fa-star"></i></span>
+                                    <span class="rating-star active"><i class="fas fa-star"></i></span>
+                                    <span class="rating-star active"><i class="fas fa-star"></i></span>
+                                    <span class="rating-star active"><i class="fas fa-star"></i></span>
+                                    <span class="rating-score">5.0</span>
+                                </div>
+                                <p class="testimonial-text">
+                                    "Ayam kampungnya lembut banget, bumbu rahasianya medok dan meresap sempurna. Wangi bakarannya bikin laper seketika. Sekali coba, pasti susah move on dari rasanya!"
+                                </p>
+                                <h5 class="testimonial-name">Charly Van Houten</h5>
+                                <p class="testimonial-role">Artis Penyanyi</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 3: Epul Saepul Ahyar -->
+                    <div class="testimonial-photo-card card-3">
+                        <div class="photo-container">
+                            <img src="asset/Wa Haji Umuh.jpg" alt="Haji Umuh Muchtar">
+                            <div class="photo-info-overlay">
+                                <div class="testimonial-rating">
+                                    <span class="rating-star active"><i class="fas fa-star"></i></span>
+                                    <span class="rating-star active"><i class="fas fa-star"></i></span>
+                                    <span class="rating-star active"><i class="fas fa-star"></i></span>
+                                    <span class="rating-star active"><i class="fas fa-star"></i></span>
+                                    <span class="rating-star active"><i class="fas fa-star"></i></span>
+                                    <span class="rating-score">5.0</span>
+                                </div>
+                                <p class="testimonial-text">
+                                    "Asli raosna! Bumbu bakakaknya meresap sempurna, ayamnya lembut pisan. Langganan tetap keluarga kalau lagi kangen masakan Sunda."
+                                </p>
+                                <h5 class="testimonial-name">Haji Umuh Muchtar</h5>
+                                <p class="testimonial-role">Manager Persib Bandung</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2 - Cards 4-6 -->
+                <div class="testimonial-slide slide-2">
+                    <!-- Card 4: Erwan Setiawan -->
+                    <div class="testimonial-photo-card card-4">
+                        <div class="photo-container">
+                            <img src="asset/EPUL SAEPUL AHYAR SITUKANGDAHAR.png" alt="Epul Saepul Ahyar">
+                            <div class="photo-info-overlay">
+                                <div class="testimonial-rating">
+                                    <span class="rating-star active"><i class="fas fa-star"></i></span>
+                                    <span class="rating-star active"><i class="fas fa-star"></i></span>
+                                    <span class="rating-star active"><i class="fas fa-star"></i></span>
+                                    <span class="rating-star active"><i class="fas fa-star"></i></span>
+                                    <span class="rating-star active"><i class="fas fa-star"></i></span>
+                                    <span class="rating-score">5.0</span>
+                                </div>
+                                <p class="testimonial-text">
+                                    "Aroma asap khasnya beda! Bumbunya medok meresap, ayamnya lembut dan juicy. Sekali coba langsung ketagihan!"
+                                </p>
+                                <h5 class="testimonial-name">Epul Saepul Ahyar</h5>
+                                <p class="testimonial-role">Content Kreator Food Vloger </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 5: Indah Nicole -->
+                    <div class="testimonial-photo-card card-5">
+                        <div class="photo-container">
+                            <img src="asset/INDAH NICOLE.png" alt="Indah Nicole">
+                            <div class="photo-info-overlay">
+                                <div class="testimonial-rating">
+                                    <span class="rating-star active"><i class="fas fa-star"></i></span>
+                                    <span class="rating-star active"><i class="fas fa-star"></i></span>
+                                    <span class="rating-star active"><i class="fas fa-star"></i></span>
+                                    <span class="rating-star active"><i class="fas fa-star"></i></span>
+                                    <span class="rating-star active"><i class="fas fa-star"></i></span>
+                                    <span class="rating-score">5.0</span>
+                                </div>
+                                <p class="testimonial-text">
+                                    "Perpaduan maut Nasi liwet anget plus Bakakak Ayam Kampung yang bumbunya nendang banget. Tiap gigitan itu flavor bomb! Gurih, manis, pedas, dan aroma rempahnya bener-bener bikin merem melek"
+                                </p>
+                                <h5 class="testimonial-name">Indah Nicole</h5>
+                                <p class="testimonial-role">Aktris & Model</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 6: Iszur Muchtar -->
+                    <div class="testimonial-photo-card card-6">
+                        <div class="photo-container">
+                            <img src="asset/ISZUR MUCHTAR.png" alt="Iszur Muchtar">
+                            <div class="photo-info-overlay">
+                                <div class="testimonial-rating">
+                                    <span class="rating-star active"><i class="fas fa-star"></i></span>
+                                    <span class="rating-star active"><i class="fas fa-star"></i></span>
+                                    <span class="rating-star active"><i class="fas fa-star"></i></span>
+                                    <span class="rating-star active"><i class="fas fa-star"></i></span>
+                                    <span class="rating-star active"><i class="fas fa-star"></i></span>
+                                    <span class="rating-score">5.0</span>
+                                </div>
+                                <p class="testimonial-text">
+                                    "Bumbu bakakaknya beneran berani! Dagingnya lembut banget dan sambalnya nampol. Raosna asli!"
+                                </p>
+                                <h5 class="testimonial-name">Iszur Muchtar</h5>
+                                <p class="testimonial-role">Presenter & Penyanyi</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3 - Cards 7-9 -->
+                <div class="testimonial-slide slide-3">
+                    <!-- Card 7: Nex Carlos -->
+                    <div class="testimonial-photo-card card-7">
+                        <div class="photo-container">
+                            <img src="asset/NEX CARLOS.png" alt="Nex Carlos">
+                            <div class="photo-info-overlay">
+                                <div class="testimonial-rating">
+                                    <span class="rating-star active"><i class="fas fa-star"></i></span>
+                                    <span class="rating-star active"><i class="fas fa-star"></i></span>
+                                    <span class="rating-star active"><i class="fas fa-star"></i></span>
+                                    <span class="rating-star active"><i class="fas fa-star"></i></span>
+                                    <span class="rating-star active"><i class="fas fa-star"></i></span>
+                                    <span class="rating-score">5.0</span>
+                                </div>
+                                <p class="testimonial-text">
+                                    "Wangi bakaran 'api kecilnya' meresap sempurna! Kulitnya smoky, dagingnya juicy dan 'prul' banget. Makan satu porsi bener-bener gak cukup!"
+                                </p>
+                                <h5 class="testimonial-name">Nex Carlos</h5>
+                                <p class="testimonial-role">Youtuber & Food Vloger</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 8: Syahrul Gunawan -->
+                    <div class="testimonial-photo-card card-8">
+                        <div class="photo-container">
+                            <img src="asset/SYAHRUL GUNAWAN.png" alt="Syahrul Gunawan">
+                            <div class="photo-info-overlay">
+                                <div class="testimonial-rating">
+                                    <span class="rating-star active"><i class="fas fa-star"></i></span>
+                                    <span class="rating-star active"><i class="fas fa-star"></i></span>
+                                    <span class="rating-star active"><i class="fas fa-star"></i></span>
+                                    <span class="rating-star active"><i class="fas fa-star"></i></span>
+                                    <span class="rating-star"><i class="fas fa-star"></i></span>
+                                    <span class="rating-score">4.0</span>
+                                </div>
+                                <p class="testimonial-text">
+                                    "Gak lengkap kalau gak pesan jengkolnya, empuk dan gak bau! Ditambah pete bakar dan cocolan sambal dadaknya yang nampol, bener-bener bikin nambah nasi terus!"
+                                </p>
+                                <h5 class="testimonial-name">Syahrul Gunawan</h5>
+                                <p class="testimonial-role">Aktor & Penyanyi</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 9: Tantan -->
+                    <div class="testimonial-photo-card card-9">
+                        <div class="photo-container">
+                            <img src="asset/TAN TAN PERSIB BANDUNG.png" alt="Tantan">
+                            <div class="photo-info-overlay">
+                                <div class="testimonial-rating">
+                                    <span class="rating-star active"><i class="fas fa-star"></i></span>
+                                    <span class="rating-star active"><i class="fas fa-star"></i></span>
+                                    <span class="rating-star active"><i class="fas fa-star"></i></span>
+                                    <span class="rating-star active"><i class="fas fa-star"></i></span>
+                                    <span class="rating-star active"><i class="fas fa-star"></i></span>
+                                    <span class="rating-score">5.0</span>
+                                </div>
+                                <p class="testimonial-text">
+                                    "Perpaduan maut: Bakakak ayam yang empuk, ikan bakar gurih, plus nasi liwet anget. Porsi melimpah, rasa bintang lima. Tempat favorit buat makan besar!"
+                                </p>
+                                <h5 class="testimonial-name">Tantan</h5>
+                                <p class="testimonial-role">Pemain Persib Bandung</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 4 - Cards 10-12 -->
+                <div class="testimonial-slide slide-4">
+                    <!-- Card 10: Uan Kaisar Juicy Luicy -->
+                    <div class="testimonial-photo-card card-10">
+                        <div class="photo-container">
+                            <img src="asset/UAN KAISAR JUICY LUICY.png" alt="Uan Kaisar Juicy Luicy">
+                            <div class="photo-info-overlay">
+                                <div class="testimonial-rating">
+                                    <span class="rating-star active"><i class="fas fa-star"></i></span>
+                                    <span class="rating-star active"><i class="fas fa-star"></i></span>
+                                    <span class="rating-star active"><i class="fas fa-star"></i></span>
+                                    <span class="rating-star active"><i class="fas fa-star"></i></span>
+                                    <span class="rating-star"><i class="fas fa-star"></i></span>
+                                    <span class="rating-score">4.0</span>
+                                </div>
+                                <p class="testimonial-text">
+                                    "Dari ayam sampai ikan bakarnya, bumbunya gak pelit! Semuanya medok, segar, dan nagih. Definisi surga masakan Sunda di Sumedang!"
+                                </p>
+                                <h5 class="testimonial-name">Uan Kaisar Juicy Luicy</h5>
+                                <p class="testimonial-role">Vokalis & Penulis Lagu</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 11: Ucie Sucita -->
+                    <div class="testimonial-photo-card card-11">
+                        <div class="photo-container">
+                            <img src="asset/UCIE SUCITA.png" alt="Ucie Sucita">
+                            <div class="photo-info-overlay">
+                                <div class="testimonial-rating">
+                                    <span class="rating-star active"><i class="fas fa-star"></i></span>
+                                    <span class="rating-star active"><i class="fas fa-star"></i></span>
+                                    <span class="rating-star active"><i class="fas fa-star"></i></span>
+                                    <span class="rating-star active"><i class="fas fa-star"></i></span>
+                                    <span class="rating-star"><i class="fas fa-star"></i></span>
+                                    <span class="rating-score">4.0</span>
+                                </div>
+                                <p class="testimonial-text">
+                                    "Dari Bakakak sampai Ikan Bakar, semuanya medok bumbu! Porsinya mantap, suasananya Sunda pisan. Tempat paling pas buat makan besar bareng keluarga!"
+                                </p>
+                                <h5 class="testimonial-name">Ucie Sucita</h5>
+                                <p class="testimonial-role">Aktris & Penyanyi Dangdut</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 12: Ust Evie Effendi -->
+                    <div class="testimonial-photo-card card-12">
+                        <div class="photo-container">
+                            <img src="asset/USTADZ EVIE EFFENDI.png" alt="Ust Evie Effendi">
+                            <div class="photo-info-overlay">
+                                <div class="testimonial-rating">
+                                    <span class="rating-star active"><i class="fas fa-star"></i></span>
+                                    <span class="rating-star active"><i class="fas fa-star"></i></span>
+                                    <span class="rating-star active"><i class="fas fa-star"></i></span>
+                                    <span class="rating-star active"><i class="fas fa-star"></i></span>
+                                    <span class="rating-star active"><i class="fas fa-star"></i></span>
+                                    <span class="rating-score">5.0</span>
+                                </div>
+                                <p class="testimonial-text">
+                                    "Suka banget sama konsep 'Wajib Enak'-nya. Tapi jujur, pas makanan dateng emang udah seenak itu, gak butuh komplain lagi. Servis dan rasanya jempolan!"
+                                </p>
+                                <h5 class="testimonial-name">Ust Evie Effendi</h5>
+                                <p class="testimonial-role">Pendakwah</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Buttons - SUDAH DIPERBAIKI -->
+            <div class="testimonial-navigation">
+                <!-- Previous Buttons untuk semua 4 slide -->
+                <label for="testimonial-slide-4" class="testimonial-btn prev-btn btn-slide-1">
+                    <i class="fas fa-chevron-left"></i>
+                </label>
+                <label for="testimonial-slide-1" class="testimonial-btn prev-btn btn-slide-2">
+                    <i class="fas fa-chevron-left"></i>
+                </label>
+                <label for="testimonial-slide-2" class="testimonial-btn prev-btn btn-slide-3">
+                    <i class="fas fa-chevron-left"></i>
+                </label>
+                <label for="testimonial-slide-3" class="testimonial-btn prev-btn btn-slide-4">
+                    <i class="fas fa-chevron-left"></i>
+                </label>
+                
+                <!-- Next Buttons untuk semua 4 slide -->
+                <label for="testimonial-slide-2" class="testimonial-btn next-btn btn-slide-1">
+                    <i class="fas fa-chevron-right"></i>
+                </label>
+                <label for="testimonial-slide-3" class="testimonial-btn next-btn btn-slide-2">
+                    <i class="fas fa-chevron-right"></i>
+                </label>
+                <label for="testimonial-slide-4" class="testimonial-btn next-btn btn-slide-3">
+                    <i class="fas fa-chevron-right"></i>
+                </label>
+                <label for="testimonial-slide-1" class="testimonial-btn next-btn btn-slide-4">
+                    <i class="fas fa-chevron-right"></i>
+                </label>
+            </div>
+
+            <!-- Dots Pagination - SUDAH DIPERBAIKI -->
+            <div class="testimonial-pagination">
+                <label for="testimonial-slide-1" class="testimonial-dot dot-1 active"></label>
+                <label for="testimonial-slide-2" class="testimonial-dot dot-2"></label>
+                <label for="testimonial-slide-3" class="testimonial-dot dot-3"></label>
+                <label for="testimonial-slide-4" class="testimonial-dot dot-4"></label>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- ========== GALLERY CAROUSEL SECTION (10 ITEMS) ========== -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title-light">Momen Hangat di Sampurasun</h2>
+                <p class="section-subtitle-light">Mengabadikan kehangatan suasana berkumpul dan keceriaan para pelanggan yang telah mengukir cerita indah di warung kami</p>
+            </div>
+
+            <!-- Gallery Slider Container -->
+            <div class="gallery-slider-container">
+                <!-- Radio buttons untuk slider control -->
+                <input type="radio" name="gallery-slider" id="gallery-slide-1" checked>
+                <input type="radio" name="gallery-slider" id="gallery-slide-2">
+                <input type="radio" name="gallery-slider" id="gallery-slide-3">
+                
+                <!-- Gallery Cards Wrapper -->
+                <div class="gallery-cards-wrapper">
+                    <!-- Slide 1 - Cards 1-3 -->
+                    <div class="gallery-slide slide-1">
+                        <!-- Card 1 -->
+                        <div class="gallery-photo-card card-1">
+                            <div class="photo-container">
+                                <img src="asset/GALLERY 1.png" alt="Interior Restoran">
+                                <div class="photo-info-overlay">
+                                    <h5 class="photo-title">Interior Nyaman</h5>
+                                    <p class="photo-desc">Tempat yang cozy untuk makan bersama keluarga</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Card 2 -->
+                        <div class="gallery-photo-card card-2">
+                            <div class="photo-container">
+                                <img src="asset/gallery 4.png" alt="Makan Bersama">
+                                <div class="photo-info-overlay">
+                                    <h5 class="photo-title">Makan Bersama</h5>
+                                    <p class="photo-desc">Keluarga menikmati hidangan spesial bersama</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Card 3 -->
+                        <div class="gallery-photo-card card-3">
+                            <div class="photo-container">
+                                <img src="asset/gallery 5.png" alt="Acara Kantor">
+                                <div class="photo-info-overlay">
+                                    <h5 class="photo-title">Bakakak Ayam</h5>
+                                    <p class="photo-desc">Menu si paling Best Seller para wargi sampurasun</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 - Cards 4-6 -->
+                    <div class="gallery-slide slide-2">
+                        <!-- Card 4 -->
+                        <div class="gallery-photo-card card-4">
+                            <div class="photo-container">
+                                <img src="asset/gallery 3.png" alt="Hidangan Spesial">
+                                <div class="photo-info-overlay">
+                                    <h5 class="photo-title">Suasana Nyaman</h5>
+                                    <p class="photo-desc">Tempat makan yang bikin suasana makin asri dan menenangkan</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Card 5 -->
+                        <div class="gallery-photo-card card-5">
+                            <div class="photo-container">
+                                <img src="asset/gallery 6.png" alt="Dapur">
+                                <div class="photo-info-overlay">
+                                    <h5 class="photo-title">Makan bersama</h5>
+                                    <p class="photo-desc">Sangat rekomendasi buat makan bersama keluarga</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Card 6 -->
+                        <div class="gallery-photo-card card-6">
+                            <div class="photo-container">
+                                <img src="asset/gallery 9.png" alt="Burger">
+                                <div class="photo-info-overlay">
+                                    <h5 class="photo-title">Tempat Makan Terfavorit</h5>
+                                    <p class="photo-desc">Tempat dan hidangan yang selalu bikin nagih dan ngiler</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 - Cards 7-9 -->
+                    <div class="gallery-slide slide-3">
+                        <!-- Card 7 -->
+                        <div class="gallery-photo-card card-7">
+                            <div class="photo-container">
+                                <img src="asset/gallery10.png" alt="Mie Goreng">
+                                <div class="photo-info-overlay">
+                                    <h5 class="photo-title">Para Influencer</h5>
+                                    <p class="photo-desc">Berbagai Influencer sellau menikmati hidangan bakakak sampurasun</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Card 8 -->
+                        <div class="gallery-photo-card card-8">
+                            <div class="photo-container">
+                                <img src="asset/gallery 11.png" alt="Rendang">
+                                <div class="photo-info-overlay">
+                                    <h5 class="photo-title">Hidangan Keluarga</h5>
+                                    <p class="photo-desc">Selalu jadi tempat andalan para keluarga</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Card 9 -->
+                        <div class="gallery-photo-card card-9">
+                            <div class="photo-container">
+                                <img src="asset/gallery 12.png" alt="Dessert">
+                                <div class="photo-info-overlay">
+                                    <h5 class="photo-title">Acara Resepsi</h5>
+                                    <p class="photo-desc">Bisa juga dipakai buat acara resepsi pernikahan</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <div class="gallery-navigation">
+                    <!-- Previous Buttons -->
+                    <label for="gallery-slide-3" class="gallery-btn prev-btn btn-slide-1">
+                        <i class="fas fa-chevron-left"></i>
+                    </label>
+                    <label for="gallery-slide-1" class="gallery-btn prev-btn btn-slide-2">
+                        <i class="fas fa-chevron-left"></i>
+                    </label>
+                    <label for="gallery-slide-2" class="gallery-btn prev-btn btn-slide-3">
+                        <i class="fas fa-chevron-left"></i>
+                    </label>
+                    
+                    <!-- Next Buttons -->
+                    <label for="gallery-slide-2" class="gallery-btn next-btn btn-slide-1">
+                        <i class="fas fa-chevron-right"></i>
+                    </label>
+                    <label for="gallery-slide-3" class="gallery-btn next-btn btn-slide-2">
+                        <i class="fas fa-chevron-right"></i>
+                    </label>
+                    <label for="gallery-slide-1" class="gallery-btn next-btn btn-slide-3">
+                        <i class="fas fa-chevron-right"></i>
+                    </label>
+                </div>
+
+                <!-- Dots Pagination -->
+                <div class="gallery-pagination">
+                    <label for="gallery-slide-1" class="gallery-dot dot-1 active"></label>
+                    <label for="gallery-slide-2" class="gallery-dot dot-2"></label>
+                    <label for="gallery-slide-3" class="gallery-dot dot-3"></label>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== VIDEO DOCUMENTATION SECTION (10 VIDEO) ========== -->
+<section id="video-documentation" class="video-doc-section py-5">
+    <div class="container">
+        <!-- Section Header -->
+        <div class="text-center mb-5">
+            <h2 class="section-title-light" data-aos="fade-up" data-aos-delay="100">Jejak Kebahagiaan di Warung Bakkak</h2>
+            <p class="section-subtitle-light" data-aos="fade-up" data-aos-delay="200">Kami percaya setiap hidangan punya cerita. Lihat bagaimana kami merayakan kebahagiaan bersama para pelanggan melalui berbagai acara inspiratif yang terekam dalam galeri video kami</p>
+        </div>
+        
+        <!-- Video Gallery - Horizontal Scroll -->
+        <div class="video-gallery-wrapper" data-aos="fade-up" data-aos-delay="300">
+            <!-- Scroll Left Button -->
+            <button class="scroll-btn scroll-left" id="videoScrollLeft">
+                <i class="bi bi-chevron-left"></i>
+            </button>
+            
+            <!-- Video Grid Container -->
+            <div class="video-grid-scroll" id="videoGridScroll">
+                <!-- Video Item 1 - Suasana Makan -->
+                <div class="video-item">
+                    <div class="video-card">
+                        <div class="video-player-wrapper">
+                            <!-- Thumbnail Image -->
+                            <img src="asset/thumbnail makan.png" alt="Suasana Makan" class="video-thumbnail">
+                            <!-- Play Button Link to Google Drive -->
+                            <a href="https://drive.google.com/file/d/1Nv-mwVtqpXB-PMaOjWvyPmILIMNZoNx1/view?usp=drive_link" target="_blank" class="video-overlay play-link">
+                                <div class="play-btn">
+                                    <i class="bi bi-play-circle"></i>
+                                </div>
+                            </a>
+                        </div>
+                        
+                        <!-- Video Info -->
+                        <div class="video-info">
+                            <h3 class="video-title">Suasana Makan</h3>
+                            <div class="video-meta">
+                                <i class="bi bi-calendar3"></i>
+                                <span>15 Januari 2024</span>
+                            </div>
+                            <p class="video-desc">"Makan tenang, hati senang. Perpaduan rasa autentik dan musik syahdu di Sampuraun Nusasari."</p>
+                            <a href="https://drive.google.com/file/d/1Nv-mwVtqpXB-PMaOjWvyPmILIMNZoNx1/view?usp=drive_link" target="_blank" class="drive-link">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Video Item 2 - Playground -->
+                <div class="video-item">
+                    <div class="video-card">
+                        <div class="video-player-wrapper">
+                            <img src="asset/thumbnail play.png" alt="Playground" class="video-thumbnail">
+                            <a href="https://drive.google.com/file/d/11z4E7LUM4ZqYl8VoPIEahfx5oO9fe5UU/view?usp=drive_link" target="_blank" class="video-overlay play-link">
+                                <div class="play-btn">
+                                    <i class="bi bi-play-circle"></i>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title">Playground</h3>
+                            <div class="video-meta">
+                                <i class="bi bi-calendar3"></i>
+                                <span>22 Februari 2024</span>
+                            </div>
+                            <p class="video-desc">"Si kecil bebas ceria di area playground yang aman dan asri, sambil Ibu dan Ayah santai menikmati hidangan."</p>
+                            <a href="https://drive.google.com/file/d/11z4E7LUM4ZqYl8VoPIEahfx5oO9fe5UU/view?usp=drive_link" target="_blank" class="drive-link">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Video Item 3 - Karaoke Hiburan -->
+                <div class="video-item">
+                    <div class="video-card">
+                        <div class="video-player-wrapper">
+                            <img src="asset/thumnail karouke.png" alt="Karaoke Hiburan" class="video-thumbnail">
+                            <a href="https://drive.google.com/file/d/1_r8HUl6fZQJH_AIIbRZfRbOwIckGcYzZ/view?usp=drive_link" target="_blank" class="video-overlay play-link">
+                                <div class="play-btn">
+                                    <i class="bi bi-play-circle"></i>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title">Karaoke Hiburan</h3>
+                            <div class="video-meta">
+                                <i class="bi bi-calendar3"></i>
+                                <span>10 Maret 2024</span>
+                            </div>
+                            <p class="video-desc">"Ekspresikan dirimu dengan fasilitas karaoke yang seru sambil menikmati hidangan favorit di Sampuraun Nusasari."</p>
+                            <a href="https://drive.google.com/file/d/1_r8HUl6fZQJH_AIIbRZfRbOwIckGcYzZ/view?usp=drive_link" target="_blank" class="drive-link">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Video Item 4 - Nasi Liwet -->
+                <div class="video-item">
+                    <div class="video-card">
+                        <div class="video-player-wrapper">
+                            <img src="asset/tumnail liwett.png" alt="Nasi Liwet" class="video-thumbnail">
+                            <a href="https://drive.google.com/file/d/1NIMB2lmCLfDtj9n9SJwbTpUdLW8QZ4WX/view?usp=drive_link" target="_blank" class="video-overlay play-link">
+                                <div class="play-btn">
+                                    <i class="bi bi-play-circle"></i>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title">Nasi Liwet</h3>
+                            <div class="video-meta">
+                                <i class="bi bi-calendar3"></i>
+                                <span>5 April 2024</span>
+                            </div>
+                            <p class="video-desc">"Nikmati sensasi Nasi Liwet autentik khas Sampuraun Nusasari, disajikan hangat dengan lauk pauk yang menggoda selera."</p>
+                            <a href="https://drive.google.com/file/d/1NIMB2lmCLfDtj9n9SJwbTpUdLW8QZ4WX/view?usp=drive_link" target="_blank" class="drive-link">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Video Item 5 - Pelayan Profesional -->
+                <div class="video-item">
+                    <div class="video-card">
+                        <div class="video-player-wrapper">
+                            <img src="asset/tumnail pelayan.png" alt="Pelayan Profesional" class="video-thumbnail">
+                            <a href="https://drive.google.com/file/d/1vNC9-drVdPQD2JF32zZhqzwK_My_rNyn/view?usp=drive_link" target="_blank" class="video-overlay play-link">
+                                <div class="play-btn">
+                                    <i class="bi bi-play-circle"></i>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title">Pelayan Profesional</h3>
+                            <div class="video-meta">
+                                <i class="bi bi-calendar3"></i>
+                                <span>18 Mei 2024</span>
+                            </div>
+                            <p class="video-desc">"Kepuasan Anda adalah prioritas kami. Rasakan pengalaman kuliner yang berkesan dengan servis terbaik dari staf profesional kami."</p>
+                            <a href="https://drive.google.com/file/d/1vNC9-drVdPQD2JF32zZhqzwK_My_rNyn/view?usp=drive_link" target="_blank" class="drive-link">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Video Item 6 - Hampers -->
+                <div class="video-item">
+                    <div class="video-card">
+                        <div class="video-player-wrapper">
+                            <img src="asset/tumnail hampers.png" alt="Hampers" class="video-thumbnail">
+                            <a href="https://drive.google.com/file/d/1bV0NxWBW_FC9UcPsZJ3kdfPFcUzLF5m9/view?usp=drive_link" target="_blank" class="video-overlay play-link">
+                                <div class="play-btn">
+                                    <i class="bi bi-play-circle"></i>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title">Hampers</h3>
+                            <div class="video-meta">
+                                <i class="bi bi-calendar3"></i>
+                                <span>25 Juni 2024</span>
+                            </div>
+                            <p class="video-desc">"Bagikan kebahagiaan lewat hampers eksklusif Sampuraun Nusasari, hantaran istimewa penuh rasa untuk orang tersayang."</p>
+                            <a href="https://drive.google.com/file/d/1bV0NxWBW_FC9UcPsZJ3kdfPFcUzLF5m9/view?usp=drive_link" target="_blank" class="drive-link">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Video Item 7 - Lalapan Gratis -->
+                <div class="video-item">
+                    <div class="video-card">
+                        <div class="video-player-wrapper">
+                            <img src="asset/tumnail lalab.png" alt="Lalapan Gratis" class="video-thumbnail">
+                            <a href="https://drive.google.com/file/d/1O_Ye-wtaqCQyahfLAClNCDPFhkfE4l9H/view?usp=drive_link" target="_blank" class="video-overlay play-link">
+                                <div class="play-btn">
+                                    <i class="bi bi-play-circle"></i>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title">Lalapan Gratis</h3>
+                            <div class="video-meta">
+                                <i class="bi bi-calendar3"></i>
+                                <span>10 Juli 2024</span>
+                            </div>
+                            <p class="video-desc">"Lengkapi hidangan favoritmu dengan lalapan segar gratis, sajian pelengkap wajib untuk pengalaman makan yang lebih mantap."</p>
+                            <a href="https://drive.google.com/file/d/1O_Ye-wtaqCQyahfLAClNCDPFhkfE4l9H/view?usp=drive_link" target="_blank" class="drive-link">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Video Item 8 - Parkiran Luas -->
+                <div class="video-item">
+                    <div class="video-card">
+                        <div class="video-player-wrapper">
+                            <img src="asset/tumnail parkiran.png" alt="Parkiran Luas" class="video-thumbnail">
+                            <a href="https://drive.google.com/file/d/1iCoGDcegVQjB_-iV10sUnz9CXn_b5Ol2/view?usp=drive_link" target="_blank" class="video-overlay play-link">
+                                <div class="play-btn">
+                                    <i class="bi bi-play-circle"></i>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title">Parkiran Luas</h3>
+                            <div class="video-meta">
+                                <i class="bi bi-calendar3"></i>
+                                <span>30 Agustus 2024</span>
+                            </div>
+                            <p class="video-desc">"Gak perlu pusing cari tempat, nikmati fasilitas parkiran luas dan aman yang siap menampung seluruh rombongan Anda."</p>
+                            <a href="https://drive.google.com/file/d/1iCoGDcegVQjB_-iV10sUnz9CXn_b5Ol2/view?usp=drive_link" target="_blank" class="drive-link">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Video Item 9 - Bakakak & Dapur -->
+                <div class="video-item">
+                    <div class="video-card">
+                        <div class="video-player-wrapper">
+                            <img src="asset/tumnail bakakak.png" alt="Bakakak & Dapur" class="video-thumbnail">
+                            <a href="https://drive.google.com/file/d/163cHP1vocJJwLzwad0AajwIXaQ_eDeCX/view?usp=drive_link" target="_blank" class="video-overlay play-link">
+                                <div class="play-btn">
+                                    <i class="bi bi-play-circle"></i>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title">Bakakak & Dapur</h3>
+                            <div class="video-meta">
+                                <i class="bi bi-calendar3"></i>
+                                <span>25 Juni 2024</span>
+                            </div>
+                            <p class="video-desc">"Rahasia rasa juara! Intip dapur kami yang apik dalam menyajikan Ayam Bakakak bumbu meresap khas Sampuraun Nusasari."</p>
+                            <a href="https://drive.google.com/file/d/163cHP1vocJJwLzwad0AajwIXaQ_eDeCX/view?usp=drive_link" target="_blank" class="drive-link">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Video Item 10 - Pesona Pariwisata Bandung -->
+                <div class="video-item">
+                    <div class="video-card">
+                        <div class="video-player-wrapper">
+                            <img src="asset/tumnail pesona.png" alt="Pesona Pariwisata Bandung" class="video-thumbnail">
+                            <a href="https://drive.google.com/file/d/1ImvkiW74HinbMTaH_FTwEQuXtvI4puNO/view?usp=drive_link" target="_blank" class="video-overlay play-link">
+                                <div class="play-btn">
+                                    <i class="bi bi-play-circle"></i>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="video-info">
+                            <h3 class="video-title">Pesona Pariwisata Bandung</h3>
+                            <div class="video-meta">
+                                <i class="bi bi-calendar3"></i>
+                                <span>15 Januari 2024</span>
+                            </div>
+                            <p class="video-desc">"Menikmati Bandung bukan sekadar rasa, tapi tentang suasana asri yang menyegarkan mata di Sampurasun Nusasari."</p>
+                            <a href="https://drive.google.com/file/d/1ImvkiW74HinbMTaH_FTwEQuXtvI4puNO/view?usp=drive_link" target="_blank" class="drive-link">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Scroll Right Button -->
+            <button class="scroll-btn scroll-right" id="videoScrollRight">
+                <i class="bi bi-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- ========== LOCATION CAROUSEL SECTION (10 CABANG) ========== -->
+    <section id="location-preview" class="location-orange-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title-light">Mampir Yuk! Kami Ada di 5 Titik Ini</h2>
+                <p class="section-subtitle-light">Hayu mampir! Parios cabang kami anu pangcaketna supados tiasa ngaraoskeun katuangan anu nikmat</p>
+            </div>
+            
+            <!-- Bootstrap Carousel -->
+            <div id="locationCarousel" class="carousel slide carousel-3cards" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    
+                    <!-- Slide 1 - Cards 1-3 -->
+                    <div class="carousel-item active">
+                        <div class="row justify-content-center g-4">
+                            <!-- Card 1 -->
+                            <div class="col-md-4">
+                                <div class="location-card-carousel">
+                                    <div class="location-header">
+                                        <div class="location-icon">
+                                            <i class="bi bi-shop"></i>
+                                        </div>
+                                        <span class="location-badge flagship">POPULER</span>
+                                    </div>
+                                    <h5 class="location-name">Warung Bakakak Sampurasun Cabang Sumedang</h5>
+                                    <p class="location-address">Jl. Parigi Lama No.18, Situ, Kecaamatan Sumedang Utara, Kabupaten Sumedang, Jawa Barat 45621</p>
+                                    <div class="location-info">
+                                        <p><i class="bi bi-clock me-2"></i> 08:00 - 22:00 WIB</p>
+                                        <p><i class="bi bi-telephone me-2"></i> (088) 2002-0763-00</p>
+                                        <p><i class="bi bi-whatsapp me-2"></i> 0821-1567-3887</p>
+                                    </div>
+                                    <a href="cabang sumedang.html" class="btn-location-detail">
+                                        Lihat Website <i class="bi bi-arrow-right ms-2"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <!-- Card 2 -->
+                            <div class="col-md-4">
+                                <div class="location-card-carousel">
+                                    <div class="location-header">
+                                        <div class="location-icon">
+                                            <i class="bi bi-shop"></i>
+                                        </div>
+                                        <span class="location-badge popular">POPULER</span>
+                                    </div>
+                                    <h5 class="location-name">Warung Bakakak Sampurasun Cabang Pasteur</h5>
+                                    <p class="location-address">Jl. Dr. Djunjungan No. 164, Sukagalih, Kecamatan Sukajadi, Kota Bandung, Jawa Barat. 40173</p>
+                                    <div class="location-info">
+                                        <p><i class="bi bi-clock me-2"></i> 08:00 - 22:00 WIB</p>
+                                        <p><i class="bi bi-telephone me-2"></i>(088) 2002-0763-00</p>
+                                        <p><i class="bi bi-whatsapp me-2"></i> 0851-1755-7723</p>
+                                    </div>
+                                    <a href="cabang Pasteur.html" class="btn-location-detail">
+                                        Lihat Website<i class="bi bi-arrow-right ms-2"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <!-- Card 3 -->
+                            <div class="col-md-4">
+                                <div class="location-card-carousel">
+                                    <div class="location-header">
+                                        <div class="location-icon">
+                                            <i class="bi bi-shop"></i>
+                                        </div>
+                                        <span class="location-badge new">POPULER</span>
+                                    </div>
+                                    <h5 class="location-name">Warung Bakakak Sampurasun Cabang Lembang</h5>
+                                    <p class="location-address">Jl. Raya Lembang No. 90, Gudangkahuripan, Kecamatan Andir, Kabupaten Bandung Barat, Jawa Barat. 40791</p>
+                                    <div class="location-info">
+                                        <p><i class="bi bi-clock me-2"></i> 08:00 - 22:00 WIB</p>
+                                        <p><i class="bi bi-telephone me-2"></i>(088) 2002-0763-00</p>
+                                        <p><i class="bi bi-whatsapp me-2"></i> 0851-1781-7727</p>
+                                    </div>
+                                    <a href="cabang lembang.html" class="btn-location-detail">
+                                        Lihat Website <i class="bi bi-arrow-right ms-2"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 2 - Cards 4-6 -->
+                    <div class="carousel-item">
+                        <div class="row justify-content-center g-4">
+                            <!-- Card 4 -->
+                            <div class="col-md-4">
+                                <div class="location-card-carousel">
+                                    <div class="location-header">
+                                        <div class="location-icon">
+                                            <i class="bi bi-shop"></i>
+                                        </div>
+                                        <span class="location-badge">NEW</span>
+                                    </div>
+                                    <h5 class="location-name">Warung Bakakak Sampurasun Cabang Soreang 2</h5>
+                                    <p class="location-address">Jl. Terusan Tol Soreang Pasirkoja Desa Parungserab, Kecamatan Soreang, Kabupaten Bandung, Jawa Barat</p>
+                                    <div class="location-info">
+                                        <p><i class="bi bi-clock me-2"></i> 10:00 - 22:00 WIB</p>
+                                        <p><i class="bi bi-telephone me-2"></i>(088) 2002-0763-00</p>
+                                        <p><i class="bi bi-whatsapp me-2"></i> 0815-6789-0123</p>
+                                    </div>
+                                    <a href="lokasi.html#surabaya" class="btn-location-detail">
+                                        Lihat Website <i class="bi bi-arrow-right ms-2"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <!-- Card 5 -->
+                            <div class="col-md-4">
+                                <div class="location-card-carousel">
+                                    <div class="location-header">
+                                        <div class="location-icon">
+                                            <i class="bi bi-shop"></i>
+                                        </div>
+                                        <span class="location-badge">POPULER</span>
+                                    </div>
+                                    <h5 class="location-name">Warung Bakakak Sampurasun Cabang Subang</h5>
+                                    <p class="location-address">Cimanggu, Kec. Cisalak, Kabupaten Subang, Jawa Barat</p>
+                                    <div class="location-info">
+                                        <p><i class="bi bi-clock me-2"></i> 10:00 - 23:00 WIB</p>
+                                        <p><i class="bi bi-telephone me-2"></i>(088) 2002-0763-00</p>
+                                        <p><i class="bi bi-whatsapp me-2"></i> 0823-1966-2260</p>
+                                    </div>
+                                    <a href="cabang subang.html" class="btn-location-detail">
+                                        Lihat Website <i class="bi bi-arrow-right ms-2"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <!-- Card 6 -->
+                            <div class="col-md-4">
+                                <div class="location-card-carousel">
+                                    <div class="location-header">
+                                        <div class="location-icon">
+                                            <i class="bi bi-shop"></i>
+                                        </div>
+                                        <span class="location-badge popular">POPULER</span>
+                                    </div>
+                                    <h5 class="location-name">Warung Bakakak Sampurasun Cabang Soreang</h5>
+                                    <p class="location-address">Jalan Terusan Jl. Tol Soreang - Pasir Koja, Pamekaran, Kec. Soreang, Kabupaten Bandung, Jawa Barat</p>
+                                    <div class="location-info">
+                                        <p><i class="bi bi-clock me-2"></i> 08:00 - 22:00 WIB</p>
+                                        <p><i class="bi bi-telephone me-2"></i>(088) 2002-0763-00</p>
+                                        <p><i class="bi bi-whatsapp me-2"></i> 0851-3362-3773</p>
+                                    </div>
+                                    <a href="cabang soreang 1.html" class="btn-location-detail">
+                                        Lihat Website <i class="bi bi-arrow-right ms-2"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Carousel Controls -->
+                <button class="carousel-control-prev location-prev" type="button" data-bs-target="#locationCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next location-next" type="button" data-bs-target="#locationCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+                
+                <!-- Indicators -->
+                <div class="carousel-indicators location-pagination">
+                    <button type="button" data-bs-target="#locationCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#locationCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER SECTION ========== -->
+    <footer class="footer-modern" id="footer-modern">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <img src="asset/Logo Warung Bakakak.png" alt="Logo Warung Sambal Bakar" height="50" class="mb-3">
+                    <p class="text-white-50">Waroeng Sambal Bakar menghadirkan cita rasa autentik Indonesia dengan 18 jenis sambal spesial dan pelayanan terbaik.</p>
+                    <div class="social-links mt-3">
+                        <a href="https://www.instagram.com/sampurasunnusasari?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" aria-label="Instagram">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@sampurasunnusasari?is_from_webapp=1&sender_device=pc" target="_blank" aria-label="TikTok">
+                            <i class="bi bi-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="text-white mb-3">Menu</h5>
+                    <ul class="footer-links">
+                        <li><a href="#hero">Wilujeng Sumping</a></li>
+                        <li><a href="#menu-highlight">Menu Favorit</a></li>
+                        <li><a href="program.html">Program Partnership</a></li>
+                        <li><a href="promo.html">Promo & Kemitraan</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-3">Layanan</h5>
+                    <ul class="footer-links">
+                        <li><a href="delivery-order.html">Peluang Investasi</a></li>
+                        <li><a href="big-order.html">Info Loker</a></li>
+                        <li><a href="sewa tempat.html">Sewa Tempat</a></li>
+                        <li><a href="#location-preview">Lokasi</a></li>
+                        <li><a href="partnership.html">Berita</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-3">Kontak</h5>
+                    <ul class="footer-contact">
+                        <li><i class="bi bi-envelope-fill me-2"></i>pelajarsumedang@gmail.com</li>
+                        <li><i class="bi bi-telephone-fill me-2"></i>0812-1431-1134</li>
+                        <li><i class="bi bi-whatsapp me-2"></i>0821-1567-3887</li>
+                        <li><i class="bi bi-clock-fill me-2"></i>08.00 - 22.00 WIB</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="text-center text-white-50">
+                <p class="mb-0">&copy; 2026 Sampurasun Nusasari. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== JAVASCRIPT LIBRARIES ========== -->
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS Animation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <!-- Custom JS (Minimal untuk responsive testing) -->
+    <script>
+        // Minimal JavaScript untuk testing responsive
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize AOS
+            if (typeof AOS !== 'undefined') {
+                AOS.init({
+                    duration: 800,
+                    easing: 'ease-out-cubic',
+                    once: true,
+                    mirror: false,
+                    offset: 50
+                });
+            }
+            
+            // Simple music player
+            const musicBtn = document.getElementById('musicPlayerBtn');
+            const musicIcon = document.getElementById('musicIcon');
+            const backgroundMusic = document.getElementById('backgroundMusic');
+            
+            if (musicBtn && backgroundMusic) {
+                let isPlaying = false;
+                
+                musicBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    if (isPlaying) {
+                        backgroundMusic.pause();
+                        musicIcon.classList.remove('fa-pause');
+                        musicIcon.classList.add('fa-play');
+                        musicBtn.classList.remove('playing');
+                    } else {
+                        backgroundMusic.play()
+                            .then(() => {
+                                musicIcon.classList.remove('fa-play');
+                                musicIcon.classList.add('fa-pause');
+                                musicBtn.classList.add('playing');
+                                isPlaying = true;
+                            })
+                            .catch(error => {
+                                console.log('Music play error:', error);
+                            });
+                    }
+                    isPlaying = !isPlaying;
+                });
+            }
+            
+            // Mobile navbar fix
+            const navbarToggler = document.querySelector('.navbar-toggler');
+            if (navbarToggler) {
+                navbarToggler.addEventListener('click', function() {
+                    document.body.classList.toggle('navbar-open');
+                });
+            }
+            
+            // Simple video play function
+            window.playVideo = function(btn) {
+                const videoCard = btn.closest('.video-card');
+                const videoElement = videoCard.querySelector('.video-element');
+                const modal = document.getElementById('videoModal');
+                
+                if (videoElement && modal) {
+                    const modalVideo = document.getElementById('modalVideo');
+                    const modalTitle = document.getElementById('modalTitle');
+                    const modalDate = document.getElementById('modalDate');
+                    const modalDesc = document.getElementById('modalDesc');
+                    
+                    const title = videoCard.querySelector('.video-title').textContent;
+                    const date = videoCard.querySelector('.video-meta span').textContent;
+                    const desc = videoCard.querySelector('.video-desc').textContent;
+                    
+                    modalVideo.src = videoElement.querySelector('source').src;
+                    modalTitle.textContent = title;
+                    modalDate.textContent = date;
+                    modalDesc.textContent = desc;
+                    
+                    modal.style.display = 'block';
+                    document.body.style.overflow = 'hidden';
+                    
+                    modalVideo.play();
+                }
+            };
+            
+            window.closeVideo = function() {
+                const modal = document.getElementById('videoModal');
+                const modalVideo = document.getElementById('modalVideo');
+                
+                if (modal && modalVideo) {
+                    modalVideo.pause();
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            };
+            
+            // Close modal when clicking overlay
+            const modalOverlay = document.querySelector('.modal-overlay');
+            if (modalOverlay) {
+                modalOverlay.addEventListener('click', closeVideo);
+            }
+        });
+        
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('nav.navbar');
+            if (window.scrollY > 30) {
+                navbar.classList.add('navbar-scrolled');
+            } else {
+                navbar.classList.remove('navbar-scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
